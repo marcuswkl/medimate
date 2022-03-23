@@ -1,12 +1,9 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+//import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key key}) : super(key: key);
+  const HomePageWidget({required Key key}) : super(key: key);
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
@@ -32,12 +29,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
                         child: Text(
                           'Hi, Name!',
-                          style:
-                          FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Fredoka One',
+                          style: GoogleFonts.fredokaOne(
                             color: Colors.black,
                             fontSize: 48,
                           ),
@@ -53,13 +48,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Padding(
                             padding:
-                            EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
+                            const EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
                             child: Text(
                               'Upcoming To-do list:',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                fontFamily: 'Signika Negative',
+                              style: GoogleFonts.signikaNegative(
                                 color: Colors.black,
                                 fontSize: 16,
                               ),
@@ -72,12 +64,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Padding(
                             padding:
-                            EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
+                            const EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.85,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x55000000),
@@ -90,7 +82,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16, 10, 16, 10),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -109,12 +101,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           children: [
                                             Text(
                                               'Coughing Medicine',
-                                              style:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily:
-                                                'Signika Negative',
+                                              style: GoogleFonts.signikaNegative(
                                                 color: Colors.black,
                                                 fontSize: 16,
                                                 fontWeight:
@@ -125,15 +112,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0, 4, 0, 0),
                                           child: Text(
                                             'Benzonatate',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText2
-                                                .override(
-                                              fontFamily:
-                                              'Signika Negative',
+                                            style: GoogleFonts.signikaNegative(
                                               color: Colors.black,
                                               fontSize: 14,
                                               fontWeight: FontWeight.normal,
@@ -155,20 +138,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           options: FFButtonOptions(
                                             width: 90,
                                             height: 23,
-                                            color: Color(0xFF95B8D1),
-                                            textStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .subtitle2
-                                                .override(
-                                              fontFamily:
-                                              'Signika Negative',
+                                            color: const Color(0xFF95B8D1),
+                                            textStyle: GoogleFonts.signikaNegative(
                                               color: Colors.white,
                                               fontSize: 14,
                                               fontWeight:
                                               FontWeight.w500,
                                             ),
                                             elevation: 3,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1,
                                             ),
@@ -177,7 +155,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0, 5, 0, 0),
                                           child: FFButtonWidget(
                                             onPressed: () {
@@ -187,20 +165,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             options: FFButtonOptions(
                                               width: 110,
                                               height: 25,
-                                              color: Color(0xFF95B8D1),
-                                              textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .subtitle2
-                                                  .override(
-                                                fontFamily:
-                                                'Signika Negative',
+                                              color: const Color(0xFF95B8D1),
+                                              textStyle: GoogleFonts.signikaNegative(
                                                 color: Colors.white,
                                                 fontSize: 14,
                                                 fontWeight:
                                                 FontWeight.w500,
                                               ),
                                               elevation: 3,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1,
                                               ),
@@ -222,12 +195,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Padding(
                             padding:
-                            EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
+                            const EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.85,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4,
                                     color: Color(0x55000000),
@@ -240,7 +213,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16, 10, 16, 10),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -259,12 +232,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           children: [
                                             Text(
                                               'Please fill in your \ndaily medical journal.',
-                                              style:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily:
-                                                'Signika Negative',
+                                              style: GoogleFonts.signikaNegative(
                                                 color: Colors.black,
                                                 fontSize: 16,
                                                 fontWeight:
@@ -288,21 +256,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           options: FFButtonOptions(
                                             width: 115,
                                             height: 46,
-                                            color: Color(0xFF95B8D1),
-                                            textStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .subtitle2
-                                                .override(
-                                              fontFamily:
-                                              'Signika Negative',
+                                            color: const Color(0xFF95B8D1),
+                                            textStyle: GoogleFonts.signikaNegative(
                                               color: Colors.white,
                                               fontSize: 14,
                                               fontWeight:
                                               FontWeight.w500,
-                                              lineHeight: 1,
                                             ),
                                             elevation: 3,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Colors.transparent,
                                               width: 1,
                                             ),
@@ -321,17 +283,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                           child: Text(
                             'News/Articles',
-                            style:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Fredoka One',
+                            style: GoogleFonts.fredokaOne(
                               color: Colors.black,
                               fontSize: 28,
                             ),
@@ -342,7 +302,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                       child: DefaultTabController(
                         length: 2,
                         initialIndex: 0,
@@ -352,13 +312,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               labelColor: Colors.black,
                               unselectedLabelColor:
                               FlutterFlowTheme.of(context).grayLight,
-                              labelStyle: GoogleFonts.getFont(
-                                'Signika Negative',
+                              labelStyle:  GoogleFonts.signikaNegative(
                                 fontSize: 14,
                               ),
-                              indicatorColor: Color(0xFF809BCE),
+                              indicatorColor: const Color(0xFF809BCE),
                               indicatorWeight: 3,
-                              tabs: [
+                              tabs: const [
                                 Tab(
                                   text: 'Latest',
                                 ),
@@ -371,7 +330,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: TabBarView(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10, 0, 10, 0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -379,7 +338,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0, 10, 0, 0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -389,7 +348,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   height: 145,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 3,
                                                         color:
@@ -403,7 +362,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                         0, 1, 0, 0),
                                                     child: Row(
@@ -422,7 +381,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   10,
@@ -430,12 +389,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0),
                                                               child: Text(
                                                                 'SINGAPORE',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .title3
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  'Signika Negative',
+                                                                style:  GoogleFonts.signikaNegative(
                                                                   color: Colors
                                                                       .black,
                                                                   fontSize:
@@ -453,11 +407,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0, 0),
                                                                   child:
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                         20,
                                                                         4,
@@ -468,14 +422,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       textAlign:
                                                                       TextAlign
                                                                           .justify,
-                                                                      style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                          .bodyText2
-                                                                          .override(
-                                                                        fontFamily:
-                                                                        'Signika Negative',
+                                                                      style:  GoogleFonts.signikaNegative(
                                                                         color:
-                                                                        Color(0xFF64696B),
+                                                                        const Color(0xFF64696B),
                                                                         fontSize:
                                                                         13,
                                                                         fontWeight:
@@ -492,7 +441,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                       20,
                                                                       10,
@@ -500,12 +449,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       0),
                                                                   child: Text(
                                                                     '1 Mar 2022 10:00 AM',
-                                                                    style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                        .bodyText1
-                                                                        .override(
-                                                                      fontFamily:
-                                                                      'Lexend Deca',
+                                                                    style:  GoogleFonts.signikaNegative(
                                                                       fontSize:
                                                                       8,
                                                                     ),
@@ -513,7 +457,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 ),
                                                               ],
                                                             ),
-                                                            Divider(
+                                                            const Divider(
                                                               height: 15,
                                                               thickness: 3,
                                                               indent: 10,
@@ -523,7 +467,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   0,
@@ -538,7 +482,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Icon(
                                                                         Icons
                                                                             .bookmark_rounded,
@@ -555,7 +499,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -563,11 +507,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Bookmark',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x99000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x99000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -578,7 +519,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Padding(
                                                                         padding: EdgeInsetsDirectional.fromSTEB(
                                                                             25,
@@ -603,7 +544,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -611,11 +552,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Share',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x9A000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x9A000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -629,12 +567,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(37,
                                                               0, 0, 0),
                                                           child: ClipRRect(
                                                             borderRadius:
-                                                            BorderRadius
+                                                            const BorderRadius
                                                                 .only(
                                                               bottomLeft: Radius
                                                                   .circular(0),
@@ -665,7 +603,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0, 10, 0, 0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -675,7 +613,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   height: 145,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 3,
                                                         color:
@@ -689,7 +627,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                         0, 1, 0, 0),
                                                     child: Row(
@@ -708,7 +646,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   10,
@@ -716,12 +654,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0),
                                                               child: Text(
                                                                 'SINGAPORE',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .title3
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  'Signika Negative',
+                                                                style:  GoogleFonts.signikaNegative(
                                                                   color: Colors
                                                                       .black,
                                                                   fontSize:
@@ -739,11 +672,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0, 0),
                                                                   child:
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                         20,
                                                                         4,
@@ -754,14 +687,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       textAlign:
                                                                       TextAlign
                                                                           .justify,
-                                                                      style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                          .bodyText2
-                                                                          .override(
-                                                                        fontFamily:
-                                                                        'Signika Negative',
+                                                                      style:  GoogleFonts.signikaNegative(
                                                                         color:
-                                                                        Color(0xFF64696B),
+                                                                        const Color(0xFF64696B),
                                                                         fontSize:
                                                                         13,
                                                                         fontWeight:
@@ -778,7 +706,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                       20,
                                                                       10,
@@ -786,12 +714,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       0),
                                                                   child: Text(
                                                                     '1 Mar 2022 10:00 AM',
-                                                                    style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                        .bodyText1
-                                                                        .override(
-                                                                      fontFamily:
-                                                                      'Lexend Deca',
+                                                                    style:  GoogleFonts.signikaNegative(
                                                                       fontSize:
                                                                       8,
                                                                     ),
@@ -799,7 +722,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 ),
                                                               ],
                                                             ),
-                                                            Divider(
+                                                            const Divider(
                                                               height: 15,
                                                               thickness: 3,
                                                               indent: 10,
@@ -809,7 +732,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   0,
@@ -824,7 +747,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Icon(
                                                                         Icons
                                                                             .bookmark_rounded,
@@ -841,7 +764,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -849,11 +772,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Bookmark',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x99000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x99000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -864,7 +784,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Padding(
                                                                         padding: EdgeInsetsDirectional.fromSTEB(
                                                                             25,
@@ -889,7 +809,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -897,11 +817,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Share',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x9A000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x9A000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -915,12 +832,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(37,
                                                               0, 0, 0),
                                                           child: ClipRRect(
                                                             borderRadius:
-                                                            BorderRadius
+                                                            const BorderRadius
                                                                 .only(
                                                               bottomLeft: Radius
                                                                   .circular(0),
@@ -954,7 +871,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10, 0, 10, 0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -962,7 +879,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0, 10, 0, 0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -972,7 +889,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   height: 145,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 3,
                                                         color:
@@ -986,7 +903,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                         0, 1, 0, 0),
                                                     child: Row(
@@ -1005,7 +922,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   10,
@@ -1013,12 +930,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0),
                                                               child: Text(
                                                                 'MALAYSIA',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .title3
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  'Signika Negative',
+                                                                style:  GoogleFonts.signikaNegative(
                                                                   color: Colors
                                                                       .black,
                                                                   fontSize:
@@ -1035,7 +947,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                       20,
                                                                       4,
@@ -1046,14 +958,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     textAlign:
                                                                     TextAlign
                                                                         .justify,
-                                                                    style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                        .bodyText2
-                                                                        .override(
-                                                                      fontFamily:
-                                                                      'Signika Negative',
+                                                                    style:  GoogleFonts.signikaNegative(
                                                                       color:
-                                                                      Color(0xFF64696B),
+                                                                      const Color(0xFF64696B),
                                                                       fontSize:
                                                                       13,
                                                                     ),
@@ -1067,7 +974,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                       20,
                                                                       10,
@@ -1075,12 +982,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       0),
                                                                   child: Text(
                                                                     '4 Jan 2022 01:00 PM',
-                                                                    style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                        .bodyText1
-                                                                        .override(
-                                                                      fontFamily:
-                                                                      'Lexend Deca',
+                                                                    style:  GoogleFonts.signikaNegative(
                                                                       fontSize:
                                                                       8,
                                                                     ),
@@ -1088,7 +990,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 ),
                                                               ],
                                                             ),
-                                                            Divider(
+                                                            const Divider(
                                                               height: 15,
                                                               thickness: 3,
                                                               indent: 10,
@@ -1098,7 +1000,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                   20,
                                                                   0,
@@ -1113,7 +1015,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Icon(
                                                                         Icons
                                                                             .bookmark_rounded,
@@ -1130,7 +1032,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -1138,11 +1040,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Bookmark',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x99000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x99000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -1153,7 +1052,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
-                                                                    children: [
+                                                                    children: const [
                                                                       Padding(
                                                                         padding: EdgeInsetsDirectional.fromSTEB(
                                                                             25,
@@ -1178,7 +1077,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
@@ -1186,11 +1085,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         child:
                                                                         Text(
                                                                           'Share',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                            fontFamily: 'Signika Negative',
-                                                                            color: Color(0x9A000000),
+                                                                          style:  GoogleFonts.signikaNegative(
+                                                                            color: const Color(0x9A000000),
                                                                             fontSize: 8,
                                                                           ),
                                                                         ),
@@ -1204,12 +1100,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(24,
                                                               0, 0, 0),
                                                           child: ClipRRect(
                                                             borderRadius:
-                                                            BorderRadius
+                                                            const BorderRadius
                                                                 .only(
                                                               bottomLeft: Radius
                                                                   .circular(0),
