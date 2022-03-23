@@ -1,869 +1,117 @@
-How-to-swallow.dart
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'view/search/how-to-swallow.dart';
 
-class HowToSwallowWidget extends StatefulWidget {
-  const HowToSwallowWidget({Key key}) : super(key: key);
-
-  @override
-  _HowToSwallowWidgetState createState() => _HowToSwallowWidgetState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
-  PageController pageViewController1;
-  PageController pageViewController2;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
-            decoration: BoxDecoration(
-              color: Color(0xFFEEEEEE),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25, 21, 0, 0),
-                  child: Material(
-                    color: Colors.transparent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Container(
-                      width: 42,
-                      height: 42,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF809BCE),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
-                        child: IconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 30,
-                          borderWidth: 1,
-                          buttonSize: 60,
-                          fillColor: Color(0x00FCFCFC),
-                          icon: Icon(
-                            Icons.arrow_back_ios_rounded,
-                            color: Colors.white,
-                            size: 20,
-                          ),
-                          onPressed: () {
-                            print('IconButton pressed ...');
-                          },
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25, 15, 0, 0),
-                  child: Text(
-                    'Have Difficulty in Swallowing Pills?',
-                    style: FlutterFlowTheme.of(context).title3.override(
-                      fontFamily: 'Fredoka One',
-                      color: Colors.black,
-                      fontSize: 28,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25, 20, 25, 0),
-                  child: Text(
-                    'Try out these few mental and physical tricks to learn how to swallow a pill! Scroll down to find out why do people may have a hard time swallowing pills and find out more articles related to Dysphagia which is the medical term for swallowing difficulties.',
-                    textAlign: TextAlign.justify,
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Signika Negative',
-                      color: Colors.black,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      height: 330,
-                      decoration: BoxDecoration(),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 120,
-                          child: Stack(
-                            children: [
-                              PageView(
-                                controller: pageViewController1 ??=
-                                    PageController(initialPage: 0),
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        height:
-                                        MediaQuery.of(context).size.height *
-                                            1,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(25, 20, 25, 0),
-                                              child: Text(
-                                                'Pop-bottle method',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color: Colors.black,
-                                                  fontSize: 20,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(25, 3, 25, 0),
-                                              child: Text(
-                                                '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color:
-                                                  Color(0x98000000),
-                                                  fontSize: 14,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Image.network(
-                                                'https://picsum.photos/seed/178/600',
-                                                width: 170,
-                                                height: 129,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(25, 20, 25, 0),
-                                              child: Text(
-                                                'Lean Forward method',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color: Colors.black,
-                                                  fontSize: 20,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(25, 3, 25, 0),
-                                              child: Text(
-                                                '1. Put a capsule on your tongue.\n2. Take a sip of water but don\'t swallow.\n3. Tilt your chin toward your chest.\n4. Swallow the capsule and water while your head is bent.\n** This technique showed an improvement of 89% over the old method of taking a sip of water from a cup and trying to swallow.',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color:
-                                                  Color(0x98000000),
-                                                  fontSize: 14,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Image.network(
-                                                'https://picsum.photos/seed/178/600',
-                                                width: 170,
-                                                height: 95,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        height:
-                                        MediaQuery.of(context).size.height *
-                                            1,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0, 0, 0, 50),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 25, 0),
-                                                child: Text(
-                                                  'Numb and Relax',
-                                                  textAlign: TextAlign.justify,
-                                                  style: FlutterFlowTheme.of(
-                                                      context)
-                                                      .bodyText1
-                                                      .override(
-                                                    fontFamily:
-                                                    'Signika Negative',
-                                                    color: Colors.black,
-                                                    fontSize: 20,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(25, 3, 25, 0),
-                                                child: Text(
-                                                  '1. Take several deep breaths to relax neck and throat muscles.\n2. Hold an ice cube or popsicle in your mouth to numb your throat and calm your gag reflex.\n3. Place the pill on your tongue. Some people recommend the tip while others suggest the middle of the tongue. Try both and see what works for you.',
-                                                  textAlign: TextAlign.justify,
-                                                  style: FlutterFlowTheme.of(
-                                                      context)
-                                                      .bodyText1
-                                                      .override(
-                                                    fontFamily:
-                                                    'Signika Negative',
-                                                    color:
-                                                    Color(0x98000000),
-                                                    fontSize: 14,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 5, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
-                                                  width: 170,
-                                                  height: 95,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Align(
-                                alignment: AlignmentDirectional(0, 1),
-                                child: SmoothPageIndicator(
-                                  controller: pageViewController1 ??=
-                                      PageController(initialPage: 0),
-                                  count: 3,
-                                  axisDirection: Axis.horizontal,
-                                  onDotClicked: (i) {
-                                    pageViewController1.animateToPage(
-                                      i,
-                                      duration: Duration(milliseconds: 500),
-                                      curve: Curves.ease,
-                                    );
-                                  },
-                                  effect: ExpandingDotsEffect(
-                                    expansionFactor: 2,
-                                    spacing: 8,
-                                    radius: 16,
-                                    dotWidth: 16,
-                                    dotHeight: 16,
-                                    dotColor: Color(0xFF9E9E9E),
-                                    activeDotColor: Color(0xFF8090BE),
-                                    paintStyle: PaintingStyle.fill,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                      child: Text(
-                        'Related Articles',
-                        textAlign: TextAlign.justify,
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Signika Negative',
-                          color: Colors.black,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 380,
-                      decoration: BoxDecoration(),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 120,
-                          child: Stack(
-                            children: [
-                              PageView(
-                                controller: pageViewController2 ??=
-                                    PageController(initialPage: 0),
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        height:
-                                        MediaQuery.of(context).size.height *
-                                            1,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          image: DecorationImage(
-                                            fit: BoxFit.fitWidth,
-                                            image: Image.asset(
-                                              'assets/images/image_22.png',
-                                            ).image,
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(20, 240, 20, 0),
-                                              child: Text(
-                                                'Why do people find swallowing pills difficult?',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color: Colors.white,
-                                                  fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.access_time_rounded,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.assignment_ind,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        height:
-                                        MediaQuery.of(context).size.height *
-                                            1,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          image: DecorationImage(
-                                            fit: BoxFit.fitWidth,
-                                            image: Image.asset(
-                                              'assets/images/image_22.png',
-                                            ).image,
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(20, 240, 20, 0),
-                                              child: Text(
-                                                'Why do people find swallowing pills difficult?',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color: Colors.white,
-                                                  fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.access_time_rounded,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.assignment_ind,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 10, 0, 0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 5,
-                                      child: Container(
-                                        width:
-                                        MediaQuery.of(context).size.width,
-                                        height:
-                                        MediaQuery.of(context).size.height *
-                                            1,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFEEEEEE),
-                                          image: DecorationImage(
-                                            fit: BoxFit.fitWidth,
-                                            image: Image.asset(
-                                              'assets/images/image_22.png',
-                                            ).image,
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              blurRadius: 10,
-                                              color: Colors.black,
-                                              offset: Offset(510, 105),
-                                              spreadRadius: 20,
-                                            )
-                                          ],
-                                          border: Border.all(
-                                            color: Colors.transparent,
-                                          ),
-                                        ),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(20, 240, 20, 0),
-                                              child: Text(
-                                                'Why do people find swallowing pills difficult?',
-                                                textAlign: TextAlign.justify,
-                                                style:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                  fontFamily:
-                                                  'Signika Negative',
-                                                  color: Colors.white,
-                                                  fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.access_time_rounded,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
-                                                    child: Icon(
-                                                      Icons.assignment_ind,
-                                                      color: Colors.white,
-                                                      size: 20,
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
-                                                    child: Text(
-                                                      '5 mins read',
-                                                      textAlign:
-                                                      TextAlign.justify,
-                                                      style: FlutterFlowTheme
-                                                          .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                        fontFamily:
-                                                        'Signika Negative',
-                                                        color: Colors.white,
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Align(
-                                alignment: AlignmentDirectional(0, 1),
-                                child: SmoothPageIndicator(
-                                  controller: pageViewController2 ??=
-                                      PageController(initialPage: 0),
-                                  count: 3,
-                                  axisDirection: Axis.horizontal,
-                                  onDotClicked: (i) {
-                                    pageViewController2.animateToPage(
-                                      i,
-                                      duration: Duration(milliseconds: 500),
-                                      curve: Curves.ease,
-                                    );
-                                  },
-                                  effect: ExpandingDotsEffect(
-                                    expansionFactor: 2,
-                                    spacing: 8,
-                                    radius: 16,
-                                    dotWidth: 16,
-                                    dotHeight: 16,
-                                    dotColor: Color(0xFF9E9E9E),
-                                    activeDotColor: Color(0xFF8090BE),
-                                    paintStyle: PaintingStyle.fill,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
       ),
+      home: HowToSwallowWidget(key: UniqueKey()),
     );
   }
 }
 
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key, required this.title}) : super(key: key);
+//
+//   // This widget is the home page of your application. It is stateful, meaning
+//   // that it has a State object (defined below) that contains fields that affect
+//   // how it looks.
+//
+//   // This class is the configuration for the state. It holds the values (in this
+//   // case the title) provided by the parent (in this case the App widget) and
+//   // used by the build method of the State. Fields in a Widget subclass are
+//   // always marked "final".
+//
+//   final String title;
+//
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+//
+// class _MyHomePageState extends State<MyHomePage> {
+//   int _counter = 0;
+//
+//   void _incrementCounter() {
+//     setState(() {
+//       // This call to setState tells the Flutter framework that something has
+//       // changed in this State, which causes it to rerun the build method below
+//       // so that the display can reflect the updated values. If we changed
+//       // _counter without calling setState(), then the build method would not be
+//       // called again, and so nothing would appear to happen.
+//       _counter++;
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // This method is rerun every time setState is called, for instance as done
+//     // by the _incrementCounter method above.
+//     //
+//     // The Flutter framework has been optimized to make rerunning build methods
+//     // fast, so that you can just rebuild anything that needs updating rather
+//     // than having to individually change instances of widgets.
+//     return Scaffold(
+//       appBar: AppBar(
+//         // Here we take the value from the MyHomePage object that was created by
+//         // the App.build method, and use it to set our appbar title.
+//         title: Text(widget.title),
+//       ),
+//       body: Center(
+//         // Center is a layout widget. It takes a single child and positions it
+//         // in the middle of the parent.
+//         child: Column(
+//           // Column is also a layout widget. It takes a list of children and
+//           // arranges them vertically. By default, it sizes itself to fit its
+//           // children horizontally, and tries to be as tall as its parent.
+//           //
+//           // Invoke "debug painting" (press "p" in the console, choose the
+//           // "Toggle Debug Paint" action from the Flutter Inspector in Android
+//           // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+//           // to see the wireframe for each widget.
+//           //
+//           // Column has various properties to control how it sizes itself and
+//           // how it positions its children. Here we use mainAxisAlignment to
+//           // center the children vertically; the main axis here is the vertical
+//           // axis because Columns are vertical (the cross axis would be
+//           // horizontal).
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             const Text(
+//               'You have pushed the button this many times:',
+//             ),
+//             Text(
+//               '$_counter',
+//               style: Theme.of(context).textTheme.headline4,
+//             ),
+//           ],
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: _incrementCounter,
+//         tooltip: 'Increment',
+//         child: const Icon(Icons.add),
+//       ), // This trailing comma makes auto-formatting nicer for build methods.
+//     );
+//   }
+// }
 
