@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view/home/homepage.dart';
+import 'view/home/side-effects-survey.dart';
 
 void main() {
   runApp(const MyApp());
