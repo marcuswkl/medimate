@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,8 +10,8 @@ class MedicationResultWidget extends StatefulWidget {
 }
 
 class _MedicationResultWidgetState extends State<MedicationResultWidget> {
-  late String dropDownValue1;
-  late String dropDownValue2;
+  String dropDownValue1 = "White";
+  String dropDownValue2 = "Round";
   late TextEditingController searchFieldController2;
   late TextEditingController searchFieldController1;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -23,16 +22,16 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
     searchFieldController1 = TextEditingController(text: 'Input');
     searchFieldController2 = TextEditingController(text: 'Input');
   }
-  String dropdownvalue = "Any Color";
-  var items = [
-      'White',
-      'Yellow',
-      'Blue',
-      'Green',
-      'Red'
-  ];
-  String dropdownvalue2 = "Any Shape";
-  var items2 = ['Round', 'Oval', 'Triangle'];
+  // String dropdownvalue = "Any Color";
+  // var items = [
+  //     'White',
+  //     'Yellow',
+  //     'Blue',
+  //     'Green',
+  //     'Red'
+  // ];
+  // String dropdownvalue2 = "Any Shape";
+  // var items2 = ['Round', 'Oval', 'Triangle'];
 
   @override
   Widget build(BuildContext context) {
@@ -212,18 +211,19 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                         0, 10, 0, 0),
                                     // margin: const EdgeInsetsDirectional.fromSTEB(
                                     //     12, 4, 12, 4),
-                                    child: DropdownButton(
-                                      value: dropdownvalue,
+                                    child: DropdownButton<String>(
+                                      value: dropDownValue1,
                                       icon: const Icon(Icons.keyboard_arrow_down),
-                                      items: items.map((String items) {
-                                        return DropdownMenuItem(
-                                          value: items,
-                                          child: Text(items),
+                                      items: <String>['White','Yellow','Red','Blue']
+                                        .map<DropdownMenuItem<String>>((String value) {
+                                        return DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Text(value),
                                         );
                                       }).toList(),
                                       onChanged: (String? val) {
                                         setState(() {
-                                          dropdownvalue = val!;
+                                          dropDownValue1 = val!;
                                         });
                                       },
                                       // width: 150,
@@ -242,18 +242,19 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                         30, 10, 0, 0),
                                     // margin: const EdgeInsetsDirectional.fromSTEB(
                                     //     12, 4, 12, 4),
-                                    child: DropdownButton(
-                                      value: dropdownvalue2,
+                                    child: DropdownButton<String>(
+                                      value: dropDownValue2,
                                       icon: const Icon(Icons.keyboard_arrow_down),
-                                      items: items.map((String items2) {
-                                        return DropdownMenuItem(
-                                          value: items2,
-                                          child: Text(items2),
+                                      items: <String>['Round','Oval','Triangle','Square']
+                                          .map<DropdownMenuItem<String>>((String value) {
+                                        return DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Text(value),
                                         );
                                       }).toList(),
-                                      onChanged: (String? val2) {
+                                      onChanged: (String? val) {
                                         setState(() {
-                                          dropdownvalue = val2!;
+                                          dropDownValue2 = val!;
                                         });
                                       },
                                       // width: 150,

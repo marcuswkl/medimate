@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view/search/how_to_swallow.dart';
+import 'view/search/medication_search.dart';
 
 void main() {
   runApp(const MyApp());
