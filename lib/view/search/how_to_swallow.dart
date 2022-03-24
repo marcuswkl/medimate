@@ -10,24 +10,27 @@ class HowToSwallowWidget extends StatefulWidget {
 }
 
 class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
-  late PageController pageViewController1;
-  late PageController pageViewController2;
+  PageController pageViewController1 = PageController();
+  PageController pageViewController2 = PageController();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       key: scaffoldKey,
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
-            decoration: const BoxDecoration(
-              color: Color(0xFFEEEEEE),
-            ),
+      body:
+      // SafeArea(
+      //   child: GestureDetector(
+      //     onTap: () => FocusScope.of(context).unfocus(),
+      //     child: Container(
+      //       width: MediaQuery.of(context).size.width,
+      //       height: MediaQuery.of(context).size.height * 1,
+      //       decoration: const BoxDecoration(
+      //         color: Color(0xFFEEEEEE),
+      //       ),
+      SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,8 +103,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                           child: Stack(
                             children: [
                               PageView(
-                                controller: pageViewController1 ??=
-                                    PageController(initialPage: 0),
+                                controller: pageViewController1,
+                                    //  ??= PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   Padding(
@@ -318,8 +321,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                               Align(
                                 alignment: const AlignmentDirectional(0, 1),
                                 child: SmoothPageIndicator(
-                                  controller: pageViewController1 ??=
-                                      PageController(initialPage: 0),
+                                  controller: pageViewController1,
+                                  // ??=
+                                  //     PageController(initialPage: 0),
                                   count: 3,
                                   axisDirection: Axis.horizontal,
                                   onDotClicked: (i) {
@@ -375,8 +379,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                           child: Stack(
                             children: [
                               PageView(
-                                controller: pageViewController2 ??=
-                                    PageController(initialPage: 0),
+                                controller: pageViewController2,
+                              // ??=
+                              //       PageController(initialPage: 0),
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   Padding(
@@ -396,7 +401,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           image: DecorationImage(
                                             fit: BoxFit.fitWidth,
                                             image: Image.asset(
-                                              'assets/images/image_22.png',
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -515,7 +520,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           image: DecorationImage(
                                             fit: BoxFit.fitWidth,
                                             image: Image.asset(
-                                              'assets/images/image_22.png',
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -634,7 +639,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           image: DecorationImage(
                                             fit: BoxFit.fitWidth,
                                             image: Image.asset(
-                                              'assets/images/image_22.png',
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -741,8 +746,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                               Align(
                                 alignment: const AlignmentDirectional(0, 1),
                                 child: SmoothPageIndicator(
-                                  controller: pageViewController2 ??=
-                                      PageController(initialPage: 0),
+                                  controller: pageViewController2,
+                                  // ??=
+                                  //     PageController(initialPage: 0),
                                   count: 3,
                                   axisDirection: Axis.horizontal,
                                   onDotClicked: (i) {
@@ -773,9 +779,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                 ),
               ],
             ),
-          ),
-        ),
-      ),
+    ),
     );
   }
 }
