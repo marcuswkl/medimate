@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/search/how-to-swallow.dart';
+import 'view/search/how_to_swallow.dart';
 
 void main() {
   runApp(const MyApp());

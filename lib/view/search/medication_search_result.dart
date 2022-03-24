@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MedicationSearchResultWidget extends StatefulWidget {
@@ -112,6 +111,29 @@ class _MedicationSearchResultWidgetState
                   ),
                 ),
                 Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFF809BCE),
+                        minimumSize: const Size(107,34),
+                        elevation: 3,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(3)),
+                        )
+                    ),
+                    onPressed: () {
+                      print('Button pressed ...');
+                    },
+                    child: Text(
+                      'Search',
+                      style: GoogleFonts.signikaNegative(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(25, 15, 0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -119,77 +141,74 @@ class _MedicationSearchResultWidgetState
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          FFButtonWidget(
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: const Color(0xFF809BCE),
+                                minimumSize: const Size(71,52),
+                                elevation: 3,
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(Radius.circular(3)),
+                                )
+                            ),
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: 'USES',
-                            options: FFButtonOptions(
-                              width: 71,
-                              height: 52,
-                              color: const Color(0xFF809BCE),
-                              textStyle: GoogleFonts.signikaNegative(
+                            child: Text(
+                              'USES',
+                              style: GoogleFonts.signikaNegative(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
                               ),
-                              elevation: 3,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 0,
-                              ),
-                              borderRadius: 50,
                             ),
                           ),
                           Padding(
                             padding:
                             const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                            child: FFButtonWidget(
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  primary: const Color(0xFF809BCE),
+                                  minimumSize: const Size(89,52),
+                                  elevation: 3,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                                  )
+                              ),
                               onPressed: () {
                                 print('Button pressed ...');
                               },
-                              text: 'METHOD',
-                              options: FFButtonOptions(
-                                width: 89,
-                                height: 52,
-                                color: const Color(0xFF809BCE),
-                                textStyle: GoogleFonts.signikaNegative(
+                              child: Text(
+                                'METHOD',
+                                style: GoogleFonts.signikaNegative(
                                   color: Colors.white,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                 ),
-                                elevation: 3,
-                                borderSide: const BorderSide(
-                                  color: Colors.transparent,
-                                  width: 0,
-                                ),
-                                borderRadius: 50,
                               ),
                             ),
                           ),
                           Padding(
                             padding:
                             const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                            child: FFButtonWidget(
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  primary: const Color(0xFF809BCE),
+                                  minimumSize: const Size(116,52),
+                                  elevation: 3,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                                  )
+                              ),
                               onPressed: () {
                                 print('Button pressed ...');
                               },
-                              text: 'SIDE EFFECT',
-                              options: FFButtonOptions(
-                                width: 116,
-                                height: 52,
-                                color: const Color(0xFF809BCE),
-                                textStyle: GoogleFonts.signikaNegative(
+                              child: Text(
+                                'SIDE EFFECT',
+                                style: GoogleFonts.signikaNegative(
                                   color: Colors.white,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                 ),
-                                elevation: 3,
-                                borderSide: const BorderSide(
-                                  color: Colors.transparent,
-                                  width: 0,
-                                ),
-                                borderRadius: 50,
                               ),
                             ),
                           ),
@@ -200,51 +219,49 @@ class _MedicationSearchResultWidgetState
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            FFButtonWidget(
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  primary: const Color(0xFF809BCE),
+                                  minimumSize: const Size(121,52),
+                                  elevation: 3,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                                  )
+                              ),
                               onPressed: () {
                                 print('Button pressed ...');
                               },
-                              text: 'PRECAUTION',
-                              options: FFButtonOptions(
-                                width: 121,
-                                height: 52,
-                                color: const Color(0xFF809BCE),
-                                textStyle: GoogleFonts.signikaNegative(
+                              child: Text(
+                                'PRECAUTION',
+                                style: GoogleFonts.signikaNegative(
                                   color: Colors.white,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                 ),
-                                elevation: 3,
-                                borderSide: const BorderSide(
-                                  color: Colors.transparent,
-                                  width: 0,
-                                ),
-                                borderRadius: 50,
                               ),
                             ),
                             Padding(
                               padding:
                               const EdgeInsetsDirectional.fromSTEB(17, 0, 0, 0),
-                              child: FFButtonWidget(
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    primary: const Color(0xFF809BCE),
+                                    minimumSize: const Size(170,52),
+                                    elevation: 3,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(3)),
+                                    )
+                                ),
                                 onPressed: () {
                                   print('Button pressed ...');
                                 },
-                                text: 'DRUG INTERACTIONS',
-                                options: FFButtonOptions(
-                                  width: 170,
-                                  height: 52,
-                                  color: const Color(0xFF809BCE),
-                                  textStyle: GoogleFonts.signikaNegative(
+                                child: Text(
+                                  'DRUG INTERACTIONS',
+                                  style: GoogleFonts.signikaNegative(
                                     color: Colors.white,
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
                                   ),
-                                  elevation: 3,
-                                  borderSide: const BorderSide(
-                                    color: Colors.transparent,
-                                    width: 0,
-                                  ),
-                                  borderRadius: 50,
                                 ),
                               ),
                             ),
@@ -256,26 +273,25 @@ class _MedicationSearchResultWidgetState
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            FFButtonWidget(
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  primary: const Color(0xFF809BCE),
+                                  minimumSize: const Size(96,52),
+                                  elevation: 3,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(3)),
+                                  )
+                              ),
                               onPressed: () {
                                 print('Button pressed ...');
                               },
-                              text: 'STORAGE',
-                              options: FFButtonOptions(
-                                width: 96,
-                                height: 52,
-                                color: const Color(0xFF809BCE),
-                                textStyle: GoogleFonts.signikaNegative(
+                              child: Text(
+                                'STORAGE',
+                                style: GoogleFonts.signikaNegative(
                                   color: Colors.white,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                 ),
-                                elevation: 3,
-                                borderSide: const BorderSide(
-                                  color: Colors.transparent,
-                                  width: 0,
-                                ),
-                                borderRadius: 50,
                               ),
                             ),
                           ],

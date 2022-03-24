@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   font_awesome_flutter: '>= 4.7.0'
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

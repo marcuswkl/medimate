@@ -23,6 +23,16 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
     searchFieldController1 = TextEditingController(text: 'Input');
     searchFieldController2 = TextEditingController(text: 'Input');
   }
+  String dropdownvalue = "Any Color";
+  var items = [
+      'White',
+      'Yellow',
+      'Blue',
+      'Green',
+      'Red'
+  ];
+  String dropdownvalue2 = "Any Shape";
+  var items2 = ['Round', 'Oval', 'Triangle'];
 
   @override
   Widget build(BuildContext context) {
@@ -200,58 +210,61 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 10, 0, 0),
-                                    child: FlutterFlowDropDown(
-                                      initialOption: dropDownValue1 ??=
-                                      'Any Color',
-                                      options: [
-                                        'White',
-                                        'Yellow',
-                                        'Blue',
-                                        'Green',
-                                        'Red'
-                                      ].toList(),
-                                      onChanged: (val) =>
-                                          setState(() => dropDownValue1 = val),
-                                      width: 150,
-                                      height: 35,
-                                      textStyle: GoogleFonts.signikaNegative(
+                                    // margin: const EdgeInsetsDirectional.fromSTEB(
+                                    //     12, 4, 12, 4),
+                                    child: DropdownButton(
+                                      value: dropdownvalue,
+                                      icon: const Icon(Icons.keyboard_arrow_down),
+                                      items: items.map((String items) {
+                                        return DropdownMenuItem(
+                                          value: items,
+                                          child: Text(items),
+                                        );
+                                      }).toList(),
+                                      onChanged: (String? val) {
+                                        setState(() {
+                                          dropdownvalue = val!;
+                                        });
+                                      },
+                                      // width: 150,
+                                      // height: 35,
+                                      style: GoogleFonts.signikaNegative(
                                         color: Colors.black,
                                       ),
-                                      hintText: 'Any Color',
-                                      fillColor: const Color(0xFFEDF1FB),
+                                      hint: const Text('Any Color'),
+                                      dropdownColor: const Color(0xFFEDF1FB),
                                       elevation: 2,
-                                      borderColor: Colors.transparent,
-                                      borderWidth: 0,
-                                      borderRadius: 0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
-                                          12, 4, 12, 4),
-                                      hidesUnderline: true,
+                                      // hidesUnderline: true,
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30, 10, 0, 0),
-                                    child: FlutterFlowDropDown(
-                                      initialOption: dropDownValue2 ??=
-                                      'Any Shape',
-                                      options: ['Round', 'Oval', 'Triangle']
-                                          .toList(),
-                                      onChanged: (val) =>
-                                          setState(() => dropDownValue2 = val),
-                                      width: 150,
-                                      height: 35,
-                                      textStyle: GoogleFonts.signikaNegative(
+                                    // margin: const EdgeInsetsDirectional.fromSTEB(
+                                    //     12, 4, 12, 4),
+                                    child: DropdownButton(
+                                      value: dropdownvalue2,
+                                      icon: const Icon(Icons.keyboard_arrow_down),
+                                      items: items.map((String items2) {
+                                        return DropdownMenuItem(
+                                          value: items2,
+                                          child: Text(items2),
+                                        );
+                                      }).toList(),
+                                      onChanged: (String? val2) {
+                                        setState(() {
+                                          dropdownvalue = val2!;
+                                        });
+                                      },
+                                      // width: 150,
+                                      // height: 35,
+                                      style: GoogleFonts.signikaNegative(
                                         color: Colors.black,
                                       ),
-                                      hintText: 'Any Shape',
-                                      fillColor: const Color(0xFFEDF1FB),
+                                      hint: const Text('Any Shape'),
+                                      dropdownColor: const Color(0xFFEDF1FB),
                                       elevation: 2,
-                                      borderColor: Colors.transparent,
-                                      borderWidth: 0,
-                                      borderRadius: 0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
-                                          12, 4, 12, 4),
-                                      hidesUnderline: true,
+                                      // hidesUnderline: true,
                                     ),
                                   ),
                                 ],
@@ -265,27 +278,25 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Padding(
-                              padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                              child: FFButtonWidget(
+                              padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    primary: const Color(0xFF809BCE),
+                                    minimumSize: const Size(107,34),
+                                    elevation: 3,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(3)),
+                                    )
+                                ),
                                 onPressed: () {
                                   print('Button pressed ...');
                                 },
-                                text: 'Search',
-                                options: FFButtonOptions(
-                                  width: 107,
-                                  height: 34,
-                                  color: const Color(0xFF809BCE),
-                                  textStyle: GoogleFonts.signikaNegative(
+                                child: Text(
+                                  'Search',
+                                  style: GoogleFonts.signikaNegative(
                                     color: Colors.white,
                                     fontSize: 18,
                                   ),
-                                  elevation: 3,
-                                  borderSide: const BorderSide(
-                                    color: Colors.transparent,
-                                    width: 0,
-                                  ),
-                                  borderRadius: 26.5,
                                 ),
                               ),
                             ),
@@ -304,8 +315,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                           children: [
                             TabBar(
                               labelColor: Colors.black,
-                              unselectedLabelColor:
-                              FlutterFlowTheme.of(context).grayLight,
+                              unselectedLabelColor: Colors.grey,
                               labelStyle: GoogleFonts.getFont(
                                 'Signika Negative',
                                 fontSize: 14,
