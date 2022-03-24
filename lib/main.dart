@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/search/how_to_swallow.dart';
 import 'view/search/medication_search.dart';
+import 'view/search/medication_search_result.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HowToSwallowWidget(key: UniqueKey()),
+      home: MedicationSearchResultWidget(key: UniqueKey()),
     );
   }
 }

@@ -18,15 +18,15 @@ class _MedicationSearchResultWidgetState
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
-            decoration: const BoxDecoration(
-              color: Color(0xFFEEEEEE),
-            ),
+      body: SingleChildScrollView(
+        // child: GestureDetector(
+        //   onTap: () => FocusScope.of(context).unfocus(),
+        //   child: Container(
+        //     width: MediaQuery.of(context).size.width,
+        //     height: MediaQuery.of(context).size.height * 1,
+        //     decoration: const BoxDecoration(
+        //       color: Color(0xFFEEEEEE),
+        //     ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,29 +107,6 @@ class _MedicationSearchResultWidgetState
                     style: GoogleFonts.signikaNegative(
                       color: Colors.black,
                       fontSize: 14,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF809BCE),
-                        minimumSize: const Size(107,34),
-                        elevation: 3,
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(3)),
-                        )
-                    ),
-                    onPressed: () {
-                      print('Button pressed ...');
-                    },
-                    child: Text(
-                      'Search',
-                      style: GoogleFonts.signikaNegative(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
                     ),
                   ),
                 ),
@@ -591,8 +568,8 @@ class _MedicationSearchResultWidgetState
               ],
             ),
           ),
-        ),
-      ),
+      //   ),
+      // ),
     );
   }
 }
