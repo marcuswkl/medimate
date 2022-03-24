@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -63,8 +62,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding:
-                            const EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 0.85,
                               decoration: BoxDecoration(
@@ -82,19 +80,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    16, 10, 16, 10),
+                                padding: const EdgeInsetsDirectional.fromSTEB(16, 10, 16, 10),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -104,16 +98,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               style: GoogleFonts.signikaNegative(
                                                 color: Colors.black,
                                                 fontSize: 16,
-                                                fontWeight:
-                                                FontWeight.normal,
+                                                fontWeight: FontWeight.normal,
                                               ),
                                             ),
                                           ],
                                         ),
                                         Padding(
-                                          padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0, 4, 0, 0),
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                           child: Text(
                                             'Benzonatate',
                                             style: GoogleFonts.signikaNegative(
@@ -127,57 +118,51 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.end,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
-                                        FFButtonWidget(
-                                          onPressed: () {
-                                            print('chatGuest pressed ...');
-                                          },
-                                          text: '2:00 PM',
-                                          options: FFButtonOptions(
-                                            width: 90,
-                                            height: 23,
-                                            color: const Color(0xFF95B8D1),
-                                            textStyle: GoogleFonts.signikaNegative(
-                                              color: Colors.white,
-                                              fontSize: 14,
-                                              fontWeight:
-                                              FontWeight.w500,
-                                            ),
-                                            elevation: 3,
-                                            borderSide: const BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1,
-                                            ),
-                                            borderRadius: 30,
-                                          ),
-                                        ),
                                         Padding(
-                                          padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0, 5, 0, 0),
-                                          child: FFButtonWidget(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              primary: const Color(0xFF95B8D1),
+                                              minimumSize: const Size(90,23),
+                                              elevation: 3,
+                                              shape: const RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(Radius.circular(2)),
+                                              )
+                                            ),
                                             onPressed: () {
-                                              print('chatGuest pressed ...');
+                                              print('Button pressed ...');
                                             },
-                                            text: 'After Lunch',
-                                            options: FFButtonOptions(
-                                              width: 110,
-                                              height: 25,
-                                              color: const Color(0xFF95B8D1),
-                                              textStyle: GoogleFonts.signikaNegative(
+                                            child: Text(
+                                                '2.00 PM',
+                                                style: GoogleFonts.signikaNegative(
+                                                  color: Colors.white,
+                                                  fontSize: 14,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                primary: const Color(0xFF95B8D1),
+                                                minimumSize: const Size(100,23),
+                                                elevation: 3,
+                                                shape: const RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.all(Radius.circular(2)),
+                                                )
+                                            ),
+                                            onPressed: () {
+                                              print('Button pressed ...');
+                                            },
+                                            child: Text(
+                                              'After Lunch',
+                                              style: GoogleFonts.signikaNegative(
                                                 color: Colors.white,
                                                 fontSize: 14,
-                                                fontWeight:
-                                                FontWeight.w500,
                                               ),
-                                              elevation: 3,
-                                              borderSide: const BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1,
-                                              ),
-                                              borderRadius: 30,
                                             ),
                                           ),
                                         ),
@@ -245,30 +230,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.end,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
                                       children: [
-                                        FFButtonWidget(
-                                          onPressed: () {
-                                            print('chatGuest pressed ...');
-                                          },
-                                          text: 'Medical Journal',
-                                          options: FFButtonOptions(
-                                            width: 115,
-                                            height: 46,
-                                            color: const Color(0xFF95B8D1),
-                                            textStyle: GoogleFonts.signikaNegative(
-                                              color: Colors.white,
-                                              fontSize: 14,
-                                              fontWeight:
-                                              FontWeight.w500,
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                primary: const Color(0xFF95B8D1),
+                                                minimumSize: const Size(115,46),
+                                                elevation: 3,
+                                                shape: const RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.all(Radius.circular(2)),
+                                                )
                                             ),
-                                            elevation: 3,
-                                            borderSide: const BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1,
+                                            onPressed: () {
+                                              print('Button pressed ...');
+                                            },
+                                            child: Text(
+                                              'Medical Journal',
+                                              style: GoogleFonts.signikaNegative(
+                                                color: Colors.white,
+                                                fontSize: 14,
+                                              ),
                                             ),
-                                            borderRadius: 30,
                                           ),
                                         ),
                                       ],
@@ -310,8 +294,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           children: [
                             TabBar(
                               labelColor: Colors.black,
-                              unselectedLabelColor:
-                              FlutterFlowTheme.of(context).grayLight,
+                              unselectedLabelColor: Colors.grey,
                               labelStyle:  GoogleFonts.signikaNegative(
                                 fontSize: 14,
                               ),

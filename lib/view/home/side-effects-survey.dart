@@ -357,29 +357,34 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(215, 16, 0, 0),
-                child: FFButtonWidget(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: const Color(0xFF95B8D1),
+                      minimumSize: const Size(90,23),
+                      elevation: 3,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(2)),
+                      )
+                  ),
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  text: 'Save',
-                  icon: const Icon(
-                    Icons.save,
-                    size: 15,
-                  ),
-                  options: FFButtonOptions(
-                    width: 130,
-                    height: 40,
-                    color: const Color(0xFF8090BE),
-                    textStyle:  GoogleFonts.signikaNegative(
-                      color: Colors.white,
-                    ),
-                    elevation: 3,
-                    borderSide: const BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: 50,
-                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        '2.00 PM',
+                        style: GoogleFonts.signikaNegative(
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const Icon(
+                        Icons.save,
+                        size: 15,
+                      ),
+                    ],
+                  )
                 ),
               ),
             ],
