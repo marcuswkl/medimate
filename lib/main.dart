@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view/home/homepage.dart';
-import 'view/home/side-effects-survey.dart';
+import 'view/home/side_effects_survey.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePageWidget(key: UniqueKey()),
+      home: SideEffectsSurveyWidget(key: UniqueKey()),
     );
   }
 }
