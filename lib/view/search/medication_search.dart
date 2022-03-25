@@ -27,6 +27,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
@@ -288,7 +289,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                       }).toList(),
                                       onChanged: (String? val) {
                                         setState(() {
-                                          dropDownValue1 = val!;
+                                          dropDownValue2 = val!;
                                         });
                                       },
                                       // height: 35,
