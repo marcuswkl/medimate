@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MedicationResultWidget(key: UniqueKey()),
+      home: MedicationSearchResultWidget(key: UniqueKey()),
     );
   }
 }
