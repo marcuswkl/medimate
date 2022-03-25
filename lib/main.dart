@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medimate/view/medication-details/medication_list.dart';
+import 'view/medication-details/add_medication_1.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,8 +8,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MedicationList(),
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: AddMedication1(),
+        ),
+      ),
     );
   }
 }
