@@ -378,15 +378,16 @@ class _AddMedication1State extends State<AddMedication1> {
                                           width: 140,
                                           height: 35,
                                           color: const Color(0xFF809BCE),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .subtitle2
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: Colors.white,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          textStyle: GoogleFonts.signikaNegative(
+                                                      color: Colors.white,
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.normal,
+                                                      ),
+                                          //FlutterFlowTheme.of(context).subtitle2.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: Colors.white,
+                                                //fontSize: 14,
+                                                //fontWeight: FontWeight.normal,),
                                           borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1,
@@ -404,12 +405,12 @@ class _AddMedication1State extends State<AddMedication1> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                       child: Text(
                                         'STEP 5: Medication Provider Name',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Signika Negative',
-                                              color: Colors.black,
-                                            ),
+                                        style: GoogleFonts.signikaNegative(
+                                                color: Colors.black,
+                                                ),
+                                        //FlutterFlowTheme.of(context).bodyText1.override(
+                                              //fontFamily: 'Signika Negative',
+                                              //color: Colors.black,),
                                       ),
                                     ),
                                   ],
@@ -425,17 +426,16 @@ class _AddMedication1State extends State<AddMedication1> {
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelText: 'Enter Provider Name',
-                                            labelStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                      fontFamily:
-                                                          'Signika Negative',
-                                                      color: const Color(0xFF57636C),
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                    ),
+                                            labelStyle: GoogleFonts.signikaNegative(
+                                                          color: const Color(0xFF57636C),
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.normal,
+                                                          ),
+                                                //FlutterFlowTheme.of(context).bodyText1.override(
+                                                      //fontFamily:'Signika Negative',
+                                                      //color: const Color(0xFF57636C),
+                                                      //fontSize: 14,
+                                                      //fontWeight:FontWeight.normal,),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -456,14 +456,16 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: const Color(0xFF1D2429),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF1D2429),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
+                                          //FlutterFlowTheme.of(context).bodyText1.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: const Color(0xFF1D2429),
+                                                //fontSize: 14,
+                                                //fontWeight: FontWeight.normal,),
                                         ),
                                       ),
                                     ),
@@ -476,12 +478,12 @@ class _AddMedication1State extends State<AddMedication1> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                       child: Text(
                                         'STEP 6: Medication Provider Contact',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Signika Negative',
-                                              color: Colors.black,
-                                            ),
+                                        style: GoogleFonts.signikaNegative(
+                                                color: Colors.black,
+                                                ),
+                                        //FlutterFlowTheme.of(context).bodyText1.override(
+                                              //fontFamily: 'Signika Negative',
+                                              //color: Colors.black,),
                                       ),
                                     ),
                                   ],
@@ -497,17 +499,16 @@ class _AddMedication1State extends State<AddMedication1> {
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelText: 'Enter Provider Contact',
-                                            labelStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1
-                                                    .override(
-                                                      fontFamily:
-                                                          'Signika Negative',
-                                                      color: const Color(0xFF57636C),
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                    ),
+                                            labelStyle: GoogleFonts.signikaNegative(
+                                                          color: const Color(0xFF57636C),
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.normal,
+                                                          ),
+                                                //FlutterFlowTheme.of(context).bodyText1.override(
+                                                      //fontFamily:'Signika Negative',
+                                                      //color: const Color(0xFF57636C),
+                                                      //fontSize: 14,
+                                                      //fontWeight: FontWeight.normal,),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -528,14 +529,16 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: const Color(0xFF1D2429),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF1D2429),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
+                                          //FlutterFlowTheme.of(context).bodyText1.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: const Color(0xFF1D2429),
+                                                //fontSize: 14,
+                                                //fontWeight: FontWeight.normal,),
                                         ),
                                       ),
                                     ),
