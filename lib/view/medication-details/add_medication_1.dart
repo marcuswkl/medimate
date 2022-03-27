@@ -559,16 +559,17 @@ class _AddMedication1State extends State<AddMedication1> {
                                         options: FFButtonOptions(
                                           width: 300,
                                           height: 40,
-                                          color: Color(0xFF809BCE),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .subtitle2
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: Colors.white,
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          color: const Color(0xFF809BCE),
+                                          textStyle: GoogleFonts.signikaNegative(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.normal,
+                                                      ),
+                                          //FlutterFlowTheme.of(context).subtitle2.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: Colors.white,
+                                                //fontSize: 18,
+                                                //fontWeight: FontWeight.normal,),
                                           elevation: 5,
                                           borderSide: const BorderSide(
                                             color: Colors.transparent,
