@@ -644,8 +644,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Row(
                                         children: [

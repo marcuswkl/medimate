@@ -12,6 +12,8 @@ class _AddMedication2State extends State<AddMedication2> {
   late String dropDownValue;
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
+  List<String> medTypes = ['Pills', 'Solution', 'Drops', 'Injections', 'Powder', 'Others'];
+  String? selectedMedType = 'Pills';
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -40,16 +42,15 @@ class _AddMedication2State extends State<AddMedication2> {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 18,
-                          buttonSize: 48,
-                          fillColor: const Color(0xFF809BCE),
+                        IconButton(
+                          //borderRadius: BorderRadius.all(18),
+                          //fillColor: Color(0xFF809BCE),
+                          iconSize: 30,
+                          color: const Color(0xFF809BCE),
                           icon: const Icon(
                             Icons.keyboard_arrow_left,
                             color: Colors.white,
-                            size: 30,
-                          ),
+                          ), 
                           onPressed: () {},
                         ),
                         Padding(
@@ -202,13 +203,16 @@ class _AddMedication2State extends State<AddMedication2> {
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelText: 'Enter Number of Days',
-                                            labelStyle:
-                                                FlutterFlowTheme.of(context).bodyText1.override(
-                                                      fontFamily:'Signika Negative',
-                                                      color: const Color(0xFF57636C),
-                                                      fontSize: 14,
-                                                      fontWeight:FontWeight.normal,
-                                                    ),
+                                            labelStyle: GoogleFonts.signikaNegative(
+                                                          color: const Color(0xFF57636C),
+                                                          fontSize: 14,
+                                                          fontWeight: FontWeight.normal,
+                                                          ),
+                                                //FlutterFlowTheme.of(context).bodyText1.override(
+                                                      //fontFamily:'Signika Negative',
+                                                      //color: const Color(0xFF57636C),
+                                                      //fontSize: 14,
+                                                      //fontWeight:FontWeight.normal,),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -229,14 +233,16 @@ class _AddMedication2State extends State<AddMedication2> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: const Color(0xFF1D2429),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF1D2429),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
+                                          //FlutterFlowTheme.of(context).bodyText1.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: const Color(0xFF1D2429),
+                                                //fontSize: 14,
+                                                //fontWeight: FontWeight.normal,),
                                         ),
                                       ),
                                     ),
@@ -246,16 +252,17 @@ class _AddMedication2State extends State<AddMedication2> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const dgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                       child: Text(
                                         'STEP 3: Medication Type',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Signika Negative',
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w600,
-                                            ),
+                                        style: GoogleFonts.signikaNegative(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w600,
+                                                ),
+                                        //FlutterFlowTheme.of(context).bodyText1.override(
+                                              //fontFamily: 'Signika Negative',
+                                              //color: Colors.black,
+                                              //fontWeight: FontWeight.w600,),
                                       ),
                                     ),
                                   ],
@@ -265,38 +272,32 @@ class _AddMedication2State extends State<AddMedication2> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                      child: FlutterFlowDropDown(
-                                        options: [
-                                          'Pills',
-                                          'Solution',
-                                          'Drops',
-                                          'Injections',
-                                          'Powder',
-                                          'Others'
-                                        ].toList(),
-                                        onChanged: (val) =>
-                                            setState(() => dropDownValue = val),
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.89,
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width *0.89,
                                         height: 50,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Signika Negative',
-                                              color: const Color(0xFF1D2429),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
+                                        
+                                        child: DropdownButtonFormField<String>(
+                                          decoration: const InputDecoration(
+                                            fillColor: Color(0xFFE7E0EC),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(Radius.circular(8)),
+                                              )
+                                          ),
+                                          value: selectedMedType,
+                                          items: medTypes.map((item) => DropdownMenuItem<String>(
+                                            value: item,
+                                            child: Text(
+                                              item,
+                                              style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF1D2429),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
                                             ),
-                                        hintText: 'Choose Medication Type',
-                                        fillColor: const Color(0xFFE7E0EC),
-                                        elevation: 2,
-                                        borderColor: Colors.transparent,
-                                        borderWidth: 0,
-                                        borderRadius: 8,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(20, 4, 10, 4),
-                                        hidesUnderline: true,
-                                      ),
+                                          )).toList(),
+                                        onChanged: (item) => setState(() => selectedMedType = item),
+                                        ),
+                                      )
                                     ),
                                   ],
                                 ),
@@ -304,33 +305,62 @@ class _AddMedication2State extends State<AddMedication2> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      FFButtonWidget(
-                                        onPressed: () {},
-                                        text: 'NEXT',
-                                        options: FFButtonOptions(
-                                          width: 300,
-                                          height: 40,
-                                          color: const Color(0xFF809BCE),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .subtitle2
-                                              .override(
-                                                fontFamily: 'Signika Negative',
-                                                color: Colors.white,
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.normal,
-                                              ),
-                                          elevation: 5,
-                                          borderSide: const BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1,
+                                      ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                              primary: const Color(0xFF809BCE),
+                                              minimumSize: const Size(300,40),
+                                              elevation: 5,
+                                              shape: const RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                              )
+                                            ),
+                                            onPressed: (){},
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                  child: Text(
+                                                    'NEXT',
+                                                    style: GoogleFonts.signikaNegative(
+                                                            color: Colors.white,
+                                                            fontSize: 18,
+                                                            fontWeight: FontWeight.normal,
+                                                            ),
+                                                    )
+                                                  ),
+                                              ],
+                                            ),
                                           ),
-                                          borderRadius: 10,
-                                        ),
-                                      ),
+
+                                      //FFButtonWidget(
+                                        //onPressed: () {},
+                                       // text: 'NEXT',
+                                       // options: FFButtonOptions(
+                                          //width: 300,
+                                          //height: 40,
+                                          //color: const Color(0xFF809BCE),
+                                          //textStyle: GoogleFonts.signikaNegative(
+                                                     // color: Colors.white,
+                                                     // fontSize: 18,
+                                                     // fontWeight: FontWeight.normal,
+                                                      //),
+                                          //FlutterFlowTheme.of(context).subtitle2.override(
+                                                //fontFamily: 'Signika Negative',
+                                                //color: Colors.white,
+                                                //fontSize: 18,
+                                                //fontWeight: FontWeight.normal,),
+                                          //elevation: 5,
+                                         // borderSide: const BorderSide(
+                                            //color: Colors.transparent,
+                                            //width: 1,
+                                          //),
+                                          //borderRadius: 10,
+                                        //),
+                                      //),
+                                      
                                     ],
                                   ),
                                 ),
