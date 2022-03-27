@@ -64,9 +64,9 @@ class _AddMedication1State extends State<AddMedication1> {
                             'Add Medication',
                             textAlign: TextAlign.start,
                             style: GoogleFonts.fredokaOne(
-                              color: Colors.black,
-                              fontSize: 22,
-                            ),
+                                    color: Colors.black,
+                                    fontSize: 22,
+                                  ),
                             //FlutterFlowTheme.of(context).bodyText1.override(
                                       //fontFamily: 'Fredoka One',
                                       //color: Colors.black,
@@ -290,6 +290,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                           ),
                                           value: selectedMedType,
                                           items: medTypes.map((item) => DropdownMenuItem<String>(
+                                            value: item,
                                             child: Text(
                                               item,
                                               style: GoogleFonts.signikaNegative(
