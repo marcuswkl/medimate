@@ -80,7 +80,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                   ),
                                   hintText: 'Input',
                                   hintStyle: GoogleFonts.signikaNegative(
-                                    color: const Color(0x98FFFFFF),
+                                    color: const Color(0xff393939),
                                   ),
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: const BorderSide(
@@ -157,7 +157,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                     ),
                                     hintText: 'Input',
                                     hintStyle: GoogleFonts.signikaNegative(
-                                      color: const Color(0x98FFFFFF),
+                                      color: const Color(0xff393939),
                                     ),
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: const BorderSide(
@@ -363,7 +363,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                               const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                           child: Container(
                             width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height * 0.35,
+                            height: MediaQuery.of(context).size.height * 0.31,
                             decoration: const BoxDecoration(
                               color: Colors.white,
                             ),
