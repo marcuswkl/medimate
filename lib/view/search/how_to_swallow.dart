@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HowToSwallowWidget extends StatefulWidget {
-  const HowToSwallowWidget({required Key key}) : super(key: key);
+  const HowToSwallowWidget({Key? key}) : super(key: key);
 
   @override
   _HowToSwallowWidgetState createState() => _HowToSwallowWidgetState();
@@ -23,7 +23,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20, 15, 20, 15),
+            padding: const EdgeInsetsDirectional.fromSTEB(20, 15, 20, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -95,8 +95,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                   Expanded(
                                     flex: 9,
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          15, 1, 15, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              15, 1, 15, 0),
                                       child: Material(
                                         color: Colors.transparent,
                                         elevation: 10,
@@ -110,33 +111,39 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 25, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                        25, 20, 25, 0),
                                                 child: Text(
                                                   'Pop-bottle method',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 20,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 3, 25, 3),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(25, 3, 25, 3),
                                                 child: Text(
                                                   '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color:
-                                                    const Color(0x98000000),
+                                                        const Color(0x98000000),
                                                     fontSize: 14,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(0, 15, 0, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(0, 15, 0, 0),
                                                 child: Image.network(
                                                   'https://picsum.photos/seed/178/600',
                                                   width: 170,
@@ -161,8 +168,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                   Expanded(
                                     flex: 9,
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          15, 1, 15, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              15, 1, 15, 0),
                                       child: Material(
                                         color: Colors.transparent,
                                         elevation: 10,
@@ -176,33 +184,39 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 25, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                        25, 20, 25, 0),
                                                 child: Text(
                                                   'Pop-bottle method',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 20,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 3, 25, 3),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(25, 3, 25, 3),
                                                 child: Text(
                                                   '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color:
-                                                    const Color(0x98000000),
+                                                        const Color(0x98000000),
                                                     fontSize: 14,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(0, 15, 0, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(0, 15, 0, 0),
                                                 child: Image.network(
                                                   'https://picsum.photos/seed/178/600',
                                                   width: 170,
@@ -227,8 +241,9 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                   Expanded(
                                     flex: 9,
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          15, 1, 15, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              15, 1, 15, 0),
                                       child: Material(
                                         color: Colors.transparent,
                                         elevation: 10,
@@ -242,33 +257,39 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 20, 25, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                        25, 20, 25, 0),
                                                 child: Text(
                                                   'Pop-bottle method',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 20,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(25, 3, 25, 3),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(25, 3, 25, 3),
                                                 child: Text(
                                                   '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
                                                   textAlign: TextAlign.justify,
-                                                  style: GoogleFonts.signikaNegative(
+                                                  style: GoogleFonts
+                                                      .signikaNegative(
                                                     color:
-                                                    const Color(0x98000000),
+                                                        const Color(0x98000000),
                                                     fontSize: 14,
                                                   ),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(0, 15, 0, 0),
+                                                padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(0, 15, 0, 0),
                                                 child: Image.network(
                                                   'https://picsum.photos/seed/178/600',
                                                   width: 170,
@@ -291,7 +312,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                           alignment: const AlignmentDirectional(0, 1.1),
                           child: SmoothPageIndicator(
                             controller: pageViewController1,
-                              //??= PageController(initialPage: 0),
+                            //??= PageController(initialPage: 0),
                             count: 3,
                             axisDirection: Axis.horizontal,
                             onDotClicked: (i) {
@@ -334,7 +355,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 15, 25),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(15, 0, 15, 25),
                     child: SizedBox(
                       width: double.infinity,
                       height: 290,
@@ -352,11 +374,12 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              10, 10, 10, 0),
                                       child: Container(
                                         width:
-                                        MediaQuery.of(context).size.width,
+                                            MediaQuery.of(context).size.width,
                                         height: 100,
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -375,7 +398,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             )
                                           ],
                                           borderRadius:
-                                          BorderRadius.circular(15),
+                                              BorderRadius.circular(15),
                                           border: Border.all(
                                             color: Colors.transparent,
                                           ),
@@ -385,33 +408,35 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
-                                          MainAxisAlignment.end,
+                                              MainAxisAlignment.end,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(20, 0, 20, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(20, 0, 20, 0),
                                               child: Text(
                                                 'Why do people find swallowing pills difficult?',
                                                 textAlign: TextAlign.left,
-                                                style: GoogleFonts.signikaNegative(
+                                                style:
+                                                    GoogleFonts.signikaNegative(
                                                   color: Colors.white,
                                                   fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 15),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(0, 5, 0, 15),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.access_time_rounded,
                                                       color: Colors.white,
@@ -420,26 +445,27 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.assignment_ind,
                                                       color: Colors.white,
@@ -448,18 +474,19 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
@@ -480,11 +507,12 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              10, 10, 10, 0),
                                       child: Container(
                                         width:
-                                        MediaQuery.of(context).size.width,
+                                            MediaQuery.of(context).size.width,
                                         height: 100,
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -503,7 +531,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             )
                                           ],
                                           borderRadius:
-                                          BorderRadius.circular(15),
+                                              BorderRadius.circular(15),
                                           border: Border.all(
                                             color: Colors.transparent,
                                           ),
@@ -513,33 +541,35 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
-                                          MainAxisAlignment.end,
+                                              MainAxisAlignment.end,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(20, 0, 20, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(20, 0, 20, 0),
                                               child: Text(
                                                 'Why do people find swallowing pills difficult?',
                                                 textAlign: TextAlign.left,
-                                                style: GoogleFonts.signikaNegative(
+                                                style:
+                                                    GoogleFonts.signikaNegative(
                                                   color: Colors.white,
                                                   fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 15),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(0, 5, 0, 15),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.access_time_rounded,
                                                       color: Colors.white,
@@ -548,26 +578,27 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.assignment_ind,
                                                       color: Colors.white,
@@ -576,18 +607,19 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
@@ -608,11 +640,12 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              10, 10, 10, 0),
                                       child: Container(
                                         width:
-                                        MediaQuery.of(context).size.width,
+                                            MediaQuery.of(context).size.width,
                                         height: 100,
                                         decoration: BoxDecoration(
                                           color: Colors.white,
@@ -631,7 +664,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             )
                                           ],
                                           borderRadius:
-                                          BorderRadius.circular(15),
+                                              BorderRadius.circular(15),
                                           border: Border.all(
                                             color: Colors.transparent,
                                           ),
@@ -641,33 +674,35 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
-                                          MainAxisAlignment.end,
+                                              MainAxisAlignment.end,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(20, 0, 20, 0),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(20, 0, 20, 0),
                                               child: Text(
                                                 'Why do people find swallowing pills difficult?',
                                                 textAlign: TextAlign.left,
-                                                style: GoogleFonts.signikaNegative(
+                                                style:
+                                                    GoogleFonts.signikaNegative(
                                                   color: Colors.white,
                                                   fontSize: 23,
-                                                  fontWeight:
-                                                  FontWeight.w600,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 15),
+                                              padding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(0, 5, 0, 15),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.access_time_rounded,
                                                       color: Colors.white,
@@ -676,26 +711,27 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
                                                   const Padding(
                                                     padding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        20, 0, 0, 0),
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                20, 0, 0, 0),
                                                     child: Icon(
                                                       Icons.assignment_ind,
                                                       color: Colors.white,
@@ -704,18 +740,19 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                        5, 0, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                            5, 0, 0, 0),
                                                     child: Text(
                                                       '5 mins read',
                                                       textAlign:
-                                                      TextAlign.justify,
-                                                      style: GoogleFonts.signikaNegative(
+                                                          TextAlign.justify,
+                                                      style: GoogleFonts
+                                                          .signikaNegative(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                         fontWeight:
-                                                        FontWeight.w500,
+                                                            FontWeight.w500,
                                                       ),
                                                     ),
                                                   ),
@@ -770,4 +807,3 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
     );
   }
 }
-

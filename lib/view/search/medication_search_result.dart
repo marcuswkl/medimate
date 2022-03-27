@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MedicationSearchResultWidget extends StatefulWidget {
-  const MedicationSearchResultWidget({required Key key}) : super(key: key);
+  const MedicationSearchResultWidget({Key? key}) : super(key: key);
 
   @override
   _MedicationSearchResultWidgetState createState() =>
@@ -22,7 +22,7 @@ class _MedicationSearchResultWidgetState
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20, 15, 20, 15),
+            padding: const EdgeInsetsDirectional.fromSTEB(20, 15, 20, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -42,7 +42,8 @@ class _MedicationSearchResultWidgetState
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
                         child: IconButton(
                           iconSize: 60,
                           color: const Color(0x00FCFCFC),
@@ -75,7 +76,8 @@ class _MedicationSearchResultWidgetState
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                           child: Image.network(
                             'https://picsum.photos/seed/970/600',
                             width: 179,
@@ -118,12 +120,12 @@ class _MedicationSearchResultWidgetState
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                       primary: const Color(0xFF809BCE),
-                                      minimumSize: const Size(71,35),
+                                      minimumSize: const Size(71, 35),
                                       elevation: 3,
                                       shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                                      )
-                                  ),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20)),
+                                      )),
                                   onPressed: () {
                                     print('Button pressed ...');
                                   },
@@ -136,7 +138,6 @@ class _MedicationSearchResultWidgetState
                                     ),
                                   ),
                                 ),
-
                               ),
                               Expanded(
                                 flex: 3,
@@ -146,12 +147,12 @@ class _MedicationSearchResultWidgetState
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                         primary: const Color(0xFF809BCE),
-                                        minimumSize: const Size(89,35),
+                                        minimumSize: const Size(89, 35),
                                         elevation: 3,
                                         shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                                        )
-                                    ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        )),
                                     onPressed: () {
                                       print('Button pressed ...');
                                     },
@@ -174,12 +175,12 @@ class _MedicationSearchResultWidgetState
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                         primary: const Color(0xFF809BCE),
-                                        minimumSize: const Size(116,35),
+                                        minimumSize: const Size(116, 35),
                                         elevation: 3,
                                         shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                                        )
-                                    ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        )),
                                     onPressed: () {
                                       print('Button pressed ...');
                                     },
@@ -197,7 +198,8 @@ class _MedicationSearchResultWidgetState
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -207,12 +209,12 @@ class _MedicationSearchResultWidgetState
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                         primary: const Color(0xFF809BCE),
-                                        minimumSize: const Size(121,35),
+                                        minimumSize: const Size(121, 35),
                                         elevation: 3,
                                         shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                                        )
-                                    ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        )),
                                     onPressed: () {
                                       print('Button pressed ...');
                                     },
@@ -229,17 +231,18 @@ class _MedicationSearchResultWidgetState
                                 Expanded(
                                   flex: 5,
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        17, 0, 0, 0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            17, 0, 0, 0),
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                           primary: const Color(0xFF809BCE),
-                                          minimumSize: const Size(170,35),
+                                          minimumSize: const Size(170, 35),
                                           elevation: 3,
                                           shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                                          )
-                                      ),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(20)),
+                                          )),
                                       onPressed: () {
                                         print('Button pressed ...');
                                       },
@@ -258,7 +261,8 @@ class _MedicationSearchResultWidgetState
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -267,12 +271,12 @@ class _MedicationSearchResultWidgetState
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                         primary: const Color(0xFF809BCE),
-                                        minimumSize: const Size(116,35),
+                                        minimumSize: const Size(116, 35),
                                         elevation: 3,
                                         shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                                        )
-                                    ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20)),
+                                        )),
                                     onPressed: () {
                                       print('Button pressed ...');
                                     },
@@ -307,7 +311,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -351,7 +356,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -395,7 +401,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -439,7 +446,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -483,7 +491,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -527,7 +536,8 @@ class _MedicationSearchResultWidgetState
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Material(
                             color: Colors.transparent,
                             elevation: 8,
@@ -566,4 +576,3 @@ class _MedicationSearchResultWidgetState
     );
   }
 }
-
