@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/Medication_Schedule/Schedule.dart';
+import 'view/Medication_Schedule/Profile2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: const Center(
-          child: Schedule(),
+          child: Profile(),
         ),
       ),
     );
