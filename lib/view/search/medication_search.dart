@@ -21,8 +21,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
   @override
   void initState() {
     super.initState();
-    searchFieldController1 = TextEditingController(text: '');
-    searchFieldController2 = TextEditingController(text: '');
+    searchFieldController1 = TextEditingController();
+    searchFieldController2 = TextEditingController();
   }
 
   @override
@@ -108,10 +108,15 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                     color: Colors.black,
                                     size: 24,
                                   ),
-                                  suffixIcon: const Icon(
-                                    Icons.highlight_off,
-                                    color: Colors.black,
-                                    size: 24,
+                                  suffixIcon: IconButton(
+                                    icon: const Icon(
+                                      Icons.clear,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
+                                    onPressed: () {
+                                      searchFieldController1.clear();
+                                    },
                                   ),
                                 ),
                                 style: GoogleFonts.signikaNegative(
@@ -185,11 +190,16 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                       color: Colors.black,
                                       size: 24,
                                     ),
-                                    suffixIcon: const Icon(
-                                      Icons.highlight_off,
-                                      color: Colors.black,
-                                      size: 24,
-                                    ),
+                                    suffixIcon: IconButton(
+                                  icon: const Icon(
+                                  Icons.clear,
+                                    color: Colors.black,
+                                    size: 24,
+                                  ),
+                                  onPressed: () {
+                                    searchFieldController2.clear();
+                                  },
+                                ),
                                   ),
                                   style: GoogleFonts.signikaNegative(
                                     color: Colors.black,
@@ -908,9 +918,9 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                           children: [
                             IconButton(
                               iconSize: 50,
-                              icon: const FaIcon(
+                              icon: FaIcon(
                                 FontAwesomeIcons.solidQuestionCircle,
-                                color: Color(0xFF809BCE),
+                                color: const Color(0xFF809BCE),
                                 size: 30,
                                 //borderRadius: 30,
                                 // buttonSize: 50,
