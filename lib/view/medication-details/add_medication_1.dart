@@ -380,10 +380,10 @@ class _AddMedication1State extends State<AddMedication1> {
                                               children: [
                                                 const Icon(
                                                   Icons.upload_sharp,
-                                                  size: 15,
+                                                  size: 18,
                                                   ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                                   child: Text(
                                                     'Upload',
                                                     style: GoogleFonts.signikaNegative(
@@ -444,10 +444,10 @@ class _AddMedication1State extends State<AddMedication1> {
                                               children: [
                                                 const Icon(
                                                   Icons.photo_camera,
-                                                  size: 15,
+                                                  size: 18,
                                                   ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                                   child: Text(
                                                     'Take Photo',
                                                     style: GoogleFonts.signikaNegative(
