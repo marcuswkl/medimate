@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/medication-details/add_medication_1.dart';
 import 'view/medication-details/add_medication_2.dart';
+import 'view/medication-details/add_medication_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: AddMedication2(),
+          child: AddMedication3(),
         ),
       ),
     );

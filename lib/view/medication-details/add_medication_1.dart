@@ -10,7 +10,6 @@ class AddMedication1 extends StatefulWidget {
 }
 
 class _AddMedication1State extends State<AddMedication1> {
-  late String dropDownValue;
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
   late TextEditingController formInputController3;

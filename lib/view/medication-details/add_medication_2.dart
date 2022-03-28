@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'add_medication_1.dart';
+import 'add_medication_3.dart';
 
 class AddMedication2 extends StatefulWidget {
   const AddMedication2({Key? key}) : super(key: key);
@@ -10,7 +11,6 @@ class AddMedication2 extends StatefulWidget {
 }
 
 class _AddMedication2State extends State<AddMedication2> {
-  late String dropDownValue;
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
   String? dropDownValue1 = 'Pills';
@@ -350,7 +350,10 @@ class _AddMedication2State extends State<AddMedication2> {
                                                 borderRadius: BorderRadius.all(Radius.circular(10)),
                                               )
                                             ),
-                                            onPressed: (){},
+                                            onPressed: (){
+                                              Navigator.push(context,
+                                              MaterialPageRoute(builder: (context) => const AddMedication3()));
+                                              },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
