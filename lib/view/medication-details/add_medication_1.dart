@@ -49,12 +49,12 @@ class _AddMedication1State extends State<AddMedication1> {
                         IconButton(
                           //borderRadius: BorderRadius.all(18),
                           //fillColor: Color(0xFF809BCE),
-                          iconSize: 30,
+                          iconSize: 40,
                           color: const Color(0xFF809BCE),
                           icon: const Icon(
                             Icons.keyboard_arrow_left,
                             color: Colors.white,
-                            size: 30,
+                            size: 20,
                           ), 
                           onPressed: () {},
                         ),
