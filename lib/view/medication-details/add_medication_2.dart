@@ -42,17 +42,38 @@ class _AddMedication2State extends State<AddMedication2> {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        IconButton(
-                          iconSize: 42,
-                          color: const Color(0xFF809BCE),
-                          icon: const Icon(
-                            Icons.chevron_left,
-                            color: Colors.white,
-                            size: 25,
-                            // borderRadius: 16,
+                        // Back button
+                        Material(
+                          color: Colors.transparent,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
                           ),
-                            onPressed: () {},
+                          child: Container(
+                            width: 42,
+                            height: 42,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF809BCE),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                              child: IconButton(
+                                iconSize: 60,
+                                color: const Color(0x00FCFCFC),
+                                icon: const Icon(
+                                  Icons.arrow_back_ios_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                onPressed: () {
+                                  //Navigator.push(context,
+                                  //MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
+                                },
+                              ),
+                            ),
                           ),
+                        ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                           child: Text(
