@@ -265,10 +265,10 @@ class _AddMedication1State extends State<AddMedication1> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                      
                                       child: SizedBox(
                                         width: MediaQuery.of(context).size.width *0.89,
                                         height: 50,
-                                        
                                         child: DropdownButtonFormField<String>(
                                           isDense: true,
                                           decoration: const InputDecoration(
