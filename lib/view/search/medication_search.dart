@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'medication_search_result.dart';
+import 'how_to_swallow.dart';
 
 class MedicationResultWidget extends StatefulWidget {
   const MedicationResultWidget({Key? key}) : super(key: key);
@@ -213,7 +215,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                         maxHeight: 35,
                                       ),
                                       decoration: const BoxDecoration(
-                                        color: const Color(0xFFEDF1FB),
+                                        color: Color(0xFFEDF1FB),
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional
@@ -340,7 +342,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                     Radius.circular(15)),
                                               )),
                                           onPressed: () {
-                                            print('Button pressed ...');
+                                            Navigator.push(context,
+                                            MaterialPageRoute(builder: (context) => const MedicationSearchResultWidget()));
                                           },
                                           child: Text(
                                             'Search',
@@ -913,7 +916,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                 // buttonSize: 50,
                               ),
                               onPressed: () {
-                                print('IconButton pressed ...');
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => const HowToSwallowWidget()));
                               },
                             ),
                             Padding(

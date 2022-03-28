@@ -4,18 +4,20 @@ import 'view/search/medication_search.dart';
 import 'view/search/medication_search_result.dart';
 
 class Nav extends StatefulWidget {
+  const Nav({Key? key}) : super(key: key);
+
   @override
   _NavState createState() => _NavState();
 }
 
 class _NavState extends State<Nav> {
   int _selectedIndex = 0;
-  List<Widget> _widgetOptions = <Widget>[
-    MedicationResultWidget(),
-    MedicationSearchResultWidget(),
-    HowToSwallowWidget(),
-    MedicationResultWidget(),
-    MedicationSearchResultWidget(),
+  final List<Widget> _widgetOptions = <Widget>[
+    const MedicationResultWidget(),
+    const MedicationSearchResultWidget(),
+    const HowToSwallowWidget(),
+    const MedicationResultWidget(),
+    const MedicationSearchResultWidget(),
   ];
 
   void _onItemTap(int index) {
@@ -36,7 +38,7 @@ class _NavState extends State<Nav> {
           primaryColor: Colors.white),
        child: BottomNavigationBar(
         selectedItemColor: Colors.white,
-        unselectedItemColor: const Color(0xFFE8E8E8FF),
+        unselectedItemColor: const Color(0xFFE8E8FF),
         // backgroundColor: const Color(0xFF809BCE),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'medication_search.dart';
 
 class MedicationSearchResultWidget extends StatefulWidget {
   const MedicationSearchResultWidget({Key? key}) : super(key: key);
@@ -69,7 +70,8 @@ class _MedicationSearchResultWidgetState
                             size: 20,
                           ),
                           onPressed: () {
-                            print('IconButton pressed ...');
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
                           },
                         ),
                       ),
@@ -337,7 +339,7 @@ class _MedicationSearchResultWidgetState
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         10, 10, 10, 10),
                                     child: Text(
-                                      'Rosuvastatin is used along with a proper diet to help lower \"bad\" cholesterol and fats (such as LDL, triglycerides) and raise \"good\" cholesterol (HDL) in the blood. ',
+                                      'Rosuvastatin is used along with a proper diet to help lower "bad" cholesterol and fats (such as LDL, triglycerides) and raise "good" cholesterol (HDL) in the blood. ',
                                       textAlign: TextAlign.justify,
                                       style: GoogleFonts.signikaNegative(
                                         color: const Color(0x98000000),
