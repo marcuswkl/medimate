@@ -12,8 +12,7 @@ class _AddMedication2State extends State<AddMedication2> {
   late String dropDownValue;
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
-  List<String> medTypes = ['Pills', 'Solution', 'Drops', 'Injections', 'Powder', 'Others'];
-  String? selectedMedType = 'Pills';
+  String? dropDownValue1 = 'Pills';
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -67,8 +66,8 @@ class _AddMedication2State extends State<AddMedication2> {
                                   size: 20,
                                 ),
                                 onPressed: () {
-                                  //Navigator.push(context,
-                                  //MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
+                                  Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
                                 },
                               ),
                             ),
@@ -146,7 +145,6 @@ class _AddMedication2State extends State<AddMedication2> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
                                           obscureText: false,
-                                          controller: TextEditingController(text: 'Enter Medication Name'),
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
                                                   fontSize: 14,
@@ -158,6 +156,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                       //color: const Color(0xFF57636C),
                                                       //fontSize: 14,
                                                       //fontWeight:FontWeight.normal,),
+                                            hintText: 'Enter Medication Stock',
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -215,7 +214,6 @@ class _AddMedication2State extends State<AddMedication2> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
                                           obscureText: false,
-                                          controller: TextEditingController(text: 'Enter Medication Name'),
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
                                                   fontSize: 14,
@@ -227,6 +225,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                       //color: const Color(0xFF57636C),
                                                       //fontSize: 14,
                                                       //fontWeight:FontWeight.normal,),
+                                            hintText: 'Enter Number of Days',
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -281,32 +280,57 @@ class _AddMedication2State extends State<AddMedication2> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                                      child: SizedBox(
-                                        width: MediaQuery.of(context).size.width *0.89,
-                                        height: 50,
-                                        
-                                        child: DropdownButtonFormField<String>(
-                                          decoration: const InputDecoration(
-                                            fillColor: Color(0xFFE7E0EC),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius: BorderRadius.all(Radius.circular(8)),
-                                              )
-                                          ),
-                                          value: selectedMedType,
-                                          items: medTypes.map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(
-                                              item,
-                                              style: GoogleFonts.signikaNegative(
-                                                  color: const Color(0xFF1D2429),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.normal,
-                                                  ),
+                                      child: Container(
+                                              width: 500,
+                                              height: 100,
+                                              constraints: BoxConstraints(
+                                                maxWidth: MediaQuery.of(context).size.width * 0.89,
+                                                maxHeight: 50,
+                                              ),
+                                              decoration: const BoxDecoration(
+                                                color: Color(0xFFE7E0EC),
+                                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 10, 0),
+                                                child: DropdownButton<String>(
+                                                    value: dropDownValue1,
+                                                    icon: const Icon(Icons.keyboard_arrow_down),
+                                                    items: <String>[
+                                                      'Pills',
+                                                      'Solution',
+                                                      'Drops',
+                                                      'Injections',
+                                                      'Powder',
+                                                      'Others'].map<DropdownMenuItem<String>>(
+                                                        (String value) {
+                                                      return DropdownMenuItem<String>(
+                                                        value: value,
+                                                        child: Text(value),
+                                                      );
+                                                    }).toList(),
+                                                    onChanged: (String? val) {
+                                                      setState(() {
+                                                        dropDownValue1 = val!;
+                                                      });
+                                                    },
+                                                    // height: 35,
+                                                    style: GoogleFonts.signikaNegative(
+                                                      color: Colors.black,
+                                                    ),
+                                                    hint: const Text('Choose Medication Type'),
+                                                    dropdownColor:const Color(0xFFE7E0EC),
+                                                    focusColor: Colors.red,
+                                                    isExpanded: true,
+                                                    //margin: EdgeInsetsDirectional.fromSTEB(12,4,12,4),
+                                                    elevation: 2,
+                                                    underline: Container(
+                                                      color: const Color(0xFFE7E0EC),
+                                                    )
+                                                    // hidesUnderline: true,
+                                                    ),
+                                              ),
                                             ),
-                                          )).toList(),
-                                        onChanged: (item) => setState(() => selectedMedType = item),
-                                        ),
-                                      )
                                     ),
                                   ],
                                 ),
