@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'add_medication_2.dart';
 
 class AddMedication1 extends StatefulWidget {
   const AddMedication1({Key? key}) : super(key: key);
@@ -681,7 +682,10 @@ class _AddMedication1State extends State<AddMedication1> {
                                                 borderRadius: BorderRadius.all(Radius.circular(10)),
                                               )
                                             ),
-                                            onPressed: (){},
+                                            onPressed: (){
+                                              Navigator.push(context,
+                                              MaterialPageRoute(builder: (context) => const AddMedication2()));
+                                            },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [

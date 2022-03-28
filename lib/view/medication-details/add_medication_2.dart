@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'add_medication_1.dart';
 
 class AddMedication2 extends StatefulWidget {
   const AddMedication2({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                 ),
                                 onPressed: () {
                                   Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
+                                  MaterialPageRoute(builder: (context) => const AddMedication1()));
                                 },
                               ),
                             ),
