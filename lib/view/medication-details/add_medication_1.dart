@@ -129,15 +129,14 @@ class _AddMedication1State extends State<AddMedication1> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
-                                          controller: formInputController1,
                                           obscureText: false,
+                                          controller: TextEditingController(text: 'Enter Medication Name'),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF57636C),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
                                           decoration: InputDecoration(
-                                            labelText: 'Enter Medication Name',
-                                            labelStyle: GoogleFonts.signikaNegative(
-                                                          color: const Color(0xFF57636C),
-                                                          fontSize: 14,
-                                                          fontWeight: FontWeight.normal,
-                                                          ),
                                             //FlutterFlowTheme.of(context).bodyText1.override(
                                                           //fontFamily:'Signika Negative',
                                                           //color: const Color(0xFF57636C),
@@ -163,11 +162,6 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: GoogleFonts.signikaNegative(
-                                                  color: const Color(0xFF1D2429),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.normal,
-                                                  ),
                                           //FlutterFlowTheme.of(context).bodyText1.override(
                                                 //fontFamily: 'Signika Negative',
                                                 //color: const Color(0xFF1D2429),
@@ -204,15 +198,14 @@ class _AddMedication1State extends State<AddMedication1> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
-                                          controller: formInputController2,
                                           obscureText: false,
+                                          controller: TextEditingController(text: 'Enter Medication Name'),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF57636C),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
                                           decoration: InputDecoration(
-                                            labelText: 'Enter Medication Nickname',
-                                            labelStyle: GoogleFonts.signikaNegative(
-                                                color: const Color(0xFF57636C),
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.normal,
-                                                ),
                                                 //FlutterFlowTheme.of(context).bodyText1.override(
                                                       //fontFamily: 'Signika Negative',
                                                       //color: const Color(0xFF57636C),
@@ -238,11 +231,6 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: GoogleFonts.signikaNegative(
-                                                  color: const Color(0xFF1D2429),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.normal,
-                                                  ),
                                           //FlutterFlowTheme.of(context).bodyText1.override(
                                                 //fontFamily: 'Signika Negative',
                                                 //color: const Color(0xFF1D2429),
@@ -282,6 +270,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                         height: 50,
                                         
                                         child: DropdownButtonFormField<String>(
+                                          isDense: true,
                                           decoration: const InputDecoration(
                                             fillColor: Color(0xFFE7E0EC),
                                             enabledBorder: OutlineInputBorder(
@@ -380,7 +369,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                               children: [
                                                 const Icon(
                                                   Icons.upload_sharp,
-                                                  size: 18,
+                                                  size: 20,
                                                   ),
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
@@ -444,7 +433,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                               children: [
                                                 const Icon(
                                                   Icons.photo_camera,
-                                                  size: 18,
+                                                  size: 20,
                                                   ),
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
@@ -518,15 +507,14 @@ class _AddMedication1State extends State<AddMedication1> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
-                                          controller: formInputController3,
                                           obscureText: false,
+                                          controller: TextEditingController(text: 'Enter Medication Name'),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF57636C),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
                                           decoration: InputDecoration(
-                                            labelText: 'Enter Provider Name',
-                                            labelStyle: GoogleFonts.signikaNegative(
-                                                          color: const Color(0xFF57636C),
-                                                          fontSize: 14,
-                                                          fontWeight: FontWeight.normal,
-                                                          ),
                                                 //FlutterFlowTheme.of(context).bodyText1.override(
                                                       //fontFamily:'Signika Negative',
                                                       //color: const Color(0xFF57636C),
@@ -552,11 +540,6 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: GoogleFonts.signikaNegative(
-                                                  color: const Color(0xFF1D2429),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.normal,
-                                                  ),
                                           //FlutterFlowTheme.of(context).bodyText1.override(
                                                 //fontFamily: 'Signika Negative',
                                                 //color: const Color(0xFF1D2429),
@@ -591,15 +574,14 @@ class _AddMedication1State extends State<AddMedication1> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
-                                          controller: formInputController4,
                                           obscureText: false,
+                                          controller: TextEditingController(text: 'Enter Medication Name'),
+                                          style: GoogleFonts.signikaNegative(
+                                                  color: const Color(0xFF57636C),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.normal,
+                                                  ),
                                           decoration: InputDecoration(
-                                            labelText: 'Enter Provider Contact',
-                                            labelStyle: GoogleFonts.signikaNegative(
-                                                          color: const Color(0xFF57636C),
-                                                          fontSize: 14,
-                                                          fontWeight: FontWeight.normal,
-                                                          ),
                                                 //FlutterFlowTheme.of(context).bodyText1.override(
                                                       //fontFamily:'Signika Negative',
                                                       //color: const Color(0xFF57636C),
@@ -625,11 +607,6 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          style: GoogleFonts.signikaNegative(
-                                                  color: const Color(0xFF1D2429),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.normal,
-                                                  ),
                                           //FlutterFlowTheme.of(context).bodyText1.override(
                                                 //fontFamily: 'Signika Negative',
                                                 //color: const Color(0xFF1D2429),
