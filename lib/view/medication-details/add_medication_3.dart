@@ -15,6 +15,7 @@ class _AddMedication3State extends State<AddMedication3> {
   String? dropDownValue3 = 'g';
   late TextEditingController formInputController;
   String? dropDownValue4 = '5 minutes before';
+  late DateTime startDateTime;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -140,8 +141,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
@@ -166,11 +166,9 @@ class _AddMedication3State extends State<AddMedication3> {
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional.fromSTEB(12, 5, 12, 5),
                                                 child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  mainAxisSize: MainAxisSize.max,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                                                   children: [
                                                     Text(
                                                       'Start Date',
@@ -674,7 +672,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                               width: 500,
                                               height: 100,
                                               constraints: BoxConstraints(
-                                                maxWidth: MediaQuery.of(context).size.width * 0.69,
+                                                maxWidth: MediaQuery.of(context).size.width * 0.72,
                                                 maxHeight: 50,
                                               ),
                                               decoration: const BoxDecoration(
@@ -757,21 +755,21 @@ class _AddMedication3State extends State<AddMedication3> {
 
                                     ),
                                    Container(
-                                    width: 30,
-                                    height: 30,
+                                    width: 50,
+                                    height: 50,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFF770FC0),
+                                      color: Colors.white,
                                       borderRadius: BorderRadius.circular(30),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
                                       child: IconButton(
-                                        iconSize: 60,
-                                        color: const Color(0xFF770FC0),
+                                        iconSize: 40,
+                                        color: Colors.white,
                                         icon: const Icon(
                                           Icons.add_circle,
-                                          color: Colors.white,
-                                          size: 20,
+                                          color: Color(0xFF770FC0),
+                                          //size: 30,
                                         ),
                                         onPressed: () {},
                                         ),
