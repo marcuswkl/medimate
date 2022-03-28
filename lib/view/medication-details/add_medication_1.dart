@@ -47,17 +47,16 @@ class _AddMedication1State extends State<AddMedication1> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         IconButton(
-                          //borderRadius: BorderRadius.all(18),
-                          //fillColor: Color(0xFF809BCE),
-                          iconSize: 40,
+                          iconSize: 42,
                           color: const Color(0xFF809BCE),
                           icon: const Icon(
-                            Icons.keyboard_arrow_left,
+                            Icons.chevron_left,
                             color: Colors.white,
-                            size: 20,
-                          ), 
-                          onPressed: () {},
-                        ),
+                            size: 25,
+                            // borderRadius: 16,
+                          ),
+                            onPressed: () {},
+                          ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                           child: Text(
