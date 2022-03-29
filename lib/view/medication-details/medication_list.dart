@@ -74,7 +74,7 @@ class _MedicationListState extends State<MedicationList> {
                                 width: 40,
                                 height: 40,
                                 decoration: BoxDecoration(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
@@ -145,10 +145,9 @@ class _MedicationListState extends State<MedicationList> {
                                         child: ExpandablePanel(
                                           header: Row(
                                             mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Image.asset('assets/images/medicine.png',
+                                            crossAxisAlignment:CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Image.asset('assets/images/medicine.jpg',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -229,6 +228,7 @@ class _MedicationListState extends State<MedicationList> {
                                                           color: Colors.black,
                                                           fontSize: 14,
                                                           fontWeight: FontWeight.w300,
+                                                          fontStyle: FontStyle.italic,
                                                           ),
                                                   //FlutterFlowTheme.of(context)
                                                   //    .bodyText1
@@ -604,8 +604,8 @@ class _MedicationListState extends State<MedicationList> {
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: [
-                                              Image.asset('assets/images/medicine.png',
+                                            children: <Widget>[
+                                              Image.asset('assets/images/medicine.jpg',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -614,10 +614,8 @@ class _MedicationListState extends State<MedicationList> {
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                                                   child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
+                                                    mainAxisSize: MainAxisSize.max,
+                                                    mainAxisAlignment:MainAxisAlignment.start,
                                                     children: [
                                                       Row(
                                                         mainAxisSize:
@@ -1080,9 +1078,8 @@ class _MedicationListState extends State<MedicationList> {
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: [
-                                              Image.asset(
-                                                'assets/images/medicine.png',
+                                            children: <Widget>[
+                                              Image.asset('assets/images/medicine.jpg',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
