@@ -3,16 +3,35 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:country_pickers/country_pickers.dart';
 import 'package:intl/intl.dart';
-import 'globals.dart' as globals;
+import 'InputValidation.dart';
+import 'Profile.dart';
+import 'SubmitButton.dart';
 
 
+// Input Values
+Map<String, String> input = {
+  'Full Name' : 'John Doe',
+  'Email' : 'example@gmail.com',
+  'Password' : 'QW12p_asq',
+  'IC Number' : '100291-20-2345',
+  'Phone Number' : '+6012-2345876',
+  'Date of Birth' : '01/12/1984',
+  'Gender' : 'Male',
+  'Drug Allergies' : 'Penicillin'
+};
+final List<String> questions = input.keys.toList();
+final List<String> answers = input.values.toList();
+
+
+// Profile Tab
 class ProfileTab extends StatefulWidget {
   const ProfileTab({Key? key}) : super(key: key);
+
   @override
   _ProfileTabState createState() => _ProfileTabState();
 }
 
-class _ProfileTabState extends State<ProfileTab> {
+class _ProfileTabState extends State<ProfileTab> with InputValidationMixin { 
   //Password Hide/Show
   bool _hide = false;
   void _togglevisibility() {
@@ -21,31 +40,30 @@ class _ProfileTabState extends State<ProfileTab> {
     });
   }
 
-  // Value Update
-  TextEditingController _dob = TextEditingController(); //DateOfBirth
-  String? _gender;
+  //Form Input
+  final ProfileformKey = GlobalKey < FormState > ();
+  List<TextEditingController> myController = List.generate(questions.length, (i) => TextEditingController());
   @override
   void initState() {
     super.initState();
-      _dob = TextEditingController (text: answers[5]); //DateOfBirth
-      _gender = answers[6]; //Gender
+    for (int i=0; i<questions.length; i++){
+      myController[i] = TextEditingController (text: answers[i]);
+    }
   }
-
-  // Input Values
-  final List<String> questions = ['Full Name', 'Email', 'Password', 'IC Number', 'Phone Number', 'Date of Birth', 'Gender', 'Drug Allergies'];
-  final List<String> answers = ['John Doe', 'example@gmail.com', 'QW12p_asq', '100291-20-2345', '+6012-2345876', '01/12/1984', 'Male', 'Penicillin'];
-
-  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return ValueListenableBuilder(
+      valueListenable: isEditable,
+      builder: (context, value, Widget) {
+    return Form(
+      key: ProfileformKey,
+      child: SafeArea(
       top: false,
       bottom: false,
       child: Builder(
         builder: (BuildContext context) {
           return CustomScrollView(
-            // key: PageStorageKey<String>(name),
             slivers: [
               SliverOverlapInjector(
                 handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
@@ -54,20 +72,95 @@ class _ProfileTabState extends State<ProfileTab> {
                 padding: const EdgeInsetsDirectional.fromSTEB(16, 10, 16, 0),
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate ((BuildContext context, int index){
-                    return cardWidget(input1: questions[index], input2: answers[index]);
+                    return cardWidget(input1: questions[index], input2: answers[index], editable: value);
                   },
                   childCount: questions.length,
                 ))
               ),
+              if (value == true)...[
+                SliverToBoxAdapter(
+                  child: SubButton(FormKey: ProfileformKey),
+                )
+              ]
             ],
           );
         }
-      ),
-    );
+      )));
+    });
   }
   
+  // //Submit Button
+  // Widget subButton() {
+  //   return Row(
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     crossAxisAlignment: CrossAxisAlignment.center,
+  //     children: [
+  //       ElevatedButton (
+  //         onPressed: () {
+  //           if (formGlobalKey.currentState!.validate()) {
+  //             formGlobalKey.currentState?.save();
+  //             ScaffoldMessenger.of(context).showSnackBar(
+  //               const SnackBar(content: Text('Saving...')),
+  //             );  
+  //             setState(() {isEditable.value = false;});
+  //           }
+  //         },
+  //         style: ButtonStyle(
+  //           elevation: MaterialStateProperty.all(0),
+  //           backgroundColor: MaterialStateProperty.all(Colors.transparent),
+  //         ),
+  //         child: Container(
+  //           width: MediaQuery.of(context).size.width * 0.8,
+  //           height: 40,
+  //           decoration: BoxDecoration(
+  //             color: const Color(0xFF809BCE),
+  //             borderRadius: BorderRadius.circular(10),
+  //           ),
+  //           child: Row(
+  //             mainAxisSize: MainAxisSize.max,
+  //             children: [
+  //               Expanded(
+  //                 child: Stack(
+  //                   children: [
+  //                     Row(
+  //                       mainAxisSize: MainAxisSize.max,
+  //                       children: [
+  //                         Expanded(
+  //                           child: Text(
+  //                             'SAVE CHANGES',
+  //                             textAlign: TextAlign.center,
+  //                             style: GoogleFonts.signikaNegative(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white)
+  //                           ),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                     Padding(
+  //                       padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+  //                       child: Row(
+  //                         mainAxisSize: MainAxisSize.max,
+  //                         mainAxisAlignment: MainAxisAlignment.end,
+  //                         children: const [
+  //                           Icon(
+  //                             Icons.check_rounded,
+  //                             color: Colors.white,
+  //                             size: 24,
+  //                           ),
+  //                         ],
+  //                       ),
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         )
+  //       )
+  //     ]
+  //   );
+  // }
+
   //Display Values
-  Widget cardWidget({required String input1, required input2}) {
+  Widget cardWidget({required String input1, required input2, required editable}) {  
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -80,7 +173,7 @@ class _ProfileTabState extends State<ProfileTab> {
                 padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
                 child: Text(
                 input1,
-                style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black,fontFamily:'signikaNegative'),
+                style: GoogleFonts.signikaNegative(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),
                 ),
               ),
               if (input1 == questions[2])...[ // Information Button
@@ -97,11 +190,13 @@ class _ProfileTabState extends State<ProfileTab> {
           ),
         ),
 
-        //'Full Name', 'Email'
-        if (input1 == questions[0] || input1 == questions[1]) ...[
+        //'Full Name'
+        if (input1 == questions[0]) ...[
         Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-          child: Container(
+          child: Stack(
+            children: [
+          Container(
             width: MediaQuery.of(context).size.width,
             height: 49,
             decoration: BoxDecoration(
@@ -110,54 +205,106 @@ class _ProfileTabState extends State<ProfileTab> {
                 color: Colors.black,
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Flexible(
-                  child: TextFormField(
-                    // Editable
-                    enabled: globals.isEditable,
-                    focusNode: FocusNode(),
-                    enableInteractiveSelection: globals.isEditable,
-                    // Managing Input
-                    keyboardType: TextInputType.text,
-                    controller: TextEditingController(text: input2),
-                    // Styling
-                    style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Please enter your ${input1.toLowerCase()}',
-                    ),
-                    onSaved: (String? value) {
-                      //save
-
-                    },
-                    validator: (String? value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your ${input1.toLowerCase()}';
-                      } else if (input1 == questions[0]){ //Full Name
-                        RegExp regex = RegExp(r"^[a-zA-Z\-]$");
-                        return (regex.hasMatch(value)) ? null : 'Please enter a valid ${input1.toLowerCase()}';
-                      } else if (input1 == questions[1]){ // Email
-                        RegExp regex = RegExp(r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
-                        return (regex.hasMatch(value)) ? null : 'Please enter a valid ${input1.toLowerCase()}';
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Flexible(
+                child: TextFormField(
+                  enabled: editable,
+                  focusNode: FocusNode(),
+                  enableInteractiveSelection: editable,
+                  keyboardType: TextInputType.text,
+                  controller: myController[0],
+                  style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Please enter your ${input1.toLowerCase()}',
+                  ),
+                  onSaved: (String? value) {
+                    //save
+                    print("saved");
+                  },
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your ${input1.toLowerCase()}';
+                    } else {
+                      if (isName(value)) {
+                        return null;
+                      } else {
+                        return 'Please enter a valid ${input1.toLowerCase()}';
                       }
-                      return null;
-                    },
-                  )),
-                ],
+                    }
+                  }
+                )),
+              ],
+            )),
+          ]))
+        ]
+
+        //'Email'
+        else if (input1 == questions[1]) ...[
+        Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+          child: Stack(
+            children:[ 
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 49,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2),
+              border: Border.all(
+                color: Colors.black,
               ),
             ),
-          )),
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Flexible(
+                child: TextFormField(
+                  enabled: editable,
+                  focusNode: FocusNode(),
+                  enableInteractiveSelection: editable,
+                  keyboardType: TextInputType.text,
+                  controller: myController[1],
+                  style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Please enter your ${input1.toLowerCase()}',
+                  ),
+                  onSaved: (String? value) {
+                    //save
+                    print("saved");
+                  },
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your ${input1.toLowerCase()}';
+                    } else {
+                      if (isEmail(value)) {
+                        return null;
+                      } else {
+                        return 'Please enter a valid ${input1.toLowerCase()}';
+                      }
+                    }
+                  }
+                )),
+              ],
+            )),
+          ]))
         ]
 
         // 'Password'
         else if (input1 == questions[2]) ...[
         Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-          child: Container(
+          child: Stack(
+            children:[ 
+          Container(
             width: MediaQuery.of(context).size.width,
             height: 49,
             decoration: BoxDecoration(
@@ -165,125 +312,123 @@ class _ProfileTabState extends State<ProfileTab> {
               border: Border.all(
                 color: Colors.black,
               ),
-            ),
-            child: Padding(
+            )),
+            Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Flexible(
                     flex: 7,
                     child: TextFormField(
-                    // Editable
-                    enabled: globals.isEditable,
+                    enabled: editable,
                     focusNode: FocusNode(),
-                    enableInteractiveSelection: globals.isEditable,
-                    // Hide or Show
+                    enableInteractiveSelection: editable,
                     obscureText: !_hide,
-                    // Managing Input
-                    controller: TextEditingController(text: input2),
-                    // Styling
-                    style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Please enter your ${input1.toLowerCase()}',
-                    ),
-                    onSaved: (String? value) {
-                            //save
-                    },
-                    validator: (String? value) {
-                      RegExp regex = RegExp(r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$");
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter a ${input1.toLowerCase()}';
-                      } else if (regex.hasMatch(value)) {
-                        return 'Please enter a valid ${input1.toLowerCase()}';
-                      }
-                      return null; 
-                    }
-                  )),
-                  Flexible(
-                    flex: 1,
-                    child: IconButton(
-                      icon: Icon (
-                        _hide 
-                        ? Icons.visibility_off
-                        : Icons.visibility
-                      ),
-                      onPressed: () {
-                        _togglevisibility();
-                      }
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ))
-        ]
-
-        //'IC Number', 'Phone Number'
-        else if (input1 == questions[3] || input1 == questions[4]) ...[
-        Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: 49,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(2),
-              border: Border.all(
-                color: Colors.black,
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Flexible(
-                  child: TextFormField(
-                     // Editable
-                    enabled: globals.isEditable,
-                    focusNode: FocusNode(),
-                    enableInteractiveSelection: globals.isEditable,
-                    // Managing Input
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      FilteringTextInputFormatter.allow(RegExp(r"[0-9\+-]")),
-                    ],
-                    controller: TextEditingController(text: input2),
-                    // Styling
-                    style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
+                    controller: myController[2],
+                    style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Please enter your ${input1.toLowerCase()}',
                     ),
                     onSaved: (String? value) {
                       //save
-
+                      print("saved");
                     },
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your ${input1.toLowerCase()}';
-                      } else if (input1 == questions[3]){ // IC Number
-                        RegExp regex = RegExp(r"^\d{6}-\d{2}-\d{4}$");
-                        return (regex.hasMatch(value)) ? null : 'Please enter a valid ${input1.toLowerCase()}';
-                      } else if (input1 == questions[4]){ // Phone Number
-                        RegExp regex = RegExp(r"^(\+?6?01)[0-46-9]-*[0-9]{7,8}$");
-                        return (regex.hasMatch(value)) ? null : 'Please enter a valid ${input1.toLowerCase()}';
+                      } else {
+                        if (isPassword(value)) {
+                          return null;
+                        } else {
+                          return 'Please enter a valid ${input1.toLowerCase()}';
+                        }
                       }
-                      return null;
-                    },
+                    }
+                )),
+                Flexible(
+                  flex: 1,
+                  child: IconButton(
+                    icon: Icon (
+                      _hide 
+                      ? Icons.visibility_off
+                      : Icons.visibility
+                    ),
+                    onPressed: () {
+                      _togglevisibility();
+                    }
                   )),
                 ],
-              ),
-            ),
-          )),
-        ]
+              )),
+            ]))
+          ]
 
-        // Date of Birth
-        else if (input1 == questions[5]) ...[
+        //'IC Number'
+        else if (input1 == questions[3]) ...[
         Padding(
           padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-          child: Container(
+          child: Stack(
+            children:[ 
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 49,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2),
+              border: Border.all(
+                color: Colors.black,
+              ),
+            )
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Flexible(
+                child: TextFormField(
+                  enabled: editable,
+                  focusNode: FocusNode(),
+                  enableInteractiveSelection: editable,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.allow(RegExp(r"[0-9\+-]")),
+                  ],
+                  controller: myController[3],
+                  style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Please enter your ${input1.toLowerCase()}',
+                  ),
+                  onSaved: (String? value) {
+                    //save
+                    print("saved");
+                  },
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your ${input1.toLowerCase()}';
+                    } else {
+                      if (isIC(value)) {
+                        return null;
+                      } else {
+                        return 'Please enter a valid ${input1.toLowerCase()}';
+                      }
+                    }
+                  }
+                )),
+              ],
+            )),
+          ]))
+        ]
+
+        //'Phone Number'
+        else if (input1 == questions[4]) ...[
+        Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+          child: Stack(
+            children: [
+          Container(
             width: MediaQuery.of(context).size.width,
             height: 49,
             decoration: BoxDecoration(
@@ -292,28 +437,82 @@ class _ProfileTabState extends State<ProfileTab> {
                 color: Colors.black,
               ),
             ),
-            child: Padding(
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Flexible(
+                child: TextFormField(
+                  enabled: editable,
+                  focusNode: FocusNode(),
+                  enableInteractiveSelection: editable,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.allow(RegExp(r"[0-9\+-]")),
+                  ],
+                  controller: myController[4],
+                  style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Please enter your ${input1.toLowerCase()}',
+                  ),
+                  onSaved: (String? value) {
+                    //save
+                    print("saved");
+                  },
+                  validator: (String? value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your ${input1.toLowerCase()}';
+                    } else {
+                      if (isPhone(value)) {
+                        return null;
+                      } else {
+                        return 'Please enter a valid ${input1.toLowerCase()}';
+                      }
+                    }
+                  }
+                )),
+              ],
+            )),
+          ]))
+        ]
+
+        // Date of Birth
+        else if (input1 == questions[5]) ...[
+        Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+          child: Stack(
+          children:[ 
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 49,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(2),
+                border: Border.all(
+                  color: Colors.black,
+                ),
+              )
+            ),
+            Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Flexible(
                     child: TextFormField(
-                      // Editable
-                      enabled: globals.isEditable,
+                      enabled: editable,
                       focusNode: FocusNode(),
-                      enableInteractiveSelection: globals.isEditable,
-                      // Managing Input
-                      controller: _dob,
-                      // Styling
-                      style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
+                      enableInteractiveSelection: editable,
+                      controller: myController[5],
+                      style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
                       decoration: InputDecoration(
                         hintText: 'Please enter your ${input1.toLowerCase()}',
                         border: InputBorder.none,
                       ),
                       onTap: () async{
                         FocusScope.of(context).requestFocus(FocusNode());
-
                         var date = await showDatePicker(
                           context: context, 
                           initialDate:DateFormat("dd/MM/yyyy").parse(input2),
@@ -321,12 +520,12 @@ class _ProfileTabState extends State<ProfileTab> {
                           lastDate: DateTime.now()
                         );
                         if (date != null){
-                          _dob.text = DateFormat("dd/MM/yyyy").format(date);
+                          myController[5].text = DateFormat("dd/MM/yyyy").format(date);
                         }
                       },
-                       onSaved: (String? value) {
-                      //save
-
+                      onSaved: (String? value) {
+                        //save
+                        print("saved");
                       },
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
@@ -334,12 +533,12 @@ class _ProfileTabState extends State<ProfileTab> {
                         }
                         return null; 
                       }
-                    )
-                  )
-                ],
+                    )),
+                  ],
+                )
               ),
-            ),
-          ))
+            ])
+          )
         ]
 
         // Gender
@@ -361,10 +560,10 @@ class _ProfileTabState extends State<ProfileTab> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   // Flexible(
-                    if (globals.isEditable == false)...[
+                    if (editable == false)...[
                       Text(
-                        input2,
-                        style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
+                        myController[6].text,
+                        style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
                       ),
                     ]
                     else...[
@@ -372,13 +571,12 @@ class _ProfileTabState extends State<ProfileTab> {
                     child: DropdownButtonHideUnderline(
                       child:DropdownButton<String>(
                       isExpanded: true,
-                      value: _gender,
-                      // Styling
-                      style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
+                      value: myController[6].text,
+                      style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
                       icon: const Icon(Icons.keyboard_arrow_down),
                       onChanged: (String? newValue){
                         setState(() {
-                          _gender = newValue!;
+                           myController[6].text = newValue!;
                         });
                       },
                       items: <String>['Male','Female']
@@ -416,21 +614,18 @@ class _ProfileTabState extends State<ProfileTab> {
                 children: [
                   Flexible(
                   child: TextFormField(
-                    // Editable
-                    enabled: globals.isEditable,
+                    enabled: editable,
                     focusNode: FocusNode(),
-                    enableInteractiveSelection: globals.isEditable,
-                    // Managing Input
-                    controller: TextEditingController(text: input2),
-                    // Styling
-                    style: const TextStyle(fontSize: 18,color: Colors.black,fontFamily:'signikaNegative'),
+                    enableInteractiveSelection: editable,
+                    controller:  myController[7],
+                    style: GoogleFonts.signikaNegative(fontSize: 18,color: Colors.black),
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Enter in any Allergies that you have',
                     ),
                     onSaved: (String? value) {
                       //save
-
+                      print("saved");
                     },
                   )),
                 ],
@@ -438,7 +633,6 @@ class _ProfileTabState extends State<ProfileTab> {
             ),
           ))
         ]
-
       ]
     );
   }
