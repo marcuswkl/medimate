@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:async';
 import 'add_medication_2.dart';
 
 class AddMedication3 extends StatefulWidget {
@@ -15,13 +16,30 @@ class _AddMedication3State extends State<AddMedication3> {
   String? dropDownValue3 = 'g';
   late TextEditingController formInputController;
   String? dropDownValue4 = '5 minutes before';
-  late DateTime startDateTime;
+  late DateTime selectedDate = DateTime.now();
+  late DateTime firstDate;
+  late DateTime lastDate;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
     formInputController = TextEditingController();
+  }
+
+  // Selecting date method
+  _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2022),
+      lastDate: DateTime(2050),
+    );
+    if (picked != null && picked != selectedDate){
+      setState(() {
+        selectedDate = picked;
+      });
+    }
   }
 
   @override
@@ -139,49 +157,96 @@ class _AddMedication3State extends State<AddMedication3> {
                                     ),
                                   ],
                                 ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                              'Start Date',
+                                              style: GoogleFonts.signikaNegative(
+                                                      color: const Color(0xFF57636C),
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.normal,
+                                                      ),
+                                              ),
+                                            ],
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                              'End Date',
+                                              style: GoogleFonts.signikaNegative(
+                                                      color: const Color(0xFF57636C),
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.normal,
+                                                      ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Padding(
-                                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
                                             child: Container(
-                                              width: MediaQuery.of(context).size.width *0.43,
+                                              width: MediaQuery.of(context).size.width * 0.43,
                                               height: 50,
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFFE7E0EC),
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
+                                                borderRadius:BorderRadius.circular(8),
                                                 border: Border.all(
                                                   color: const Color(0xFFCFD4DB),
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional.fromSTEB(12, 5, 12, 5),
+                                                padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 12, 5),
                                                 child: Row(
                                                   mainAxisSize: MainAxisSize.max,
                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                                                  children: [
-                                                    Text(
-                                                      'Start Date',
-                                                      style: GoogleFonts.signikaNegative(
-                                                              color: const Color(0xFF57636C),
-                                                              fontSize: 14,
-                                                              fontWeight: FontWeight.normal,
-                                                              ),
-                                                          //FlutterFlowTheme.of(context).subtitle2.override(
-                                                               // fontFamily:'Signika Negative',
-                                                                //color: const Color(0xFF57636C),
-                                                                //fontSize: 14,
-                                                                //fontWeight:FontWeight.normal,),
+                                                  
+                                                  children: <Widget>[
+                                                    ElevatedButton(
+                                                      onPressed: () => _selectDate(context), 
+                                                      child: 
+                                                        Text(
+                                                          "${selectedDate.toLocal()}".split(' ')[0],
+                                                          style: GoogleFonts.signikaNegative(
+                                                                  color: const Color(0xFF57636C),
+                                                                  fontSize: 14,
+                                                                  fontWeight: FontWeight.normal,
+                                                                  ),
+                                                              //FlutterFlowTheme.of(context).subtitle2.override(
+                                                                  // fontFamily:'Signika Negative',
+                                                                    //color: const Color(0xFF57636C),
+                                                                    //fontSize: 14,
+                                                                    //fontWeight:FontWeight.normal,),
+                                                        ),
+                                                      style: ElevatedButton.styleFrom(
+                                                        primary: const Color(0xFFE7E0EC),
+                                                        elevation: 0,
+                                                      ),
                                                     ),
                                                     const Icon(
                                                       Icons.date_range_outlined,
@@ -194,7 +259,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                             ),
                                           ),
                                           Container(
-                                            width: MediaQuery.of(context).size.width *0.43,
+                                            width: MediaQuery.of(context).size.width * 0.43,
                                             height: 50,
                                             decoration: BoxDecoration(
                                               color: const Color(0xFFE7E0EC),
@@ -204,30 +269,38 @@ class _AddMedication3State extends State<AddMedication3> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional.fromSTEB(12, 5, 12, 5),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 12, 5),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'End Date',
-                                                    style: GoogleFonts.signikaNegative(
-                                                            color: const Color(0xFF57636C),
-                                                            fontSize: 14,
-                                                            fontWeight: FontWeight.normal,
-                                                            ),
-                                                    //FlutterFlowTheme.of(context).subtitle2.override(
-                                                          //fontFamily:'Signika Negative',
-                                                          //color: const Color(0xFF57636C),
-                                                          //fontSize: 14,
-                                                          //fontWeight:FontWeight.normal,),
-                                                  ),
-                                                  const Icon(
-                                                    Icons.date_range_outlined,
-                                                    color: Color(0xFF57636C),
-                                                    size: 24,
-                                                  ),
-                                                ],
+                                                children: <Widget>[
+                                                    ElevatedButton(
+                                                      onPressed: () => _selectDate(context), 
+                                                      child: 
+                                                        Text(
+                                                          "${selectedDate.toLocal()}".split(' ')[0],
+                                                          style: GoogleFonts.signikaNegative(
+                                                                  color: const Color(0xFF57636C),
+                                                                  fontSize: 14,
+                                                                  fontWeight: FontWeight.normal,
+                                                                  ),
+                                                              //FlutterFlowTheme.of(context).subtitle2.override(
+                                                                  // fontFamily:'Signika Negative',
+                                                                    //color: const Color(0xFF57636C),
+                                                                    //fontSize: 14,
+                                                                    //fontWeight:FontWeight.normal,),
+                                                        ),
+                                                      style: ElevatedButton.styleFrom(
+                                                        primary: const Color(0xFFE7E0EC),
+                                                        elevation: 0,
+                                                      ),
+                                                    ),
+                                                    const Icon(
+                                                      Icons.date_range_outlined,
+                                                      color: Color(0xFF57636C),
+                                                      size: 24,
+                                                    ),
+                                                  ],
                                               ),
                                             ),
                                           ),
