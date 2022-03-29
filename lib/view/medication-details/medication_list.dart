@@ -148,8 +148,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Image.asset(
-                                                'assets/images/medicine.png',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -424,11 +423,8 @@ class _MedicationListState extends State<MedicationList> {
                                                         ),
                                                       ),
                                                       Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceEvenly,
+                                                        mainAxisSize:MainAxisSize.max,
+                                                        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                                                         children: [
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB(0,30,5,0),
@@ -488,31 +484,60 @@ class _MedicationListState extends State<MedicationList> {
                                                           ),
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB(0,30,0,0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed: () {},
-                                                              text: 'INFO',
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 65,
-                                                                height: 30,
-                                                                color: const Color(0xFF809BCE),
-                                                                textStyle: FlutterFlowTheme.of(context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:'Signika Negative',
-                                                                      color: Colors.white,
-                                                                      fontSize:12,
-                                                                      fontWeight:FontWeight.w500,
+                                                            child: ElevatedButton(
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      primary: const Color(0xFF809BCE),
+                                                                      minimumSize: const Size(65,30),
+                                                                      elevation: 5,
+                                                                      shape: const RoundedRectangleBorder(
+                                                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                                      )
                                                                     ),
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.transparent,
-                                                                  width: 1,
-                                                                ),
-                                                                borderRadius:
-                                                                    50,
-                                                              ),
-                                                            ),
+                                                                    onPressed: (){},
+                                                                    child: Row(
+                                                                      mainAxisSize: MainAxisSize.min,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          child: Text(
+                                                                            'INFO',
+                                                                            style: GoogleFonts.signikaNegative(
+                                                                                    color: Colors.white,
+                                                                                    fontSize: 12,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    ),
+                                                                            )
+                                                                          ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+
+                                                            //     FFButtonWidget(
+                                                            //   onPressed: () {},
+                                                            //   text: 'INFO',
+                                                            //   options:
+                                                            //       FFButtonOptions(
+                                                            //     width: 65,
+                                                            //     height: 30,
+                                                            //     color: const Color(0xFF809BCE),
+                                                            //     textStyle: FlutterFlowTheme.of(context)
+                                                            //         .subtitle2
+                                                            //         .override(
+                                                            //           fontFamily:'Signika Negative',
+                                                            //           color: Colors.white,
+                                                            //           fontSize:12,
+                                                            //           fontWeight:FontWeight.w500,
+                                                            //         ),
+                                                            //     borderSide: const BorderSide(
+                                                            //       color: Colors.transparent,
+                                                            //       width: 1,
+                                                            //     ),
+                                                            //     borderRadius:
+                                                            //         50,
+                                                            //   ),
+                                                            // ),
+
+
                                                           ),
                                                         ],
                                                       ),
@@ -580,8 +605,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
-                                              Image.asset(
-                                                'assets/images/medicine.png',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -864,75 +888,135 @@ class _MedicationListState extends State<MedicationList> {
                                                         children: [
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB( 0,30,5,0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed: () {},
-                                                              text: 'RESTOCK',
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 80,
-                                                                height: 30,
-                                                                color: const Color(0xFF809BCE),
-                                                                textStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Signika Negative',
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontSize:
-                                                                          12,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w500,
+                                                            child: ElevatedButton(
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      primary: const Color(0xFF809BCE),
+                                                                      minimumSize: const Size(80,30),
+                                                                      elevation: 5,
+                                                                      shape: const RoundedRectangleBorder(
+                                                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                                      )
                                                                     ),
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.transparent,
-                                                                  width: 1,
-                                                                ),
-                                                                borderRadius:
-                                                                    50,
-                                                              ),
-                                                            ),
+                                                                    onPressed: (){},
+                                                                    child: Row(
+                                                                      mainAxisSize: MainAxisSize.min,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          child: Text(
+                                                                            'RESTOCK',
+                                                                            style: GoogleFonts.signikaNegative(
+                                                                                    color: Colors.white,
+                                                                                    fontSize: 12,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    ),
+                                                                            )
+                                                                          ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+
+
+                                                            //     FFButtonWidget(
+                                                            //   onPressed: () {},
+                                                            //   text: 'RESTOCK',
+                                                            //   options:
+                                                            //       FFButtonOptions(
+                                                            //     width: 80,
+                                                            //     height: 30,
+                                                            //     color: const Color(0xFF809BCE),
+                                                            //     textStyle: FlutterFlowTheme.of(
+                                                            //             context)
+                                                            //         .subtitle2
+                                                            //         .override(
+                                                            //           fontFamily:
+                                                            //               'Signika Negative',
+                                                            //           color: Colors
+                                                            //               .white,
+                                                            //           fontSize:
+                                                            //               12,
+                                                            //           fontWeight:
+                                                            //               FontWeight
+                                                            //                   .w500,
+                                                            //         ),
+                                                            //     borderSide: const BorderSide(
+                                                            //       color: Colors.transparent,
+                                                            //       width: 1,
+                                                            //     ),
+                                                            //     borderRadius:
+                                                            //         50,
+                                                            //   ),
+                                                            // ),
+
+
                                                           ),
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB(0,30,0,0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed: () {
-                                                                print(
-                                                                    'Button pressed ...');
-                                                              },
-                                                              text: 'INFO',
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 65,
-                                                                height: 30,
-                                                                color: const Color(0xFF809BCE),
-                                                                textStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Signika Negative',
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontSize:
-                                                                          12,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w500,
+                                                            child: ElevatedButton(
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      primary: const Color(0xFF809BCE),
+                                                                      minimumSize: const Size(65,30),
+                                                                      elevation: 5,
+                                                                      shape: const RoundedRectangleBorder(
+                                                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                                      )
                                                                     ),
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors
-                                                                      .transparent,
-                                                                  width: 1,
-                                                                ),
-                                                                borderRadius:
-                                                                    50,
-                                                              ),
-                                                            ),
+                                                                    onPressed: (){},
+                                                                    child: Row(
+                                                                      mainAxisSize: MainAxisSize.min,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          child: Text(
+                                                                            'INFO',
+                                                                            style: GoogleFonts.signikaNegative(
+                                                                                    color: Colors.white,
+                                                                                    fontSize: 12,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    ),
+                                                                            )
+                                                                          ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+
+
+                                                            //     FFButtonWidget(
+                                                            //   onPressed: () {
+                                                            //     print(
+                                                            //         'Button pressed ...');
+                                                            //   },
+                                                            //   text: 'INFO',
+                                                            //   options:
+                                                            //       FFButtonOptions(
+                                                            //     width: 65,
+                                                            //     height: 30,
+                                                            //     color: const Color(0xFF809BCE),
+                                                            //     textStyle: FlutterFlowTheme.of(
+                                                            //             context)
+                                                            //         .subtitle2
+                                                            //         .override(
+                                                            //           fontFamily:
+                                                            //               'Signika Negative',
+                                                            //           color: Colors
+                                                            //               .white,
+                                                            //           fontSize:
+                                                            //               12,
+                                                            //           fontWeight:
+                                                            //               FontWeight
+                                                            //                   .w500,
+                                                            //         ),
+                                                            //     borderSide: const BorderSide(
+                                                            //       color: Colors
+                                                            //           .transparent,
+                                                            //       width: 1,
+                                                            //     ),
+                                                            //     borderRadius:
+                                                            //         50,
+                                                            //   ),
+                                                            // ),
+
+
                                                           ),
                                                         ],
                                                       ),
@@ -1275,58 +1359,117 @@ class _MedicationListState extends State<MedicationList> {
                                                         children: [
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB(0,30,5,0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed: () {
-                                                              },
-                                                              text: 'RESTOCK',
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 80,
-                                                                height: 30,
-                                                                color: const Color(0xFF809BCE),
-                                                                textStyle: FlutterFlowTheme.of(context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:'Signika Negative',
-                                                                      color: Colors.white,
-                                                                      fontSize:12,
-                                                                      fontWeight:FontWeight.w500,
+                                                            child: ElevatedButton(
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      primary: const Color(0xFF809BCE),
+                                                                      minimumSize: const Size(80,30),
+                                                                      elevation: 5,
+                                                                      shape: const RoundedRectangleBorder(
+                                                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                                      )
                                                                     ),
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.transparent,
-                                                                  width: 1,
-                                                                ),
-                                                                borderRadius:50,
-                                                              ),
-                                                            ),
+                                                                    onPressed: (){},
+                                                                    child: Row(
+                                                                      mainAxisSize: MainAxisSize.min,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          child: Text(
+                                                                            'RESTOCK',
+                                                                            style: GoogleFonts.signikaNegative(
+                                                                                    color: Colors.white,
+                                                                                    fontSize: 12,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    ),
+                                                                            )
+                                                                          ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+
+                                                            //     FFButtonWidget(
+                                                            //   onPressed: () {
+                                                            //   },
+                                                            //   text: 'RESTOCK',
+                                                            //   options:
+                                                            //       FFButtonOptions(
+                                                            //     width: 80,
+                                                            //     height: 30,
+                                                            //     color: const Color(0xFF809BCE),
+                                                            //     textStyle: FlutterFlowTheme.of(context)
+                                                            //         .subtitle2
+                                                            //         .override(
+                                                            //           fontFamily:'Signika Negative',
+                                                            //           color: Colors.white,
+                                                            //           fontSize:12,
+                                                            //           fontWeight:FontWeight.w500,
+                                                            //         ),
+                                                            //     borderSide: const BorderSide(
+                                                            //       color: Colors.transparent,
+                                                            //       width: 1,
+                                                            //     ),
+                                                            //     borderRadius:50,
+                                                            //   ),
+                                                            // ),
+
+
                                                           ),
                                                           Padding(
                                                             padding: const EdgeInsetsDirectional.fromSTEB(0,30,0,0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed: () { },
-                                                              text: 'INFO',
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 65,
-                                                                height: 30,
-                                                                color: const Color(0xFF809BCE),
-                                                                textStyle: FlutterFlowTheme.of(context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:'Signika Negative',
-                                                                      color: Colors.white,
-                                                                      fontSize:12,
-                                                                      fontWeight:FontWeight.w500,
+                                                            child: ElevatedButton(
+                                                                    style: ElevatedButton.styleFrom(
+                                                                      primary: const Color(0xFF809BCE),
+                                                                      minimumSize: const Size(65,30),
+                                                                      elevation: 5,
+                                                                      shape: const RoundedRectangleBorder(
+                                                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                                      )
                                                                     ),
-                                                                borderSide: const BorderSide(
-                                                                  color: Colors.transparent,
-                                                                  width: 1,
-                                                                ),
-                                                                borderRadius:50,
-                                                              ),
-                                                            ),
+                                                                    onPressed: (){},
+                                                                    child: Row(
+                                                                      mainAxisSize: MainAxisSize.min,
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          child: Text(
+                                                                            'INFO',
+                                                                            style: GoogleFonts.signikaNegative(
+                                                                                    color: Colors.white,
+                                                                                    fontSize: 12,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    ),
+                                                                            )
+                                                                          ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+
+
+                                                            //     FFButtonWidget(
+                                                            //   onPressed: () { },
+                                                            //   text: 'INFO',
+                                                            //   options:
+                                                            //       FFButtonOptions(
+                                                            //     width: 65,
+                                                            //     height: 30,
+                                                            //     color: const Color(0xFF809BCE),
+                                                            //     textStyle: FlutterFlowTheme.of(context)
+                                                            //         .subtitle2
+                                                            //         .override(
+                                                            //           fontFamily:'Signika Negative',
+                                                            //           color: Colors.white,
+                                                            //           fontSize:12,
+                                                            //           fontWeight:FontWeight.w500,
+                                                            //         ),
+                                                            //     borderSide: const BorderSide(
+                                                            //       color: Colors.transparent,
+                                                            //       width: 1,
+                                                            //     ),
+                                                            //     borderRadius:50,
+                                                            //   ),
+                                                            // ),
+
+
                                                           ),
                                                         ],
                                                       ),
