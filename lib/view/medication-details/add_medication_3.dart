@@ -17,8 +17,8 @@ class _AddMedication3State extends State<AddMedication3> {
   late TextEditingController formInputController;
   String? dropDownValue4 = '5 minutes before';
   //late DateTime selectedDate = DateTime.now();
-  late DateTime startDate;
-  late DateTime endDate;
+  DateTime startDate = DateTime.now();
+  DateTime endDate = DateTime.now();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -35,7 +35,7 @@ class _AddMedication3State extends State<AddMedication3> {
       firstDate: DateTime(2022),
       lastDate: DateTime(2050),
     );
-    if (startPicked != null && startPicked != startDate){
+    if (startPicked != null && startPicked != startDate && (startPicked.isAtSameMomentAs(DateTime.now()) || startPicked.isAfter(DateTime.now()))){
       setState(() {
         startDate = startPicked;
       });
@@ -50,7 +50,7 @@ class _AddMedication3State extends State<AddMedication3> {
       firstDate: DateTime(2022),
       lastDate: DateTime(2050),
     );
-    if (endPicked != null && endPicked != endDate){
+    if (endPicked != null && endPicked != endDate && (endPicked.isAtSameMomentAs(startDate) || endPicked.isAfter(startDate))){
       setState(() {
         endDate = endPicked;
       });
@@ -202,7 +202,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                     ),
                                   ],
                                 ),
-                                
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -236,7 +235,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                       onPressed: () => _selectStartDate(context), 
                                                       child: 
                                                         Text(
-                                                          "${startDate.toLocal()}".split(' ')[0],
+                                                          "$startDate".split(' ')[0],
                                                           style: GoogleFonts.signikaNegative(
                                                                   color: Colors.black,
                                                                   fontSize: 14,
@@ -278,7 +277,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                       onPressed: () => _selectEndDate(context), 
                                                       child: 
                                                         Text(
-                                                          "${endDate.toLocal()}".split(' ')[0],
+                                                          "$endDate".split(' ')[0],
                                                           style: GoogleFonts.signikaNegative(
                                                                   color: Colors.black,
                                                                   fontSize: 14,
