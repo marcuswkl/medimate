@@ -83,10 +83,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                     color: Colors.black,
                                     fontSize: 22,
                                   ),
-                            //FlutterFlowTheme.of(context).bodyText1.override(
-                                      //fontFamily: 'Fredoka One',
-                                      //color: Colors.black,
-                                      //fontSize: 22,),
+                      
                           ),
                         ),
                       ],
@@ -107,10 +104,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                         color: Colors.black,
                                         fontSize: 18,
                                         ),
-                                //FlutterFlowTheme.of(context).bodyText1.override(
-                                      //fontFamily: 'Signika Negative',
-                                      //color: Colors.black,
-                                      //fontSize: 18,),
+                
                               ),
                             ],
                           ),
@@ -130,10 +124,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
+                                   
                                       ),
                                     ),
                                   ],
@@ -151,12 +142,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.normal,
                                                   ),
-                                          decoration: InputDecoration(
-                                                //FlutterFlowTheme.of(context).bodyText1.override(
-                                                      //fontFamily:'Signika Negative',
-                                                      //color: const Color(0xFF57636C),
-                                                      //fontSize: 14,
-                                                      //fontWeight:FontWeight.normal,),
+                                          decoration: InputDecoration( 
                                             hintText: 'Enter Medication Stock',
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
@@ -178,11 +164,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          //FlutterFlowTheme.of(context).bodyText1.override(
-                                                //fontFamily: 'Signika Negative',
-                                                //color: const Color(0xFF1D2429),
-                                                //fontSize: 14,
-                                                //fontWeight: FontWeight.normal,),
+                                 
                                         ),
                                       ),
                                     ),
@@ -199,10 +181,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
+                                        
                                       ),
                                     ),
                                   ],
@@ -221,11 +200,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                   fontWeight: FontWeight.normal,
                                                   ),
                                           decoration: InputDecoration(
-                                                //FlutterFlowTheme.of(context).bodyText1.override(
-                                                      //fontFamily:'Signika Negative',
-                                                      //color: const Color(0xFF57636C),
-                                                      //fontSize: 14,
-                                                      //fontWeight:FontWeight.normal,),
+                 
                                             hintText: 'Enter Number of Days',
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
@@ -247,11 +222,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
-                                          //FlutterFlowTheme.of(context).bodyText1.override(
-                                                //fontFamily: 'Signika Negative',
-                                                //color: const Color(0xFF1D2429),
-                                                //fontSize: 14,
-                                                //fontWeight: FontWeight.normal,),
+ 
                                         ),
                                       ),
                                     ),
@@ -268,10 +239,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
+
                                       ),
                                     ),
                                   ],
@@ -371,32 +339,6 @@ class _AddMedication2State extends State<AddMedication2> {
                                               ],
                                             ),
                                           ),
-
-                                      //FFButtonWidget(
-                                        //onPressed: () {},
-                                       // text: 'NEXT',
-                                       // options: FFButtonOptions(
-                                          //width: 300,
-                                          //height: 40,
-                                          //color: const Color(0xFF809BCE),
-                                          //textStyle: GoogleFonts.signikaNegative(
-                                                     // color: Colors.white,
-                                                     // fontSize: 18,
-                                                     // fontWeight: FontWeight.normal,
-                                                      //),
-                                          //FlutterFlowTheme.of(context).subtitle2.override(
-                                                //fontFamily: 'Signika Negative',
-                                                //color: Colors.white,
-                                                //fontSize: 18,
-                                                //fontWeight: FontWeight.normal,),
-                                          //elevation: 5,
-                                         // borderSide: const BorderSide(
-                                            //color: Colors.transparent,
-                                            //width: 1,
-                                          //),
-                                          //borderRadius: 10,
-                                        //),
-                                      //),
                                       
                                     ],
                                   ),

@@ -16,9 +16,9 @@ class _AddMedication3State extends State<AddMedication3> {
   String? dropDownValue3 = 'g';
   late TextEditingController formInputController;
   String? dropDownValue4 = '5 minutes before';
-  late DateTime selectedDate = DateTime.now();
-  late DateTime firstDate;
-  late DateTime lastDate;
+  //late DateTime selectedDate = DateTime.now();
+  late DateTime startDate;
+  late DateTime endDate;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -27,20 +27,36 @@ class _AddMedication3State extends State<AddMedication3> {
     formInputController = TextEditingController();
   }
 
-  // Selecting date method
-  _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
+  // Selecting start date method
+  _selectStartDate(BuildContext context1) async {
+    final DateTime? startPicked = await showDatePicker(
+      context: context1,
+      initialDate: DateTime.now(),
       firstDate: DateTime(2022),
       lastDate: DateTime(2050),
     );
-    if (picked != null && picked != selectedDate){
+    if (startPicked != null && startPicked != startDate){
       setState(() {
-        selectedDate = picked;
+        startDate = startPicked;
       });
     }
   }
+
+  // Selecting end date method
+  _selectEndDate(BuildContext context2) async {
+    final DateTime? endPicked = await showDatePicker(
+      context: context2,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2022),
+      lastDate: DateTime(2050),
+    );
+    if (endPicked != null && endPicked != endDate){
+      setState(() {
+        endDate = endPicked;
+      });
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -102,10 +118,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                     color: Colors.black,
                                     fontSize: 22,
                                     ),
-                                //FlutterFlowTheme.of(context).bodyText1.override(
-                                      //fontFamily: 'Fredoka One',
-                                      //color: Colors.black,
-                                      //fontSize: 22,),
                           ),
                         ),
                       ],
@@ -126,10 +138,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                         color: Colors.black,
                                         fontSize: 18,
                                         ),
-                                //FlutterFlowTheme.of(context).bodyText1.override(
-                                     // fontFamily: 'Signika Negative',
-                                      //color: Colors.black,
-                                      //fontSize: 18,),
+
                               ),
                             ],
                           ),
@@ -149,10 +158,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
                                       ),
                                     ),
                                   ],
@@ -228,20 +233,15 @@ class _AddMedication3State extends State<AddMedication3> {
                                                   
                                                   children: <Widget>[
                                                     ElevatedButton(
-                                                      onPressed: () => _selectDate(context), 
+                                                      onPressed: () => _selectStartDate(context), 
                                                       child: 
                                                         Text(
-                                                          "${selectedDate.toLocal()}".split(' ')[0],
+                                                          "${startDate.toLocal()}".split(' ')[0],
                                                           style: GoogleFonts.signikaNegative(
-                                                                  color: const Color(0xFF57636C),
+                                                                  color: Colors.black,
                                                                   fontSize: 14,
                                                                   fontWeight: FontWeight.normal,
                                                                   ),
-                                                              //FlutterFlowTheme.of(context).subtitle2.override(
-                                                                  // fontFamily:'Signika Negative',
-                                                                    //color: const Color(0xFF57636C),
-                                                                    //fontSize: 14,
-                                                                    //fontWeight:FontWeight.normal,),
                                                         ),
                                                       style: ElevatedButton.styleFrom(
                                                         primary: const Color(0xFFE7E0EC),
@@ -275,20 +275,15 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: <Widget>[
                                                     ElevatedButton(
-                                                      onPressed: () => _selectDate(context), 
+                                                      onPressed: () => _selectEndDate(context), 
                                                       child: 
                                                         Text(
-                                                          "${selectedDate.toLocal()}".split(' ')[0],
+                                                          "${endDate.toLocal()}".split(' ')[0],
                                                           style: GoogleFonts.signikaNegative(
-                                                                  color: const Color(0xFF57636C),
+                                                                  color: Colors.black,
                                                                   fontSize: 14,
                                                                   fontWeight: FontWeight.normal,
                                                                   ),
-                                                              //FlutterFlowTheme.of(context).subtitle2.override(
-                                                                  // fontFamily:'Signika Negative',
-                                                                    //color: const Color(0xFF57636C),
-                                                                    //fontSize: 14,
-                                                                    //fontWeight:FontWeight.normal,),
                                                         ),
                                                       style: ElevatedButton.styleFrom(
                                                         primary: const Color(0xFFE7E0EC),
@@ -320,10 +315,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
+
                                       ),
                                     ),
                                   ],
@@ -387,41 +379,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                               ),
                                             ),
 
-                                      //FlutterFlowDropDown(
-                                        //options: [
-                                        //  'Once a week',
-                                        //  'Twice a week',
-                                        //  '3 days a week',
-                                        //  '4 days a week',
-                                        //  '5 days a week',
-                                        //  '6 days a week',
-                                        //  '7 days a week',
-                                        //  'Custom'
-                                        //].toList(),
-                                        //onChanged: (val) => setState(
-                                         //   () => dropDownValue1 = val),
-                                        //width: MediaQuery.of(context).size.width *0.89,
-                                        //height: 50,
-                                        //textStyle: GoogleFonts.signikaNegative(
-                                         //           color: const Color(0xFF1D2429),
-                                        //            fontSize: 14,
-                                        //            fontWeight: FontWeight.normal,
-                                        //            ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: const Color(0xFF1D2429),
-                                              //fontSize: 14,
-                                              //fontWeight: FontWeight.normal,),
-                                       // hintText: 'eg: Twice a week',
-                                        //fillColor: const Color(0xFFE7E0EC),
-                                        //elevation: 2,
-                                        //borderColor: Colors.transparent,
-                                        //borderWidth: 0,
-                                        //borderRadius: 8,
-                                        //margin: const EdgeInsetsDirectional.fromSTEB(20, 0, 10, 0),
-                                        //hidesUnderline: true,
-                                      //),
-
                                     ),
                                   ],
                                 ),
@@ -436,10 +393,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ),
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: Colors.black,
-                                              //fontWeight: FontWeight.w600,),
                                       ),
                                     ),
                                   ],
@@ -499,38 +452,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                                     ),
                                               ),
                                             ),
-                                      
-                                      //FlutterFlowDropDown(
-                                     //   options: [
-                                    //      'Once daily',
-                                    //      'Twice daily',
-                                    //      '3 times a day',
-                                    //      '4 times a day',
-                                   //       'Custom'
-                                   //     ].toList(),
-                                   //     onChanged: (val) => setState(
-                                   //         () => dropDownValue2 = val),
-                                    //    width: MediaQuery.of(context).size.width *0.9,
-                                   //     height: 50,
-                                   //     textStyle: GoogleFonts.signikaNegative(
-                                   //                 color: const Color(0xFF1D2429),
-                                   //                 fontSize: 14,
-                                  //                  fontWeight: FontWeight.normal,
-                                  //                  ), 
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: const Color(0xFF1D2429),
-                                              //fontSize: 14,
-                                              //fontWeight: FontWeight.normal,),
-                                     //   hintText: 'eg: 3 times a day',
-                                     //   fillColor: const Color(0xFFE7E0EC),
-                                     //   elevation: 2,
-                                     //   borderColor: Colors.transparent,
-                                     //   borderWidth: 0,
-                                     //   borderRadius: 8,
-                                    //    margin: const EdgeInsetsDirectional.fromSTEB(20, 4, 10, 4),
-                                    //    hidesUnderline: true,
-                                    //  ),
                                    
                                    ),
                                   ],
@@ -546,10 +467,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ), 
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                          //fontFamily: 'Signika Negative',
-                                          //color: Colors.black,
-                                          //fontWeight: FontWeight.w600,),
+                
                                       ),
                                     ),
                                   ],
@@ -570,31 +488,13 @@ class _AddMedication3State extends State<AddMedication3> {
                                                           fontSize: 14,
                                                           fontWeight: FontWeight.normal,
                                                           ), 
-                                                //FlutterFlowTheme.of(context)
-                                                    //.bodyText1
-                                                    //.override(
-                                                      //fontFamily:
-                                                          //'Signika Negative',
-                                                      //color: const Color(0xFF57636C),
-                                                      //fontSize: 14,
-                                                      //fontWeight:
-                                                          //FontWeight.normal,
-                                                    //),
+                          
                                             hintStyle: GoogleFonts.signikaNegative(
                                                         color: const Color(0xFF57636C),
                                                         fontSize: 14,
                                                         fontWeight: FontWeight.normal,
                                                         ), 
-                                                //FlutterFlowTheme.of(context)
-                                                    //.bodyText1
-                                                    //.override(
-                                                      //fontFamily:
-                                                       //   'Signika Negative',
-                                                      //color: const Color(0xFF57636C),
-                                                      //fontSize: 14,
-                                                      //fontWeight:
-                                                        //  FontWeight.normal,
-                                                    //),
+                            
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
                                                 color: Color(0xFFDBE2E7),
@@ -625,11 +525,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.normal,
                                                   ), 
-                                          //FlutterFlowTheme.of(context).bodyText1.override(
-                                                //fontFamily: 'Signika Negative',
-                                                //color: const Color(0xFF1D2429),
-                                                //fontSize: 14,
-                                                //fontWeight: FontWeight.normal,),
+
                                         ),
                                       ),
                                     ),
@@ -683,36 +579,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                     // hidesUnderline: true,
                                                     ),
                                               ),
-                                            ),
-                                      
-                                      //FlutterFlowDropDown(
-                                       // options: ['g', 'mg', 'mcg', 'IU', 'mEq']
-                                       //     .toList(),
-                                       // onChanged: (val) => setState(
-                                       //     () => dropDownValue3 = val),
-                                       // width:
-                                       //     MediaQuery.of(context).size.width *
-                                       //         0.25,
-                                      //  height: 50,
-                                      //  textStyle: GoogleFonts.signikaNegative(
-                                      //              color: const Color(0xFF1D2429),
-                                      //              fontSize: 14,
-                                      //              fontWeight: FontWeight.normal,
-                                      //              ), 
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                             //fontFamily: 'Signika Negative',
-                                              //color: const Color(0xFF1D2429),
-                                              //fontSize: 14,
-                                              //fontWeight: FontWeight.normal,),
-                                      //  hintText: 'mg',
-                                       // fillColor: const Color(0xFFE7E0EC),
-                                      //  elevation: 2,
-                                       // borderColor: Colors.transparent,
-                                       // borderWidth: 0,
-                                       // borderRadius: 8,
-                                      //  margin: const EdgeInsetsDirectional.fromSTEB(20, 4, 10, 4),
-                                      //  hidesUnderline: true,
-                                      //),
+                                            ), 
 
                                     ),
                                   ],
@@ -728,10 +595,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.w600,
                                                 ), 
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                          //fontFamily: 'Signika Negative',
-                                          //color: Colors.black,
-                                          //fontWeight: FontWeight.w600,),
+                                       
                                       ),
                                     ),
                                   ],
@@ -794,37 +658,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                                     ),
                                               ),
                                             ),
-                                      
-                                    //  FlutterFlowDropDown(
-                                       // options: [].toList(),
-                                       // onChanged: (val) => setState(
-                                        //    () => dropDownValue4 = val),
-                                       // width: MediaQuery.of(context).size.width *0.7,
-                                       // height: 50,
-                                       // textStyle: GoogleFonts.signikaNegative(
-                                       //             color: const Color(0xFF1D2429),
-                                       //             fontSize: 14,
-                                       //             fontWeight: FontWeight.normal,
-                                      //              ), 
-                                        //FlutterFlowTheme.of(context).bodyText1.override(
-                                              //fontFamily: 'Signika Negative',
-                                              //color: const Color(0xFF1D2429),
-                                              //fontSize: 14,
-                                              //fontWeight: FontWeight.normal,),
-                                       // hintText: 'Choose Notification Period',
-                                       // icon: const Icon(
-                                       //   Icons.notifications,
-                                       //   size: 15,
-                                       // ),
-                                       // fillColor: const Color(0xFFE7E0EC),
-                                       // elevation: 2,
-                                       // borderColor: Colors.transparent,
-                                       // borderWidth: 0,
-                                       // borderRadius: 8,
-                                       // margin: const EdgeInsetsDirectional.fromSTEB(20, 4, 10, 4),
-                                       // hidesUnderline: true,
-                                      //),
-
+                                
 
                                     ),
                                    Container(
@@ -848,29 +682,14 @@ class _AddMedication3State extends State<AddMedication3> {
                                         ),
                                       ),
                                     ),
-                                       
-
-                                    //FlutterFlowIconButton(
-                                     // borderColor: Colors.transparent,
-                                     // borderRadius: 30,
-                                     // borderWidth: 1,
-                                      //buttonSize: 60,
-                                      //icon: const Icon(
-                                     //   Icons.add_circle,
-                                     //   color: Color(0xFF770FC0),
-                                     //   size: 40,
-                                    //  ),
-                                    //  onPressed: () {},
-                                    //),
-
+                                      
                                   ],
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                                     children: [
                                       ElevatedButton(
                                             style: ElevatedButton.styleFrom(
@@ -899,7 +718,6 @@ class _AddMedication3State extends State<AddMedication3> {
                                               ],
                                             ),
                                           ),
-
                                     ],
                                   ),
                                 ),
