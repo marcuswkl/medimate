@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'view/search/how_to_swallow.dart';
 import 'view/search/medication_search.dart';
 import 'view/search/medication_search_result.dart';
+import 'view/search/medication_information_profile.dart';
 
 class Nav extends StatefulWidget {
   const Nav({Key? key}) : super(key: key);
@@ -11,12 +12,12 @@ class Nav extends StatefulWidget {
 }
 
 class _NavState extends State<Nav> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
   final List<Widget> _widgetOptions = <Widget>[
     const MedicationResultWidget(),
     const MedicationSearchResultWidget(),
     const HowToSwallowWidget(),
-    const MedicationResultWidget(),
+    const MedicationInformationProfileWidget(),
     const MedicationSearchResultWidget(),
   ];
 
@@ -29,9 +30,11 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: IndexedStack(
+      children: [Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
+    ]),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: const Color(0xFF809BCE),

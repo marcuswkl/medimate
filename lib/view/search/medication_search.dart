@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'medication_search_result.dart';
 import 'how_to_swallow.dart';
+import '../../nav.dart';
 
 class MedicationResultWidget extends StatefulWidget {
   const MedicationResultWidget({Key? key}) : super(key: key);
@@ -632,6 +633,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                               0),
                                                                           child:
                                                                               IconButton(
+
                                                                             iconSize:
                                                                                 60,
                                                                             icon:

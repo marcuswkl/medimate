@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'medication_search.dart';
+import '../../nav.dart';
 
 class MedicationSearchResultWidget extends StatefulWidget {
   const MedicationSearchResultWidget({Key? key}) : super(key: key);
@@ -70,9 +71,7 @@ class _MedicationSearchResultWidgetState
                             size: 20,
                           ),
                           onPressed: () {
-                            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
-                          },
+                            Navigator.pop(context);},
                         ),
                       ),
                     ),

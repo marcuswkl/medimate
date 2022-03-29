@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'medication_search.dart';
+import '../../subnav.dart';
 
 class HowToSwallowWidget extends StatefulWidget {
   const HowToSwallowWidget({Key? key}) : super(key: key);
@@ -52,9 +53,10 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                           size: 20,
                         ),
                         onPressed: () {
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const MedicationResultWidget()));
-                        },
+                        //   Navigator.push(context,
+                        //   MaterialPageRoute(builder: (context) => Subnav(data: Data(1))));
+                        // },
+    Navigator.pop(context);},
                       ),
                     ),
                   ),
