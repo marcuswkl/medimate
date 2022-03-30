@@ -2,6 +2,7 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'medication_information_profile.dart';
 
 class MedicationList extends StatefulWidget {
   const MedicationList({Key? key}) : super(key: key);
@@ -494,7 +495,10 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
@@ -960,7 +964,10 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
@@ -1423,7 +1430,10 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [

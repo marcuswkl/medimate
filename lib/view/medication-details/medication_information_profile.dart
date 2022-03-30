@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'medication_list.dart';
 
 class MedicationInformationProfileWidget extends StatefulWidget {
   const MedicationInformationProfileWidget({Key? key}) : super(key: key);
@@ -47,10 +48,9 @@ class _MedicationInformationProfileWidgetState
                           size: 20,
                         ),
                         onPressed: () {
-                          //   Navigator.push(context,
-                          //   MaterialPageRoute(builder: (context) => Subnav(data: Data(1))));
-                          // },
-                          Navigator.pop(context);},
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const MedicationList()));
+                          },
                       ),
                     ),
                     IconButton(
@@ -62,7 +62,7 @@ class _MedicationInformationProfileWidgetState
                         size: 30,
                       ),
                       onPressed: () {
-
+                        
                       },
                     ),
                   ],

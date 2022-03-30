@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:async';
 import 'add_medication_2.dart';
 
 class AddMedication3 extends StatefulWidget {
