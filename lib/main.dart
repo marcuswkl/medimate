@@ -48,7 +48,7 @@ class _LandingWidgetState extends State<LandingWidget> {
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                     child: Image.asset(
-                      'assets/images/MediMate.png',
+                      'assets/images/medimate.png',
                       width: 290,
                       height: 63,
                       fit: BoxFit.cover,
@@ -57,7 +57,7 @@ class _LandingWidgetState extends State<LandingWidget> {
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                     child: Image.asset(
-                      'assets/images/Logo.png',
+                      'assets/images/logo.png',
                       width: 105,
                       height: 250,
                       fit: BoxFit.cover,
