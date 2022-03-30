@@ -13,6 +13,7 @@ class JournalHistoryWidget extends StatefulWidget {
 class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
   // String dropDownValue;
   DateTime startDate = DateTime.now();
+  DateTime endDate = DateTime.now();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   // Selecting date method
@@ -23,7 +24,7 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
       firstDate: DateTime(2022),
       lastDate: DateTime(2050),
     );
-    if (startPicked != null && startPicked != startDate){
+    if (startPicked != null && startPicked != startDate && (startPicked.isAtSameMomentAs(DateTime.now()) || startPicked.isAfter(DateTime.now()))){
       setState(() {
         startDate = startPicked;
       });

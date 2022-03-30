@@ -5,10 +5,12 @@ class MedicationInformationProfileWidget extends StatefulWidget {
   const MedicationInformationProfileWidget({Key? key}) : super(key: key);
 
   @override
-  _MedicationInformationProfileWidgetState createState() => _MedicationInformationProfileWidgetState();
+  _MedicationInformationProfileWidgetState createState() =>
+      _MedicationInformationProfileWidgetState();
 }
 
-class _MedicationInformationProfileWidgetState extends State<MedicationInformationProfileWidget> {
+class _MedicationInformationProfileWidgetState
+    extends State<MedicationInformationProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
