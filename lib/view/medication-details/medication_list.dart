@@ -2,6 +2,7 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'medication_information_profile.dart';
 
 class MedicationList extends StatefulWidget {
   const MedicationList({Key? key}) : super(key: key);
@@ -23,6 +24,7 @@ class _MedicationListState extends State<MedicationList> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+            child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -147,7 +149,7 @@ class _MedicationListState extends State<MedicationList> {
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -442,7 +444,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -493,12 +495,15 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -605,7 +610,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -900,7 +905,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -959,12 +964,15 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1079,7 +1087,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -1370,7 +1378,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1422,12 +1430,15 @@ class _MedicationListState extends State<MedicationList> {
                                                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                                                       )
                                                                     ),
-                                                                    onPressed: (){},
+                                                                    onPressed: (){
+                                                                      Navigator.push(context,
+                                                                      MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                                    },
                                                                     child: Row(
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1507,6 +1518,7 @@ class _MedicationListState extends State<MedicationList> {
             ),
           ),
         ),
+      ),
       ),
     );
   }

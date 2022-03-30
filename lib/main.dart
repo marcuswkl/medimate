@@ -4,6 +4,7 @@ import 'view/medication-details/add_medication_2.dart';
 import 'view/medication-details/add_medication_3.dart';
 import 'view/medication-details/medication_list.dart';
 import 'view/medication-details/journal_history.dart';
+import 'view/medication-details/medication_information_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: JournalHistoryWidget(),
+          child: MedicationList(),
         ),
       ),
     );
