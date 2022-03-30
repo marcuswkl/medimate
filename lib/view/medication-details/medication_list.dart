@@ -223,7 +223,7 @@ class _MedicationListState extends State<MedicationList> {
                                               mainAxisAlignment: MainAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'More details ',
+                                                  'More details',
                                                   style: GoogleFonts.signikaNegative(
                                                           color: Colors.black,
                                                           fontSize: 14,
