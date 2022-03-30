@@ -147,7 +147,7 @@ class _MedicationListState extends State<MedicationList> {
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -605,7 +605,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
@@ -1079,7 +1079,7 @@ class _MedicationListState extends State<MedicationList> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset('assets/images/medicine.jpg',
+                                              Image.asset('assets/images/medicine.png',
                                                 width: 50,
                                                 height: 50,
                                                 fit: BoxFit.cover,
