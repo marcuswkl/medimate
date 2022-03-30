@@ -94,10 +94,10 @@ class _MedicationSearchResultWidgetState
                       children: [
                         Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                              const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                           child: Image.network(
                             'https://picsum.photos/seed/970/600',
-                            width: 179,
+                            width: 169,
                             height: 134,
                             fit: BoxFit.cover,
                           ),

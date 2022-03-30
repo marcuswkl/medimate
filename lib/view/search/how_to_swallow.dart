@@ -111,7 +111,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           decoration: const BoxDecoration(
                                             color: Colors.white,
                                           ),
-                                          child: Column(
+                                          child: SingleChildScrollView(
+                                            child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
@@ -158,6 +159,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                             ],
                                           ),
                                         ),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -184,7 +186,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           decoration: const BoxDecoration(
                                             color: Colors.white,
                                           ),
-                                          child: Column(
+                                          child: SingleChildScrollView(
+                                            child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
@@ -229,6 +232,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                 ),
                                               ),
                                             ],
+                                          ),
                                           ),
                                         ),
                                       ),
@@ -257,7 +261,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           decoration: const BoxDecoration(
                                             color: Colors.white,
                                           ),
-                                          child: Column(
+                                          child: SingleChildScrollView(
+                                            child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
@@ -302,6 +307,7 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                 ),
                                               ),
                                             ],
+                                          ),
                                           ),
                                         ),
                                       ),

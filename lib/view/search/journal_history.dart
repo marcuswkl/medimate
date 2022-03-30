@@ -24,7 +24,7 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
       firstDate: DateTime(2022),
       lastDate: DateTime(2050),
     );
-    if (startPicked != null && startPicked != startDate && (startPicked.isAtSameMomentAs(DateTime.now()) || startPicked.isAfter(DateTime.now()))){
+    if (startPicked != null && startPicked != startDate){
       setState(() {
         startDate = startPicked;
       });
@@ -193,19 +193,19 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                     ],
                   ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                      child: Material(
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Material(
                         color: Colors.transparent,
                         elevation: 3,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.89,
+                          width: MediaQuery.of(context).size.width,
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -340,22 +340,22 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                      child: Material(
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Material(
                         color: Colors.transparent,
                         elevation: 3,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.89,
+                          width: MediaQuery.of(context).size.width,
                           height: 100,
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -490,8 +490,8 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(10, 15, 10, 0),
@@ -530,7 +530,7 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 0.9,
+                      width: MediaQuery.of(context).size.width * 0.95,
                       height: MediaQuery.of(context).size.height * 0.3,
                       decoration: BoxDecoration(
                         color: Colors.white,

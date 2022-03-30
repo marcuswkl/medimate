@@ -97,7 +97,7 @@ class _MedicationInformationProfileWidgetState
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(40, 35, 40, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(35, 35, 35, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
