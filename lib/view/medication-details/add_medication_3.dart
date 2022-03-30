@@ -23,6 +23,8 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final formKey = GlobalKey<FormState>();
 
+  int count = 1;
+
 
   @override
   void initState() {
@@ -678,9 +680,7 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                                     ),
                                               ),
                                             ),
-                                
-
-                                    ),
+                                          ),
                                    Container(
                                     width: 50,
                                     height: 50,
@@ -698,7 +698,9 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                           color: Color(0xFF770FC0),
                                           //size: 30,
                                         ),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          count ++;
+                                        },
                                         ),
                                       ),
                                     ),
@@ -720,7 +722,11 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                                 borderRadius: BorderRadius.all(Radius.circular(10)),
                                               )
                                             ),
-                                            onPressed: (){},
+                                            onPressed: (){
+                                              if (formKey.currentState!.validate()) {
+                                                formKey.currentState?.save();
+                                              }
+                                            },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [

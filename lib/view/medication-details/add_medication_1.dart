@@ -139,6 +139,7 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
+                                          
                                           obscureText: false,
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
@@ -211,6 +212,7 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
+                                          
                                           obscureText: false,
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
@@ -590,8 +592,10 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                               )
                                             ),
                                             onPressed: (){
-                                              Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) => const AddMedication2()));
+                                              if (formKey.currentState!.validate()) {
+                                                  formKey.currentState?.save();
+                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AddMedication2()));
+                                              }
                                             },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,

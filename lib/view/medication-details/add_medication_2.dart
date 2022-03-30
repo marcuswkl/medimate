@@ -178,7 +178,7 @@ class _AddMedication2State extends State<AddMedication2> with InputValidationMix
                                             if (value == null || value.isEmpty) {
                                               return 'Please enter your Medication Stock';
                                             } else {
-                                              if (isName(value)) {
+                                              if (isNumber(value)) {
                                                 return null;
                                               } else {
                                                 return 'Please enter a valid Medication Stock';
@@ -356,9 +356,11 @@ class _AddMedication2State extends State<AddMedication2> with InputValidationMix
                                               )
                                             ),
                                             onPressed: (){
-                                              Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) => const AddMedication3()));
-                                              },
+                                              if (formKey.currentState!.validate()) {
+                                                  formKey.currentState?.save();
+                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AddMedication3()));
+                                              }
+                                            },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [

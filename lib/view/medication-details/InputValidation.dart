@@ -15,14 +15,4 @@ mixin InputValidationMixin {
     return regex.hasMatch(number);
   }
 
-  bool isEmail(String email) {
-    RegExp regex = RegExp(r'^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
-    return regex.hasMatch(email);
-  }
-
-  bool isIC (String ic){
-    RegExp regex = RegExp(r"^\d{6}-\d{2}-\d{4}$");
-    return regex.hasMatch(ic);
-  }
-
 }
