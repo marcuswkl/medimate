@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'view/search/how_to_swallow.dart';
 import 'view/search/medication_search.dart';
 import 'view/search/medication_search_result.dart';
-import 'view/search/medication_information_profile.dart';
-import 'view/search/journal_history.dart';
 
 class Nav extends StatefulWidget {
   const Nav({Key? key}) : super(key: key);
@@ -18,8 +16,8 @@ class _NavState extends State<Nav> {
     const MedicationResultWidget(),
     const MedicationSearchResultWidget(),
     const HowToSwallowWidget(),
-    const MedicationInformationProfileWidget(),
-    const JournalHistoryWidget(),
+    const MedicationSearchResultWidget(),
+    const HowToSwallowWidget(),
   ];
 
   void _onItemTap(int index) {
