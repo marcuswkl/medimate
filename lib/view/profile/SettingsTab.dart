@@ -30,7 +30,7 @@ class _SettingsTabState extends State<SettingsTab> {
   List<DateTime> timeStore = [];
 
   //Form Input
-  final SettingsformKey = GlobalKey < FormState > ();
+  final settingsFormKey = GlobalKey < FormState > ();
   List<TextEditingController> myController = List.generate(questions.length, (i) => TextEditingController());
   @override
   void initState() {
@@ -52,9 +52,9 @@ class _SettingsTabState extends State<SettingsTab> {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: isEditable,
-      builder: (context, value, Widget) {
+      builder: (context, value, widget) {
     return Form(
-      key: SettingsformKey,
+      key: settingsFormKey,
       child: SafeArea(
       top: false,
       bottom: false,
@@ -78,7 +78,7 @@ class _SettingsTabState extends State<SettingsTab> {
               ),
               if (value == true)...[
                 SliverToBoxAdapter(
-                  child: SubButton(FormKey: SettingsformKey),
+                  child: SubButton(FormKey: settingsFormKey),
                 )
               ]
             ],

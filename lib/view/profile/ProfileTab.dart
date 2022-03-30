@@ -41,7 +41,7 @@ class _ProfileTabState extends State<ProfileTab> with InputValidationMixin {
   }
 
   //Form Input
-  final ProfileformKey = GlobalKey < FormState > ();
+  final profileformKey = GlobalKey < FormState > ();
   List<TextEditingController> myController = List.generate(questions.length, (i) => TextEditingController());
   @override
   void initState() {
@@ -55,9 +55,9 @@ class _ProfileTabState extends State<ProfileTab> with InputValidationMixin {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: isEditable,
-      builder: (context, value, Widget) {
+      builder: (context, value, widget) {
     return Form(
-      key: ProfileformKey,
+      key: profileformKey,
       child: SafeArea(
       top: false,
       bottom: false,
@@ -79,7 +79,7 @@ class _ProfileTabState extends State<ProfileTab> with InputValidationMixin {
               ),
               if (value == true)...[
                 SliverToBoxAdapter(
-                  child: SubButton(FormKey: ProfileformKey),
+                  child: SubButton(FormKey: profileformKey),
                 )
               ]
             ],
@@ -176,16 +176,16 @@ class _ProfileTabState extends State<ProfileTab> with InputValidationMixin {
                 style: GoogleFonts.signikaNegative(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black),
                 ),
               ),
-              if (input1 == questions[2])...[ // Information Button
-              IconButton(
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
-                icon: const Icon(
-                  Icons.info_rounded,
-                  ),
-                onPressed: (){},
-                tooltip: 'Password should contain: \n - At least one upper case character \n - At least one lower case character \n - At least one digit \n - At least one special character \n - At least 8 characters in length',
-              )]
+              // if (input1 == questions[2])...[ // Information Button
+              // IconButton(
+              //   padding: EdgeInsets.zero,
+              //   constraints: const BoxConstraints(),
+              //   icon: const Icon(
+              //     Icons.info_rounded,
+              //     ),
+              //   onPressed: (){},
+              //   tooltip: 'Password should contain: \n - At least one upper case character \n - At least one lower case character \n - At least one digit \n - At least one special character \n - At least 8 characters in length',
+              // )]
             ],
           ),
         ),

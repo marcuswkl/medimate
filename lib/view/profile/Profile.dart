@@ -49,7 +49,10 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin{
                   style: GoogleFonts.fredokaOne(fontSize: 28,fontWeight: FontWeight.bold,color: Colors.black)
                 ),
                 actions: [
-                  IconButton(
+                  ValueListenableBuilder(
+                  valueListenable: isEditable,
+                  builder: (context, value, widget) {
+                  return IconButton(
                     icon: Icon(
                       isEditable.value 
                       ? Icons.close
@@ -65,7 +68,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin{
                       ? setState(() {})
                       : setState(() {isEditable.value = true;});
                     }
-                  )
+                  );
+                  })
                 ],
                 pinned: false,
                 backgroundColor: Colors.white,
