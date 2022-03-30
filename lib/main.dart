@@ -128,10 +128,29 @@ class _LandingWidgetState extends State<LandingWidget> {
                       ),
                     ),
                   ),
-                  Text(
-                    'By signing in, you agree to our Terms of\nService and Privacy Policy.',
+                  RichText(
+                    text: TextSpan(
+                        text: 'By signing in, you agree to our ',
+                        style: GoogleFonts.signikaNegative(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Terms of\nService ',
+                            style: GoogleFonts.signikaNegative(
+                              color: const Color(0xFF809BCE),
+                            ),
+                          ),
+                          TextSpan(text: 'and '),
+                          TextSpan(
+                            text: 'Privacy Policy.',
+                            style: GoogleFonts.signikaNegative(
+                              color: const Color(0xFF809BCE),
+                            ),
+                          ),
+                        ]),
                     textAlign: TextAlign.center,
-                    style: TextStyle(),
                   ),
                 ],
               ),
