@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'medication_search.dart';
-import '../../subnav.dart';
 
 class HowToSwallowWidget extends StatefulWidget {
   const HowToSwallowWidget({Key? key}) : super(key: key);
