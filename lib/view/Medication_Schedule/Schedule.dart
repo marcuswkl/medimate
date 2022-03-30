@@ -15,7 +15,6 @@ final List<String> questions = ['Before Breakfast','After Breakfast','Before Lun
 //   return storage;
 // }
 
-
 // Schedule Class
 class Schedule extends StatefulWidget {
   const Schedule({Key? key}) : super(key: key);
@@ -25,7 +24,6 @@ class Schedule extends StatefulWidget {
 }
 
 class _ScheduleState extends State<Schedule> {
-  
   // Convert List String to NextLine String
   String multipleString(value) {
     StringBuffer sb = StringBuffer();
@@ -40,8 +38,6 @@ class _ScheduleState extends State<Schedule> {
   @override
   void initState() {
     super.initState();
-    // for (int i=0; i<questions.length; i++){
-    //   myController[i] = TextEditingController (text: answers[i]);
     _MedicationQuery (DateTime.now());
     }
 
