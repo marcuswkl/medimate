@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'add_medication_2.dart';
+import 'InputValidation.dart';
+
 
 class AddMedication1 extends StatefulWidget {
   const AddMedication1({Key? key}) : super(key: key);
@@ -9,13 +11,14 @@ class AddMedication1 extends StatefulWidget {
   _AddMedication1State createState() => _AddMedication1State();
 }
 
-class _AddMedication1State extends State<AddMedication1> {
+class _AddMedication1State extends State<AddMedication1> with InputValidationMixin{
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
   late TextEditingController formInputController3;
   late TextEditingController formInputController4;
   String? dropDownValue1 = 'Pills';
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -28,8 +31,10 @@ class _AddMedication1State extends State<AddMedication1> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
+    return Form(
+      key: formKey,
+      child: Scaffold(
+        key: scaffoldKey,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
@@ -141,7 +146,6 @@ class _AddMedication1State extends State<AddMedication1> {
                                                   fontWeight: FontWeight.normal,
                                                   ),
                                           decoration: InputDecoration(
-
                                             hintText: 'Enter Medication Name',
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: const BorderSide(
@@ -163,7 +167,22 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
- 
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Enter Medication Name';
+                                            } else {
+                                              if (isName(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Medication Name';
+                                              }
+                                            }
+                                          }
+
                                         ),
                                       ),
                                     ),
@@ -221,6 +240,22 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Enter Medication Nickname';
+                                            } else {
+                                              if (isName(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Medication Nickname';
+                                              }
+                                            }
+                                          }
+
 
                                         ),
                                       ),
@@ -417,6 +452,7 @@ class _AddMedication1State extends State<AddMedication1> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
+
                                           obscureText: false,
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
@@ -445,6 +481,21 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Enter Provider Name';
+                                            } else {
+                                              if (isName(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Provider Name';
+                                              }
+                                            }
+                                          }
                                         ),
                                       ),
                                     ),
@@ -501,6 +552,21 @@ class _AddMedication1State extends State<AddMedication1> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Enter Provider Contact';
+                                            } else {
+                                              if (isPhone(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Provider Contact';
+                                              }
+                                            }
+                                          }
                                         ),
                                       ),
                                     ),
@@ -561,6 +627,7 @@ class _AddMedication1State extends State<AddMedication1> {
             ),
           ),
         ),
+      )
       ),
     );
   }

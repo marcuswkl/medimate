@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'add_medication_1.dart';
 import 'add_medication_3.dart';
+import 'InputValidation.dart';
+
 
 class AddMedication2 extends StatefulWidget {
   const AddMedication2({Key? key}) : super(key: key);
@@ -10,11 +12,12 @@ class AddMedication2 extends StatefulWidget {
   _AddMedication2State createState() => _AddMedication2State();
 }
 
-class _AddMedication2State extends State<AddMedication2> {
+class _AddMedication2State extends State<AddMedication2> with InputValidationMixin {
   late TextEditingController formInputController1;
   late TextEditingController formInputController2;
   String? dropDownValue1 = 'Pills';
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -25,8 +28,10 @@ class _AddMedication2State extends State<AddMedication2> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
+    return Form(
+        key: formKey,
+      child: Scaffold(
+        key: scaffoldKey,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
@@ -136,6 +141,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                                         child: TextFormField(
+                                          keyboardType: TextInputType.number,
                                           obscureText: false,
                                           style: GoogleFonts.signikaNegative(
                                                   color: const Color(0xFF57636C),
@@ -164,6 +170,21 @@ class _AddMedication2State extends State<AddMedication2> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter your Medication Stock';
+                                            } else {
+                                              if (isName(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Medication Stock';
+                                              }
+                                            }
+                                          }
                                  
                                         ),
                                       ),
@@ -199,6 +220,7 @@ class _AddMedication2State extends State<AddMedication2> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.normal,
                                                   ),
+                                          keyboardType: TextInputType.number,
                                           decoration: InputDecoration(
                  
                                             hintText: 'Enter Number of Days',
@@ -222,6 +244,21 @@ class _AddMedication2State extends State<AddMedication2> {
                                             fillColor: const Color(0xFFE7E0EC),
                                             contentPadding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                                           ),
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Enter Number of Days';
+                                            } else {
+                                              if (isNumber(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Number of Days';
+                                              }
+                                            }
+                                          }
  
                                         ),
                                       ),
@@ -355,6 +392,7 @@ class _AddMedication2State extends State<AddMedication2> {
             ),
           ),
         ),
+      ),
       ),
     );
   }

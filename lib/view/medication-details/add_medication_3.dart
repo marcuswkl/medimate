@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 import 'add_medication_2.dart';
+import 'InputValidation.dart';
+
 
 class AddMedication3 extends StatefulWidget {
   const AddMedication3({Key? key}) : super(key: key);
@@ -10,7 +12,7 @@ class AddMedication3 extends StatefulWidget {
   _AddMedication3State createState() => _AddMedication3State();
 }
 
-class _AddMedication3State extends State<AddMedication3> {
+class _AddMedication3State extends State<AddMedication3> with InputValidationMixin {
   String? dropDownValue1 = 'Once a week';
   String? dropDownValue2 = 'Once daily';
   String? dropDownValue3 = 'g';
@@ -20,6 +22,8 @@ class _AddMedication3State extends State<AddMedication3> {
   DateTime startDate = DateTime.now();
   DateTime endDate = DateTime.now();
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
+
 
   @override
   void initState() {
@@ -60,7 +64,9 @@ class _AddMedication3State extends State<AddMedication3> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Form(
+      key: formKey,
+        child: Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -479,6 +485,7 @@ class _AddMedication3State extends State<AddMedication3> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 15, 0),
                                         child: TextFormField(
                                           controller: formInputController,
+                                          keyboardType: TextInputType.number,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             hintText: 'Enter Value',
@@ -524,6 +531,21 @@ class _AddMedication3State extends State<AddMedication3> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.normal,
                                                   ), 
+                                          onSaved: (String? value) {
+                                            //save
+                                            print("saved");
+                                          },
+                                          validator: (String? value) {
+                                            if (value == null || value.isEmpty) {
+                                              return 'Please enter Value';
+                                            } else {
+                                              if (isNumber(value)) {
+                                                return null;
+                                              } else {
+                                                return 'Please enter a valid Value';
+                                              }
+                                            }
+                                          }
 
                                         ),
                                       ),
@@ -732,6 +754,7 @@ class _AddMedication3State extends State<AddMedication3> {
             ),
           ),
         ),
+      ),
       ),
     );
   }
