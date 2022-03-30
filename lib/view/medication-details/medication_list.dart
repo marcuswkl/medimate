@@ -23,6 +23,7 @@ class _MedicationListState extends State<MedicationList> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+            child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -442,7 +443,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -498,7 +499,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -900,7 +901,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -964,7 +965,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1370,7 +1371,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'RESTOCK',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1427,7 +1428,7 @@ class _MedicationListState extends State<MedicationList> {
                                                                       mainAxisSize: MainAxisSize.min,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                                                                           child: Text(
                                                                             'INFO',
                                                                             style: GoogleFonts.signikaNegative(
@@ -1507,6 +1508,7 @@ class _MedicationListState extends State<MedicationList> {
             ),
           ),
         ),
+      ),
       ),
     );
   }
