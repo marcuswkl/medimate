@@ -1514,13 +1514,179 @@ class _MedicationListState extends State<MedicationList> {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 130, 0),
+                        child: (
+                          Row(
+                            children: [
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: const Color(0xFF809BCE),
+                                  minimumSize: const Size(125,40),
+                                  elevation: 3,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                                  )
+                                ),
+                                onPressed: (){},
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(
+                                      Icons.history,
+                                      size: 16,
+                                      ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                      child: Text(
+                                        'HISTORY',
+                                        style: GoogleFonts.signikaNegative(
+                                                color: Colors.white,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w500,
+                                                ),
+                                        )
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        ),
+                        
+
+                        // child: FFButtonWidget(
+                        //   onPressed: () {},
+                        //   text: 'HISTORY',
+                        //   icon: const Icon(
+                        //     Icons.history,
+                        //     size: 16,
+                        //   ),
+                        //   options: FFButtonOptions(
+                        //     width: 125,
+                        //     height: 40,
+                        //     color: const Color(0xFF809BCE),
+                        //     textStyle:
+                        //         FlutterFlowTheme.of(context).subtitle2.override(
+                        //               fontFamily: 'Signika Negative',
+                        //               color: Colors.white,
+                        //               fontSize: 14,
+                        //               fontWeight: FontWeight.w500,
+                        //             ),
+                        //     borderSide: const BorderSide(
+                        //       color: Colors.transparent,
+                        //       width: 1,
+                        //     ),
+                        //     borderRadius: 50,
+                        //   ),
+                        // ),
+
+
+                      ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        child: Material(
+                          color: Colors.transparent,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF809BCE),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                              child: IconButton(
+                                iconSize: 40,
+                                color: const Color(0x00FCFCFC),
+                                icon: const Icon(
+                                  Icons.edit_outlined,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ),
+                        ),
+                        
+                        // FlutterFlowIconButton(
+                        //   borderColor: Colors.transparent,
+                        //   borderRadius: 50,
+                        //   borderWidth: 1,
+                        //   buttonSize: 40,
+                        //   fillColor: const Color(0xFF809BCE),
+                        //   icon: const Icon(
+                        //     Icons.edit_outlined,
+                        //     color: Colors.white,
+                        //     size: 20,
+                        //   ),
+                        //   onPressed: () {},
+                        // ),
+
+
+                      ),
+                      Material(
+                          color: Colors.transparent,
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF809BCE),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                              child: IconButton(
+                                iconSize: 40,
+                                color: const Color(0x00FCFCFC),
+                                icon: const Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ),
+                        ),
+
+                      // FlutterFlowIconButton(
+                      //   borderColor: Colors.transparent,
+                      //   borderRadius: 50,
+                      //   borderWidth: 1,
+                      //   buttonSize: 40,
+                      //   fillColor: const Color(0xFF809BCE),
+                      //   icon: const Icon(
+                      //     Icons.add,
+                      //     color: Colors.white,
+                      //     size: 20,
+                      //   ),
+                      //   onPressed: () {},
+                      // ),
+
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
-      ),
+    ),
     );
   }
 }
-
