@@ -23,8 +23,6 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final formKey = GlobalKey<FormState>();
 
-  int count = 1;
-
 
   @override
   void initState() {
@@ -698,9 +696,7 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                           color: Color(0xFF770FC0),
                                           //size: 30,
                                         ),
-                                        onPressed: () {
-                                          count ++;
-                                        },
+                                        onPressed: () {},
                                         ),
                                       ),
                                     ),
