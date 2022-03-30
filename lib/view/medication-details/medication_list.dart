@@ -80,7 +80,7 @@ class _MedicationListState extends State<MedicationList> {
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
                                   child: IconButton(
-                                    iconSize: 40,
+                                    iconSize: 50,
                                     color: Colors.black,
                                     icon: const Icon(
                                       Icons.delete,
