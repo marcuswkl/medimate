@@ -378,7 +378,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               await Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginWidget(),
+                                  builder: (context) => const LoginWidget(),
                                 ),
                               );
                             },
