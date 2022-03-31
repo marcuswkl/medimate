@@ -46,7 +46,7 @@ class _MedicationListViewState extends State<MedicationListView> {
         primary: false,
         shrinkWrap: true,
         separatorBuilder: (BuildContext context, int index) => const Divider(),
-        padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+        padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
         itemCount: medications.length,
         itemBuilder: (context, index) {
         _medicationQuery(index);
