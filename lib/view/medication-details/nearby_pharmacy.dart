@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
 class NearbyPharmacyWidget extends StatefulWidget {
   const NearbyPharmacyWidget({Key? key}) : super(key: key);
@@ -190,14 +191,21 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                                           ),
                                         ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Signika Negative',
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w300,
-                                          ),
+                                      style: GoogleFonts.signikaNegative(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w300,
+                                              ),
+                                      
+                                      // FlutterFlowTheme.of(context)
+                                      //     .bodyText1
+                                      //     .override(
+                                      //       fontFamily: 'Signika Negative',
+                                      //       color: Colors.white,
+                                      //       fontSize: 18,
+                                      //       fontWeight: FontWeight.w300,
+                                      //     ),
+
                                     ),
                                   ),
                                 ),
@@ -256,13 +264,19 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                             children: [
                               Text(
                                 'Watsons Pharmacy',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Signika Negative',
-                                      color: Colors.black,
-                                      fontSize: 20,
-                                    ),
+                                style: GoogleFonts.signikaNegative(
+                                        color: Colors.black,
+                                        fontSize: 20,
+                                        ),
+                                
+                                // FlutterFlowTheme.of(context)
+                                //     .bodyText1
+                                //     .override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontSize: 20,
+                                //     ),
+
                               ),
                             ],
                           ),
@@ -272,15 +286,23 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                           children: [
                             Text(
                               '2.5 km',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Signika Negative',
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal,
-                                    fontStyle: FontStyle.italic,
-                                  ),
+                              style: GoogleFonts.signikaNegative(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FontStyle.italic,
+                                      ),
+                              
+                              // FlutterFlowTheme.of(context)
+                              //     .bodyText1
+                              //     .override(
+                              //       fontFamily: 'Signika Negative',
+                              //       color: Colors.black,
+                              //       fontSize: 16,
+                              //       fontWeight: FontWeight.normal,
+                              //       fontStyle: FontStyle.italic,
+                              //     ),
+
                             ),
                           ],
                         ),
@@ -294,21 +316,30 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                         children: [
                           Text(
                             'Contact: ',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.bold,
+                                //     ),
                           ),
                           Text(
                             '1300 880 847',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.normal,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.normal,
+                                //     ),
+
                           ),
                         ],
                       ),
@@ -320,21 +351,31 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                         children: [
                           Text(
                             'Operating Hours: ',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.bold,
+                                //     ),
+
                           ),
                           Text(
                             '9.00AM - 9.00PM',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.normal,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.normal,
+                                //     ),
+
                           ),
                         ],
                       ),
@@ -346,21 +387,31 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                         children: [
                           Text(
                             'Available Days: ',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.bold,
+                                //     ),
+
                           ),
                           Text(
                             'Monday - Friday',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Signika Negative',
+                            style: GoogleFonts.signikaNegative(
                                       color: Colors.black,
                                       fontWeight: FontWeight.normal,
-                                    ),
+                                      ),
+
+                                // FlutterFlowTheme.of(context).bodyText1.override(
+                                //       fontFamily: 'Signika Negative',
+                                //       color: Colors.black,
+                                //       fontWeight: FontWeight.normal,
+                                //     ),
+
                           ),
                         ],
                       ),
