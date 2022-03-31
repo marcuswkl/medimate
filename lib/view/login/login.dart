@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import '../forgot_password/forgot_password_widget.dart';
+import 'forgot_password.dart';
 // import '../sign_up/sign_up_widget.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -206,7 +206,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      Column() // TODO: Replace with LoginWidget(),
+                                      Column() // TODO: Replace with HomeWidget(),
                                   ),
                             );
                           },
@@ -236,8 +236,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    Column(), //TODO: Change to ForgotPasswordWidget(),
+                                builder: (context) => ForgotPasswordWidget(),
                               ),
                             );
                           },
