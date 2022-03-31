@@ -39,17 +39,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
-                    child: IconButton(
-                      iconSize: 30,
-                      color: const Color(0xFF809BCE),
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.chevron_left,
-                        color: Colors.white,
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF809BCE),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: IconButton(
+                        iconSize: 30,
+                        onPressed: () async {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.chevron_left,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -65,9 +69,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: Image.asset(
-                          'assets/images/Logo.png',
+                          'assets/images/logo.png',
                           width: 72,
                           height: 174,
                           fit: BoxFit.cover,
@@ -82,13 +86,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                           style: GoogleFonts.signikaNegative(
                             color: Colors.black,
                             fontSize: 18,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
                           height: 52,
@@ -103,12 +107,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 hintText: 'Eg: example@gmail.com',
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.black,
+                                    color: Colors.black45,
                                     width: 1,
                                   ),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
@@ -138,9 +141,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                         child: Text(
                           'Password',
                           style: GoogleFonts.signikaNegative(
-                              // color: Colors.black,
-                              // fontSize: 18,
-                              ),
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ),
                       Padding(
@@ -157,12 +161,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                               hintText: 'Enter your password',
                               enabledBorder: const OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Colors.black,
+                                  color: Colors.black45,
                                   width: 1,
                                 ),
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4.0),
                                 ),
                               ),
                               focusedBorder: const OutlineInputBorder(
@@ -213,7 +216,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 const Color(0xFF809BCE)),
                             minimumSize: MaterialStateProperty.all<Size>(
-                                const Size(284, 53)),
+                                const Size(277, 48)),
                             shape: MaterialStateProperty.all<OutlinedBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5))),
@@ -229,7 +232,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.push(
@@ -252,7 +255,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Text(
                           'or',
                           style: GoogleFonts.signikaNegative(),
@@ -307,7 +310,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     ),
                                   ),
                                 ),
-                                Align(
+                                /* Align(
                                   alignment:
                                       const AlignmentDirectional(-0.83, 0),
                                   child: Container(
@@ -322,7 +325,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       fit: BoxFit.contain,
                                     ),
                                   ),
-                                ),
+                                ), */
                               ],
                             ),
                           ),
@@ -347,17 +350,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                               await Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Column(), //TODO: Replace with SignUpWidget(),
+                                  builder: (context) =>
+                                      Column(), //TODO: Replace with SignUpWidget(),
                                 ),
                               );
                             },
                             child: Text(
                               'Sign Up',
                               style: GoogleFonts.signikaNegative(
-                                color: const Color(0xFF102D51),
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  color: const Color(0xFF102D51),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ],
