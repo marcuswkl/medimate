@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'medication_information_profile.dart';
 import 'MedicationData.dart';
+import 'add_medication_1.dart';
+import 'nearby_pharmacy.dart';
 
 
 class MedicationListView extends StatefulWidget {
@@ -105,7 +107,10 @@ class _MedicationListViewState extends State<MedicationListView> {
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                           )
                       ),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const AddMedication1()));
+                      },
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -349,7 +354,10 @@ class _MedicationListViewState extends State<MedicationListView> {
                                                   borderRadius: BorderRadius.all(Radius.circular(50)),
                                                 ),
                                               ),
-                                              onPressed: (){},
+                                              onPressed: (){
+                                                Navigator.push(context,
+                                                MaterialPageRoute(builder: (context) => const NearbyPharmacyWidget()));
+                                              },
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [

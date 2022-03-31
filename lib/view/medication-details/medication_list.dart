@@ -2,7 +2,6 @@ import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'medication_information_profile.dart';
 import 'medication_list_ListView.dart';
 import 'journal_history.dart';
 

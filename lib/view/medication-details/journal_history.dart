@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:async';
+import 'medication_list.dart';
 
 class JournalHistoryWidget extends StatefulWidget {
   const JournalHistoryWidget({Key? key}) : super(key: key);
@@ -64,10 +64,9 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                             size: 30,
                           ),
                           onPressed: () {
-                            //   Navigator.push(context,
-                            //   MaterialPageRoute(builder: (context) => Subnav(data: Data(1))));
-                            // },
-                            Navigator.pop(context);},
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const MedicationList()));
+                            },
                         ),
                       ),
                     ],
