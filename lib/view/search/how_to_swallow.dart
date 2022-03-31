@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'medication_search.dart';
 
 class HowToSwallowWidget extends StatefulWidget {
   const HowToSwallowWidget({Key? key}) : super(key: key);
@@ -148,8 +147,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                 padding:
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
+                                                child: Image.asset(
+                                                  'assets/images/pop_bottle_method.png',
                                                   width: 170,
                                                   height: 129,
                                                   fit: BoxFit.cover,
@@ -223,8 +222,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                 padding:
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
+                                                child: Image.asset(
+                                                  'assets/images/pop_bottle_method.png',
                                                   width: 170,
                                                   height: 129,
                                                   fit: BoxFit.cover,
@@ -298,8 +297,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                                 padding:
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
+                                                child: Image.asset(
+                                                  'assets/images/pop_bottle_method.png',
                                                   width: 170,
                                                   height: 129,
                                                   fit: BoxFit.cover,
@@ -394,8 +393,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -527,8 +526,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -660,8 +659,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
