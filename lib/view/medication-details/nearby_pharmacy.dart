@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
+import 'medication_list.dart';
 
 class NearbyPharmacyWidget extends StatefulWidget {
   const NearbyPharmacyWidget({Key? key}) : super(key: key);
@@ -62,8 +63,8 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                           size: 20,
                         ),
                         onPressed: () {
-                          // Navigator.push(context,
-                          // MaterialPageRoute(builder: (context) => const AddMedication2()));
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const MedicationList()));
                         },
                       ),
                     ),
