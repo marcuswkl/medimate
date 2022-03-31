@@ -74,11 +74,13 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: Text(
-                          'Submit your email to\nreceive instructions to reset password',
+                          'Submit your email to receive instructions\nto reset password',
                           style: GoogleFonts.signikaNegative(
                             color: Colors.black,
                             fontSize: 16,
+                            fontWeight: FontWeight.w600
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                       Padding(
@@ -108,7 +110,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: Container(
                           width: 278,
-                          height: 52,
+                          height: 55,
                           decoration: BoxDecoration(),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(

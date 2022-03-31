@@ -95,7 +95,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
-                          height: 52,
+                          height: 55,
                           decoration: const BoxDecoration(),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -151,7 +151,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: Container(
                           width: 278,
-                          height: 52,
+                          height: 55,
                           decoration: const BoxDecoration(),
                           child: TextFormField(
                             controller: textController2,
