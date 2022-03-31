@@ -68,9 +68,7 @@ class _MedicationInformationProfileWidgetState extends State<MedicationInformati
                           size: 20,
                         ),
                         onPressed: () {
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const MedicationList()));
-                          },
+                          Navigator.pop(context);},
                       ),
                     ),
                     IconButton(
@@ -82,7 +80,7 @@ class _MedicationInformationProfileWidgetState extends State<MedicationInformati
                         size: 30,
                       ),
                       onPressed: () {
-                        
+
                       },
                     ),
                   ],

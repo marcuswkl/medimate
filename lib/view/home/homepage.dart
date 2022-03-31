@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'side_effects_survey.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({required Key key}) : super(key: key);
+  const HomePageWidget({Key? key}) : super(key: key);
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
@@ -23,7 +24,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -120,8 +121,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           Radius.circular(15)),
                                                 )),
                                             onPressed: () {
-                                              print('Button pressed ...');
-                                            },
+                                               },
                                             child: Text(
                                               '2.00 PM',
                                               style:
@@ -179,8 +179,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 15)),
                                                   )),
                                               onPressed: () {
-                                                print('Button pressed ...');
-                                              },
+                                                },
                                               child: Text(
                                                 'After Lunch',
                                                 style:
@@ -266,7 +265,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           Radius.circular(15)),
                                                 )),
                                             onPressed: () {
-                                              print('Button pressed ...');
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(builder: (context) => const SideEffectsSurveyWidget()));
                                             },
                                             child: Text(
                                               'Journal',
@@ -556,8 +556,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                           type:
                                                                               PageTransitionType.fade,
                                                                           child:
-                                                                              Image.network(
-                                                                            'https://picsum.photos/seed/544/600',
+                                                                              Image.asset(
+                                                                            'assets/images/news1.png',
                                                                             width:
                                                                                 100,
                                                                             height:
@@ -586,9 +586,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                           topRight:
                                                                               Radius.circular(8),
                                                                         ),
-                                                                        child: Image
-                                                                            .network(
-                                                                          'https://picsum.photos/seed/544/600',
+                                                                        child: Image.asset(
+                                                                          'assets/images/news2.png',
                                                                           width:
                                                                               100,
                                                                           height:
@@ -826,8 +825,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                           type:
                                                                               PageTransitionType.fade,
                                                                           child:
-                                                                              Image.network(
-                                                                            'https://picsum.photos/seed/544/600',
+                                                                          Image.asset(
+                                                                            'assets/images/news2.png',
                                                                             width:
                                                                                 100,
                                                                             height:
@@ -856,9 +855,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                           topRight:
                                                                               Radius.circular(8),
                                                                         ),
-                                                                        child: Image
-                                                                            .network(
-                                                                          'https://picsum.photos/seed/544/600',
+                                                                        child: Image.asset(
+                                                                          'assets/images/news1.png',
                                                                           width:
                                                                               100,
                                                                           height:
@@ -1101,8 +1099,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                             type:
                                                                                 PageTransitionType.fade,
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/544/600',
+                                                                            Image.asset(
+                                                                              'assets/images/news1.png',
                                                                               width: 100,
                                                                               height: MediaQuery.of(context).size.height * 0.17,
                                                                               fit: BoxFit.fill,
@@ -1130,8 +1128,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                                 Radius.circular(8),
                                                                           ),
                                                                           child:
-                                                                              Image.network(
-                                                                            'https://picsum.photos/seed/544/600',
+                                                                          Image.asset(
+                                                                            'assets/images/news1.png',
                                                                             width:
                                                                                 100,
                                                                             height:

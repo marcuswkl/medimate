@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
 class SideEffectsSurveyWidget extends StatefulWidget {
-  const SideEffectsSurveyWidget({required Key key}) : super(key: key);
+  const SideEffectsSurveyWidget({Key? key}) : super(key: key);
 
   @override
   _SideEffectsSurveyWidgetState createState() =>
@@ -45,25 +45,42 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15, 10, 15, 10),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                  iconSize: 42,
-                  color: const Color(0xFF809BCE),
-                  icon: const Icon(
-                    Icons.chevron_left,
-                    color: Colors.white,
-                    size: 25,
-                    // borderRadius: 16,
-                  ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
-                    },
+                  Material(
+                    color: Colors.transparent,
+                    elevation: 3,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Container(
+                      width: 42,
+                      height: 42,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF809BCE),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Padding(
+                        padding:
+                        const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                        child: IconButton(
+                          iconSize: 60,
+                          color: const Color(0x00FCFCFC),
+                          icon: const Icon(
+                            Icons.arrow_back_ios_rounded,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);},
+                        ),
+                      ),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),

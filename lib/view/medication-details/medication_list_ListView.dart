@@ -355,8 +355,8 @@ class _MedicationListViewState extends State<MedicationListView> {
                                                 ),
                                               ),
                                               onPressed: (){
-                                                Navigator.push(context,
-                                                MaterialPageRoute(builder: (context) => const NearbyPharmacyWidget()));
+                                                // Navigator.push(context,
+                                                // MaterialPageRoute(builder: (context) => const NearbyPharmacyWidget()));
                                               },
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,

@@ -64,8 +64,7 @@ class _JournalHistoryWidgetState extends State<JournalHistoryWidget> {
                             size: 30,
                           ),
                           onPressed: () {
-                            Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const MedicationList()));
+                            Navigator.pop(context);
                             },
                         ),
                       ),
