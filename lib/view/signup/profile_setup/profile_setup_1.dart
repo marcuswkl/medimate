@@ -36,8 +36,7 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: Container(
                       decoration: const BoxDecoration(
                         color: Color(0xFF809BCE),
@@ -77,9 +76,9 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.7,
+                        height: MediaQuery.of(context).size.height * 0.6275,
                         decoration: const BoxDecoration(
-                          color: Color(0xFFEEEEEE),
+                          color: Color(0xFF809BCE),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0),
                             bottomRight: Radius.circular(0),
@@ -89,7 +88,7 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                         ),
                         child: Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                              const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -116,7 +115,12 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                 child: Container(
                                   width: 278,
                                   height: 55,
-                                  decoration: const BoxDecoration(),
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white54,
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(11.0),
+                                    ),
+                                  ),
                                   child: Padding(
                                     padding:
                                         const EdgeInsetsDirectional.fromSTEB(
@@ -174,7 +178,12 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                 child: Container(
                                   width: 278,
                                   height: 55,
-                                  decoration: const BoxDecoration(),
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white54,
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(11.0),
+                                    ),
+                                  ),
                                   child: Padding(
                                     padding:
                                         const EdgeInsetsDirectional.fromSTEB(
@@ -209,7 +218,9 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                   ),
                                 ),
                               ),
-                              const Spacer(),
+                              const SizedBox(
+                                height: 100,
+                              ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -223,7 +234,8 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => Column(), //TODO: Replace with ProfileSetup2Widget(),
+                                            builder: (context) =>
+                                                Column(), //TODO: Replace with ProfileSetup2Widget(),
                                           ),
                                         );
                                       },
@@ -238,7 +250,7 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                                 OutlinedBorder>(
                                             RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(12))),
+                                                    BorderRadius.circular(20))),
                                       ),
                                       child: Text(
                                         'Next',
