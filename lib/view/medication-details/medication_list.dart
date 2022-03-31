@@ -83,7 +83,6 @@ class _MedicationListState extends State<MedicationList> {
                     ],
                   ),
                 ),
-                // SingleChildScrollView(
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -99,7 +98,7 @@ class _MedicationListState extends State<MedicationList> {
                             
                             //History Button
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 130, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 130, 0),
                               child: (
                                 Row(
                                   children: [
@@ -120,7 +119,7 @@ class _MedicationListState extends State<MedicationList> {
                                       children: [
                                         const Icon(
                                           Icons.history,
-                                          size: 16,
+                                          size: 18,
                                         ),
                                         Padding(
                                           padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
