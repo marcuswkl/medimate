@@ -97,7 +97,7 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                   alignment: const AlignmentDirectional(0, 0),
                   child: Container(
                     height: MediaQuery.of(context).size.height * 1,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: FlutterFlowGoogleMap(
                       controller: googleMapsController,
                       onCameraIdle: (latLng) =>
