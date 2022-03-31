@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import '../profile_setup2/profile_setup2_widget.dart';
+import 'profile_setup_2.dart';
 
 class ProfileSetup1Widget extends StatefulWidget {
   const ProfileSetup1Widget({Key? key}) : super(key: key);
@@ -234,8 +234,7 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column(), //TODO: Replace with ProfileSetup2Widget(),
+                                            builder: (context) => ProfileSetup2Widget(),
                                           ),
                                         );
                                       },
