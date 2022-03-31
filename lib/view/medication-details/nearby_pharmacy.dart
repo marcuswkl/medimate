@@ -70,7 +70,7 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20, 50, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                   child: Text(
                     'Nearby Pharmacy',
                     textAlign: TextAlign.start,
@@ -98,25 +98,28 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                   child: Container(
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: const BoxDecoration(),
-                    child: FlutterFlowGoogleMap(
-                      controller: googleMapsController,
-                      onCameraIdle: (latLng) =>
-                          setState(() => googleMapsCenter = latLng),
-                      initialLocation: googleMapsCenter ??=
-                          LatLng(13.1, -59.613158),
-                      markerColor: GoogleMarkerColor.violet,
-                      mapType: MapType.normal,
-                      style: GoogleMapStyle.standard,
-                      initialZoom: 14,
-                      allowInteraction: true,
-                      allowZoom: true,
-                      showZoomControls: false,
-                      showLocation: true,
-                      showCompass: false,
-                      showMapToolbar: false,
-                      showTraffic: false,
-                      centerMapOnMarkerTap: true,
-                    ),
+                    //child: 
+                    
+                    // FlutterFlowGoogleMap(
+                    //   controller: googleMapsController,
+                    //   onCameraIdle: (latLng) =>
+                    //       setState(() => googleMapsCenter = latLng),
+                    //   initialLocation: googleMapsCenter ??=
+                    //       LatLng(13.1, -59.613158),
+                    //   markerColor: GoogleMarkerColor.violet,
+                    //   mapType: MapType.normal,
+                    //   style: GoogleMapStyle.standard,
+                    //   initialZoom: 14,
+                    //   allowInteraction: true,
+                    //   allowZoom: true,
+                    //   showZoomControls: false,
+                    //   showLocation: true,
+                    //   showCompass: false,
+                    //   showMapToolbar: false,
+                    //   showTraffic: false,
+                    //   centerMapOnMarkerTap: true,
+                    // ),
+
                   ),
                 ),
                 Row(
