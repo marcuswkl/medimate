@@ -246,19 +246,6 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                             //save
                                             print("saved");
                                           },
-                                          validator: (String? value) {
-                                            if (value == null || value.isEmpty) {
-                                              return 'Enter Medication Nickname';
-                                            } else {
-                                              if (isName(value)) {
-                                                return null;
-                                              } else {
-                                                return 'Please enter a valid Medication Nickname';
-                                              }
-                                            }
-                                          }
-
-
                                         ),
                                       ),
                                     ),
