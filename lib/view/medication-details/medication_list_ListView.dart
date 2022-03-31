@@ -33,10 +33,106 @@ class _MedicationListViewState extends State<MedicationListView> {
     // If no medications
     if (medications.isEmpty){
       return Center(
-          child: Text(
-            'Nothing to display',
-            style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w600,),
-          )
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 214,
+                    height: 324,
+                    decoration: BoxDecoration(
+                      color: const Color(0x4D95B8D1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(15, 15, 15, 5),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: Image.asset(
+                              'assets/images/doctor.png',
+                              width: 100,
+                              height: 158,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                            child: Text(
+                              'No Meds Found!',
+                              style: GoogleFonts.signikaNegative(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: Text(
+                              'OOPS! Looks like your medication list is empty.',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.signikaNegative(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: const Color(0xFF809BCE),
+                          minimumSize: const Size(175,40),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          )
+                      ),
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.add,
+                            size: 16,
+                          ),
+                          Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Text(
+                                'ADD MEDICATION',
+                                style: GoogleFonts.signikaNegative(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       );
     }
 
