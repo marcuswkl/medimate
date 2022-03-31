@@ -6,15 +6,6 @@ import 'ScheduleData.dart';
 
 final List<String> questions = ['Before Breakfast','After Breakfast','Before Lunch','After Lunch','Before Dinner','After Dinner','Bedtime'];
 
-// List<DateTime> dates () {
-//   final List<String> tempList = records.keys.toList();
-//   List<DateTime> storage = [];
-//   for (String i in tempList){
-//     storage.add(DateFormat("dd/MM/yyyy").parse(i));
-//   }
-//   return storage;
-// }
-
 // Schedule Class
 class Schedule extends StatefulWidget {
   const Schedule({Key? key}) : super(key: key);
@@ -114,7 +105,10 @@ class _ScheduleState extends State<Schedule> {
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate ((BuildContext context, int index){
                     List answers = _MedicationQuery(_focusedDay);
-                    return displayWidget(input1: questions[index], input2: answers[index]);
+                    // print('MedQuery' + _MedicationQuery(_focusedDay));
+                    return (answers.isEmpty)
+                    ? Container()
+                    : displayWidget(input1: questions[index], input2: answers[index]);
                   },
                   childCount: questions.length,
                 )),
