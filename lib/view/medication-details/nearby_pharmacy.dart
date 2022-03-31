@@ -70,7 +70,7 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20, 50, 0, 0),
                   child: Text(
                     'Nearby Pharmacy',
                     textAlign: TextAlign.start,

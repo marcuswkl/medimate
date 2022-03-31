@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'medication_information_profile.dart';
 import 'medication_list_ListView.dart';
+import 'journal_history.dart';
 
 class MedicationList extends StatefulWidget {
   const MedicationList({Key? key}) : super(key: key);
@@ -112,7 +113,8 @@ class _MedicationListState extends State<MedicationList> {
                                         )
                                       ),
                                     onPressed: (){
-                                      //Go to Medical History 
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => const JournalHistoryWidget()));
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
