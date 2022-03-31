@@ -1,21 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'medication_list.dart';
+import 'MedicationData.dart'; //for medication data query
 
 class MedicationInformationProfileWidget extends StatefulWidget {
-  const MedicationInformationProfileWidget({Key? key}) : super(key: key);
+  const MedicationInformationProfileWidget({Key? key, required this.index}) : super(key: key);
+  final int index;
 
   @override
-  _MedicationInformationProfileWidgetState createState() =>
-      _MedicationInformationProfileWidgetState();
+  _MedicationInformationProfileWidgetState createState() => _MedicationInformationProfileWidgetState();
 }
 
-class _MedicationInformationProfileWidgetState
-    extends State<MedicationInformationProfileWidget> {
+class _MedicationInformationProfileWidgetState extends State<MedicationInformationProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  
+  String? medNickName, medName, medPic, adheranceRate, supplyRate, completionRate, medType, medProvider, medProviderContact, duration, dosage, frequencyPerWeek, frequencyPerDay, dosageStock;
+
+  _medicationQuery(index) {
+    Map medDetails = medications.values.elementAt(index);
+    return {
+      medNickName = medDetails['MedNickName'],
+      medName = medDetails['MedName'],
+      medPic = medDetails['MedPic'],
+      medType =  medDetails['MedType'],
+      medProvider = medDetails['MedProvider'],
+      medProviderContact =  medDetails['MedProviderContact'],
+      duration = medDetails['Duration'],
+      dosage = medDetails['Dosage'],
+      frequencyPerWeek = medDetails['FrequencyPerWeek'],
+      frequencyPerDay = medDetails['FrequencyPerDay'],
+      dosageStock = medDetails['DosageStock'],
+    };
+  }
 
   @override
   Widget build(BuildContext context) {
+    _medicationQuery(widget.index);
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
@@ -77,7 +97,7 @@ class _MedicationInformationProfileWidgetState
                     color: Color(0xFFEEEEEE),
                   ),
                   child: Image.asset(
-                    'assets/images/medicine.png',
+                    medPic!,
                     width: 200,
                     height: 200,
                     fit: BoxFit.cover,
@@ -105,7 +125,7 @@ class _MedicationInformationProfileWidgetState
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Cholesterol Medicine',
+                            medName!, //'Cholesterol Medicine',
                             style: GoogleFonts.signikaNegative(
                               color: Colors.black,
                               fontSize: 24,
@@ -120,7 +140,7 @@ class _MedicationInformationProfileWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Atorvastatin',
+                              medNickName!,//'Atorvastatin',
                               style: GoogleFonts.signikaNegative(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -144,7 +164,7 @@ class _MedicationInformationProfileWidgetState
                               ),
                             ),
                             Text(
-                              'Pills',
+                              medType!,
                               style: GoogleFonts.signikaNegative(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -168,7 +188,7 @@ class _MedicationInformationProfileWidgetState
                               ),
                             ),
                             Text(
-                              'Watsons Pharmacy Puchong',
+                              medProvider!,
                               style: GoogleFonts.signikaNegative(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -192,7 +212,7 @@ class _MedicationInformationProfileWidgetState
                               ),
                             ),
                             Text(
-                              '011-5694 4650',
+                              medProviderContact!,
                               style: GoogleFonts.signikaNegative(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -254,7 +274,7 @@ class _MedicationInformationProfileWidgetState
                                                 ),
                                               ),
                                               Text(
-                                                '30 days',
+                                                duration!,
                                                 style: GoogleFonts.signikaNegative(
                                                   color: Colors.black,
                                                   fontSize: 16,
@@ -312,7 +332,7 @@ class _MedicationInformationProfileWidgetState
                                                 ),
                                               ),
                                               Text(
-                                                '10 mg',
+                                                dosage!,
                                                 style: GoogleFonts.signikaNegative(
                                                   color: Colors.black,
                                                   fontSize: 16,
@@ -380,7 +400,7 @@ class _MedicationInformationProfileWidgetState
                                                   ),
                                                 ),
                                                 Text(
-                                                  '5 days',
+                                                  frequencyPerWeek!,
                                                   style: GoogleFonts.signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 16,
@@ -438,7 +458,7 @@ class _MedicationInformationProfileWidgetState
                                                   ),
                                                 ),
                                                 Text(
-                                                  '2 times',
+                                                  frequencyPerDay!,
                                                   style: GoogleFonts.signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 16,
@@ -507,7 +527,7 @@ class _MedicationInformationProfileWidgetState
                                                   ),
                                                 ),
                                                 Text(
-                                                  '5 pills',
+                                                  dosageStock!,
                                                   style: GoogleFonts.signikaNegative(
                                                     color: Colors.black,
                                                     fontSize: 16,

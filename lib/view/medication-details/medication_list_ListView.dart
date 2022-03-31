@@ -15,16 +15,16 @@ class MedicationListView extends StatefulWidget {
 
 class _MedicationListViewState extends State<MedicationListView> { 
   String? medNickName, medName, medPic, adheranceRate, supplyRate, completionRate;
-
+  
   _medicationQuery(index) {
-    List medDetails = medications.values.elementAt(index);
+    Map medDetails = medications.values.elementAt(index);
     return {
-      medNickName = medDetails[0],
-      medName = medDetails[1],
-      medPic = medDetails[2],
-      adheranceRate = medDetails[3],
-      supplyRate = medDetails[4],
-      completionRate = medDetails[5],
+      medNickName = medDetails['MedNickName'],
+      medName = medDetails['MedName'],
+      medPic = medDetails['MedPic'],
+      adheranceRate = medDetails['AdheranceRate'],
+      supplyRate = medDetails['SupplyRate'],
+      completionRate = medDetails['CompletionRate'],
     };
   }
   
@@ -98,7 +98,7 @@ class _MedicationListViewState extends State<MedicationListView> {
                                         mainAxisSize:MainAxisSize.max,
                                         children: [
                                           Text(
-                                            medNickName!,// 'Coughing Medicine',
+                                            medName!,// 'Coughing Medicine',
                                             style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w600,),
                                           ),
                                         ],
@@ -110,7 +110,7 @@ class _MedicationListViewState extends State<MedicationListView> {
                                           mainAxisAlignment:MainAxisAlignment.start,
                                           children: [
                                             Text(
-                                              medName!,// 'Benzonatate',
+                                              medNickName!,// 'Benzonatate',
                                               style: GoogleFonts.signikaNegative(color: Colors.black,fontWeight: FontWeight.w500,),
                                             ),
                                           ],
@@ -281,7 +281,7 @@ class _MedicationListViewState extends State<MedicationListView> {
                                               ),
                                               onPressed: (){
                                                 Navigator.push(context, 
-                                                MaterialPageRoute(builder: (context) => const MedicationInformationProfileWidget()));
+                                                MaterialPageRoute(builder: (context) => MedicationInformationProfileWidget(index: index)));
                                               },
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
