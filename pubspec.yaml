@@ -35,8 +35,6 @@ dependencies:
   expandable: 5.0.1
   font_awesome_flutter: 8.11.0
   google_fonts: 2.1.0
-  google_maps_flutter: 2.1.1
-  google_maps_flutter_web: 0.3.2
   intl: 0.17.0
   json_path: 0.2.1
   page_transition: 2.0.4
@@ -45,6 +43,12 @@ dependencies:
   timeago: 3.1.0
   url_launcher: 6.0.15
   flutter_datetime_picker: ^1.5.1
+  
+  # Google Maps dependencies
+  dio: ^4.0.5
+  flutter_polyline_points: ^1.0.0
+  google_maps_flutter: 2.1.1
+  google_maps_flutter_web: 0.3.2
 
 dev_dependencies:
   flutter_test:
