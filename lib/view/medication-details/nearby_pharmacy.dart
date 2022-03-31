@@ -61,8 +61,8 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                           size: 20,
                         ),
                         onPressed: () {
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const AddMedication2()));
+                          // Navigator.push(context,
+                          // MaterialPageRoute(builder: (context) => const AddMedication2()));
                         },
                       ),
                     ),
