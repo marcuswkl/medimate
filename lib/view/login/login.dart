@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password.dart';
+import 'InputValidation.dart';
 // import '../sign_up/sign_up_widget.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -10,7 +11,7 @@ class LoginWidget extends StatefulWidget {
   _LoginWidgetState createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class _LoginWidgetState extends State<LoginWidget> with InputValidationMixin {
   late TextEditingController textController1;
   late TextEditingController textController2;
   late bool passwordVisibility;
@@ -129,6 +130,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   // fontSize: 18,
                                   ),
                               keyboardType: TextInputType.emailAddress,
+
+                              validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid email';
+                              } else {
+                                if (isEmail(value)) {
+                                  return null;
+                                } else {
+                                  return 'Please enter a valid email';
+                                }
+                              }
+                            }
                             ),
                           ),
                         ),

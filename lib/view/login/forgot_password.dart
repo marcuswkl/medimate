@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'InputValidation.dart';
 
 class ForgotPasswordWidget extends StatefulWidget {
   const ForgotPasswordWidget({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class ForgotPasswordWidget extends StatefulWidget {
   _ForgotPasswordWidgetState createState() => _ForgotPasswordWidgetState();
 }
 
-class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
+class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> with InputValidationMixin {
   late TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -144,6 +145,17 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                                 // fontSize: 18,
                                 ),
                               keyboardType: TextInputType.emailAddress,
+                              validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid email';
+                              } else {
+                                if (isEmail(value)) {
+                                  return null;
+                                } else {
+                                  return 'Please enter a valid email';
+                                }
+                              }
+                            }
                             ),
                           ),
                         ),
