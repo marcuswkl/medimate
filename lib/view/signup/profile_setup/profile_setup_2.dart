@@ -35,7 +35,7 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: Container(
                       decoration: const BoxDecoration(
                         color: Color(0xFF809BCE),
@@ -75,7 +75,7 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.6275,
+                        height: MediaQuery.of(context).size.height * 0.555,
                         decoration: const BoxDecoration(
                           color: Color(0xFF809BCE),
                           borderRadius: BorderRadius.only(
@@ -87,13 +87,13 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                         ),
                         child: Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                              const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0, 0, 0, 20),
+                                    0, 0, 0, 5),
                                 child: Container(
                                   width: 281,
                                   height: 58,
@@ -150,6 +150,7 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                                       ),
                                     ),
                                     style: GoogleFonts.signikaNegative(),
+                                    maxLines: 10,
                                   ),
                                 ),
                               ),
@@ -160,7 +161,7 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                                   Padding(
                                     padding:
                                         const EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 50, 50),
+                                            0, 0, 50, 0),
                                     child: ElevatedButton(
                                       onPressed: () async {
                                         await Navigator.push(

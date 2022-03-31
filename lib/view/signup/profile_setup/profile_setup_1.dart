@@ -88,7 +88,7 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                         ),
                         child: Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                              const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
