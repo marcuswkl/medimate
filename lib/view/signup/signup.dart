@@ -44,10 +44,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: Container(
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 38, 43, 54),
+                        color: Color(0xFF809BCE),
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                       ),
                       child: IconButton(
@@ -74,7 +74,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -101,11 +101,15 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: Text(
-                          'Create an account for your MediMate.',
-                          style: GoogleFonts.signikaNegative(
-                            color: Colors.black,
-                            fontSize: 16,
+                        child: Container(
+                          width: 297,
+                          child: Text(
+                            'Create an account for your MediMate.',
+                            style: GoogleFonts.signikaNegative(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ),
@@ -124,7 +128,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
                           height: 55,
@@ -139,7 +143,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 hintText: 'Eg: John Doe',
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.black,
+                                    color: Colors.black45,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.all(
@@ -177,7 +181,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
                           height: 55,
@@ -192,7 +196,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 hintText: 'Eg: example@gmail.com',
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.black,
+                                    color: Colors.black45,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.all(
@@ -230,7 +234,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
                           height: 55,
@@ -242,7 +246,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               hintText: 'Enter your password',
                               enabledBorder: const OutlineInputBorder(
                                 borderSide: const BorderSide(
-                                  color: Colors.black,
+                                  color: Colors.black45,
                                   width: 1,
                                 ),
                                 borderRadius: BorderRadius.all(
@@ -306,7 +310,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 hintText: 'XXXXXX-XX-XXXX',
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.black,
+                                    color: Colors.black45,
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.all(
