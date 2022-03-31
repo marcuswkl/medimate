@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password.dart';
 import '../signup/signup.dart';
+import '../signup/profile_setup/profile_setup_1.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({Key? key}) : super(key: key);
@@ -269,8 +270,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       await Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column() // TODO: Replace with ProfileSetupWidget(),
+                                            builder: (context) => ProfileSetup1Widget(),
                                             ),
                                       );
                                     },

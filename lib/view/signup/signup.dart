@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../login/login.dart';
-// import '../profile_setup1/profile_setup1_widget.dart';
+import '../signup/profile_setup/profile_setup_1.dart';
 
 class SignUpWidget extends StatefulWidget {
   const SignUpWidget({Key? key}) : super(key: key);
@@ -341,7 +341,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Column(), //TODO: Replace with ProfileSetup1Widget(),
+                                builder: (context) => ProfileSetup1Widget(),
                                   ),
                             );
                           },
