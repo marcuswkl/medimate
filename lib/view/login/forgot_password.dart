@@ -139,10 +139,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                                   ),
                                 ),
                               ),
-                              style: GoogleFonts.signikaNegative(
-                                // color: Colors.black,
-                                // fontSize: 18,
-                                ),
+                              style: GoogleFonts.signikaNegative(),
                               keyboardType: TextInputType.emailAddress,
                             ),
                           ),

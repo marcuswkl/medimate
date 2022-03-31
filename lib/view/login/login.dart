@@ -124,10 +124,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                 ),
                               ),
-                              style: GoogleFonts.signikaNegative(
-                                  // color: Colors.black,
-                                  // fontSize: 18,
-                                  ),
+                              style: GoogleFonts.signikaNegative(),
                               keyboardType: TextInputType.emailAddress,
                             ),
                           ),
@@ -190,10 +187,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 ),
                               ),
                             ),
-                            style: GoogleFonts.signikaNegative(
-                                // color: Colors.black,
-                                // fontSize: 18,
-                                ),
+                            style: GoogleFonts.signikaNegative(),
                           ),
                         ),
                       ),
