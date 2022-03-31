@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'view/login/login.dart';
+import 'view/signup/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -99,8 +100,7 @@ class _LandingWidgetState extends State<LandingWidget> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  Column() // TODO: Replace with SignUpWidget(),
+                              builder: (context) => const SignUpWidget(),
                               ),
                         );
                       },
