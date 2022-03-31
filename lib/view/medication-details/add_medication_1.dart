@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'medication_list.dart';
 import 'add_medication_2.dart';
 import 'InputValidation.dart';
 
@@ -75,7 +76,10 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                   color: Colors.white,
                                   size: 20,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) => const MedicationList()));
+                                },
                               ),
                             ),
                           ),
