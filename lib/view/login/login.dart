@@ -119,9 +119,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     color: Colors.black,
                                     width: 1,
                                   ),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
                                   ),
                                 ),
                               ),
@@ -173,9 +172,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   color: Colors.black,
                                   width: 1,
                                 ),
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(4.0),
-                                  topRight: Radius.circular(4.0),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(4.0),
                                 ),
                               ),
                               suffixIcon: InkWell(
