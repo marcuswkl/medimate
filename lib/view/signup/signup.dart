@@ -359,6 +359,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             style: GoogleFonts.signikaNegative(
                               color: Colors.white,
                               fontSize: 18,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
