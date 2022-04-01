@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'medication_list_ListView.dart';
 import 'journal_history.dart';
+import '../medication-details/add_medication_1.dart';
 
 class MedicationList extends StatefulWidget {
   const MedicationList({Key? key}) : super(key: key);
@@ -196,6 +197,8 @@ class _MedicationListState extends State<MedicationList> {
                                       size: 20,
                                     ),
                                     onPressed: () {
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => const AddMedication1()));
                                       //Add Records
                                     },
                                   ),

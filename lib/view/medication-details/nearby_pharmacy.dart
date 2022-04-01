@@ -99,7 +99,7 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: const BoxDecoration(),
                     child: Text(
-                      'Medication List',
+                      'Google Maps Work-In-Progress',
                       style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.normal,fontStyle: FontStyle.italic,),
                     )
                     

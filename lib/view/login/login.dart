@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password.dart';
-// import '../sign_up/sign_up_widget.dart';
+import '../../nav.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({Key? key}) : super(key: key);
@@ -206,7 +206,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      Column() // TODO: Replace with HomeWidget(),
+                                      const Nav()
                                   ),
                             );
                           },

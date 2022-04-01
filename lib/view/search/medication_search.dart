@@ -487,8 +487,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                                Image.asset(
+                                                                              'assets/images/pill1.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -593,8 +593,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                            Image.asset(
+                                                                              'assets/images/pill2.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -700,8 +700,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                               Image.asset(
+                                                                              'assets/images/pill3.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -833,8 +833,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                               Image.asset(
+                                                                              'assets/images/pill3.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
