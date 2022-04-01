@@ -219,6 +219,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             style: GoogleFonts.signikaNegative(
                               color: Colors.white,
                               fontSize: 22,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
@@ -297,6 +298,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       style: GoogleFonts.signikaNegative(
                                         color: const Color(0xFF6C757D),
                                         fontSize: 22,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                     ),
                                   ),

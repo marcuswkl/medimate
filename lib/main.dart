@@ -89,6 +89,7 @@ class _LandingWidgetState extends State<LandingWidget> {
                         style: GoogleFonts.signikaNegative(
                           color: Colors.white,
                           fontSize: 22,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
@@ -123,6 +124,7 @@ class _LandingWidgetState extends State<LandingWidget> {
                         style: GoogleFonts.signikaNegative(
                           color: const Color(0xFF515151),
                           fontSize: 22,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
