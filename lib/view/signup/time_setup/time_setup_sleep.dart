@@ -1,26 +1,22 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../welcome/welcome_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import '../welcome/welcome_widget.dart';
 
-class TimeSetup4Widget extends StatefulWidget {
-  const TimeSetup4Widget({Key key}) : super(key: key);
+class TimeSetupSleepWidget extends StatefulWidget {
+  const TimeSetupSleepWidget({Key? key}) : super(key: key);
 
   @override
-  _TimeSetup4WidgetState createState() => _TimeSetup4WidgetState();
+  _TimeSetupSleepWidgetState createState() => _TimeSetupSleepWidgetState();
 }
 
-class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
+class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -31,21 +27,23 @@ class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
-                    child: FlutterFlowIconButton(
-                      borderColor: FlutterFlowTheme.of(context).primaryColor,
-                      borderRadius: 20,
-                      borderWidth: 1,
-                      buttonSize: 50,
-                      fillColor: FlutterFlowTheme.of(context).primaryColor,
-                      icon: Icon(
-                        Icons.chevron_left,
-                        color: Colors.white,
-                        size: 30,
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF809BCE),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
                       ),
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
+                      child: IconButton(
+                        iconSize: 30,
+                        onPressed: () async {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.chevron_left,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -59,7 +57,8 @@ class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
                         child: Image.asset(
                           'assets/images/time_setup.png',
                           width: 169,
@@ -70,8 +69,8 @@ class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height * 0.6,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF023E8A),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0),
                             bottomRight: Radius.circular(0),
@@ -80,54 +79,53 @@ class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 0, 20),
                                 child: Container(
                                   width: 281,
                                   height: 58,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 2),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 2),
                                     child: Text(
                                       'Please enter the time that you usually sleep:',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                      style: GoogleFonts.signikaNegative(
+                                        color: Colors.white,
+                                        fontSize: 21,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 0, 20),
                                 child: Container(
                                   width: 287,
                                   height: 139,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFFF3E7BF),
+                                    color: const Color(0xFFF3E7BF),
                                     borderRadius: BorderRadius.circular(22),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 10, 10, 10),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            10, 10, 10, 10),
                                     child: Text(
                                       'Advice: Take your medicine on time to make sure your body has an effective amount of the drug at all times!',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 17,
-                                          ),
+                                      style: GoogleFonts.signikaNegative(
+                                        color: Colors.black,
+                                        fontSize: 21,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -137,35 +135,37 @@ class _TimeSetup4WidgetState extends State<TimeSetup4Widget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 50, 50),
-                                    child: FFButtonWidget(
+                                    child: ElevatedButton(
                                       onPressed: () async {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                WelcomeWidget(),
+                                                Column(), //TODO: Replace with WelcomeWidget(),
                                           ),
                                         );
                                       },
-                                      text: 'Finish',
-                                      options: FFButtonOptions(
-                                        width: 103,
-                                        height: 35,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all<Color>(
+                                                const Color(0xFFFFFEFE)),
+                                        minimumSize:
+                                            MaterialStateProperty.all<Size>(
+                                                const Size(103, 35)),
+                                        shape: MaterialStateProperty.all<
+                                                OutlinedBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20))),
+                                      ),
+                                      child: Text(
+                                        'Finish',
+                                        style: GoogleFonts.signikaNegative(
+                                          color: Colors.black,
+                                          fontSize: 18,
                                         ),
-                                        borderRadius: 12,
                                       ),
                                     ),
                                   ),
