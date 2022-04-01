@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TimeSetup1Widget extends StatefulWidget {
-  const TimeSetup1Widget({Key? key}) : super(key: key);
+class TimeSetupBreakfastWidget extends StatefulWidget {
+  const TimeSetupBreakfastWidget({Key? key}) : super(key: key);
 
   @override
-  _TimeSetup1WidgetState createState() => _TimeSetup1WidgetState();
+  _TimeSetupBreakfastWidgetState createState() => _TimeSetupBreakfastWidgetState();
 }
 
-class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
+class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -65,7 +65,7 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.6,
+                        height: MediaQuery.of(context).size.height * 0.525,
                         decoration: const BoxDecoration(
                           color: Color(0xFFFFCB77),
                           borderRadius: BorderRadius.only(
@@ -76,7 +76,7 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -86,7 +86,7 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                                 child: Container(
                                   width: 281,
                                   height: 58,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 2),
