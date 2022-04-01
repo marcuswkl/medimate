@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'view/search/how_to_swallow.dart';
+import 'view/home/homepage.dart';
 import 'view/search/medication_search.dart';
-import 'view/search/medication_search_result.dart';
+import 'view/medication-details/medication_list.dart';
+import 'view/Medication_Schedule/Schedule.dart';
+import 'view/profile/Profile.dart';
 
 class Nav extends StatefulWidget {
   const Nav({Key? key}) : super(key: key);
@@ -14,10 +16,10 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 2;
   final List<Widget> _widgetOptions = <Widget>[
     const MedicationResultWidget(),
-    const MedicationSearchResultWidget(),
-    const HowToSwallowWidget(),
-    const MedicationSearchResultWidget(),
-    const HowToSwallowWidget(),
+    const MedicationList(),
+    const HomePageWidget(),
+    const Schedule(),
+    const Profile(),
   ];
 
   void _onItemTap(int index) {

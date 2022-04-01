@@ -77,9 +77,7 @@ class _AddMedication1State extends State<AddMedication1> with InputValidationMix
                                   size: 20,
                                 ),
                                 onPressed: () {
-                                  Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => const MedicationList()));
-                                },
+                                  Navigator.pop(context);},
                               ),
                             ),
                           ),

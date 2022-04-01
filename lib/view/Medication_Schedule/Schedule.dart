@@ -58,6 +58,7 @@ class _ScheduleState extends State<Schedule> {
                 'Medication Schedule',
                 style: GoogleFonts.fredokaOne(fontSize: 28,fontWeight: FontWeight.normal,color: Colors.black)
               ),
+              automaticallyImplyLeading: false,
               pinned: true,
               backgroundColor: Colors.white,
             ),

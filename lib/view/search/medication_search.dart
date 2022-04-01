@@ -487,8 +487,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                                Image.asset(
+                                                                              'assets/images/pill1.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -507,7 +507,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                               0),
                                                                           child:
                                                                               Text(
-                                                                            'Statins Atorvastatin',
+                                                                            'Rosuvastatin Calcium',
                                                                             style:
                                                                                 GoogleFonts.signikaNegative(
                                                                               color: Colors.white,
@@ -539,7 +539,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
+                                                                                  Navigator.push(context,
+                                                                                      MaterialPageRoute(builder: (context) => const MedicationSearchResultWidget()));
                                                                             },
                                                                           ),
                                                                         ),
@@ -593,8 +594,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                            Image.asset(
+                                                                              'assets/images/pill2.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -646,7 +647,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),
@@ -700,8 +700,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                               Image.asset(
+                                                                              'assets/images/pill3.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -752,7 +752,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),
@@ -833,8 +832,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             borderRadius:
                                                                                 BorderRadius.circular(11),
                                                                             child:
-                                                                                Image.network(
-                                                                              'https://picsum.photos/seed/870/600',
+                                                                               Image.asset(
+                                                                              'assets/images/pill3.png',
                                                                               width: 40,
                                                                               height: 40,
                                                                               fit: BoxFit.cover,
@@ -885,7 +884,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),

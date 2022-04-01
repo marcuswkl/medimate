@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'add_medication_2.dart';
 import 'InputValidation.dart';
+import '../../nav.dart';
 
 
 class AddMedication3 extends StatefulWidget {
@@ -107,9 +108,7 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                   size: 20,
                                 ),
                                 onPressed: () {
-                                  Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => const AddMedication2()));
-                                },
+                                  Navigator.pop(context);},
                               ),
                             ),
                           ),
@@ -722,6 +721,10 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                               if (formKey.currentState!.validate()) {
                                                 formKey.currentState?.save();
                                               }
+                                              var count = 0;
+                                              Navigator.popUntil(context, (route) {
+                                                return count++ == 3;
+                                              });
                                             },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,

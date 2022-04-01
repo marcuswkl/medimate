@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'medication_list.dart';
 
 class NearbyPharmacyWidget extends StatefulWidget {
@@ -12,8 +12,8 @@ class NearbyPharmacyWidget extends StatefulWidget {
 }
 
 class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
-  late LatLng googleMapsCenter;
-  late Completer<GoogleMapController> googleMapsController;
+  // late LatLng googleMapsCenter;
+  // late Completer<GoogleMapController> googleMapsController;
   late TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -62,8 +62,7 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                           size: 20,
                         ),
                         onPressed: () {
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const MedicationList()));
+                          Navigator.pop(context);
                         },
                       ),
                     ),
@@ -96,11 +95,26 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0, 0),
                   child: Container(
+                    width: MediaQuery.of(context).size.width * 1,
                     height: MediaQuery.of(context).size.height * 1,
-                    decoration: const BoxDecoration(),
-                    //child: 
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                    ),
+                    child: Image.asset(
+                      ("assets/images/MapSnippet.png"),
+                      width: MediaQuery.of(context).size.width * 1,
+                      height: MediaQuery.of(context).size.height * 1,
+                      fit: BoxFit.cover,
+                    )
+
+                    // height: MediaQuery.of(context).size.height * 1,
+                    // decoration: const BoxDecoration(),
+                    // child: Text(
+                    //   'Google Maps Work-In-Progress',
+                    //   style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.normal,fontStyle: FontStyle.italic,),
+                    // )
                     
-                    // FlutterFlowGoogleMap(
+                    // GoogleMap(
                     //   controller: googleMapsController,
                     //   onCameraIdle: (latLng) =>
                     //       setState(() => googleMapsCenter = latLng),

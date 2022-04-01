@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'medication_search.dart';
 
 class HowToSwallowWidget extends StatefulWidget {
   const HowToSwallowWidget({Key? key}) : super(key: key);
@@ -52,10 +51,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                           size: 20,
                         ),
                         onPressed: () {
-                        //   Navigator.push(context,
-                        //   MaterialPageRoute(builder: (context) => Subnav(data: Data(1))));
-                        // },
-    Navigator.pop(context);},
+                          Navigator.pop(context);
+                        },
                       ),
                     ),
                   ),
@@ -112,126 +109,55 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           ),
                                           child: SingleChildScrollView(
                                             child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                        25, 20, 25, 0),
-                                                child: Text(
-                                                  'Pop-bottle method',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color: Colors.black,
-                                                    fontSize: 20,
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 20, 25, 0),
+                                                  child: Text(
+                                                    'Pop-bottle method',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: Colors.black,
+                                                      fontSize: 20,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(25, 3, 25, 3),
-                                                child: Text(
-                                                  '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color:
-                                                        const Color(0x98000000),
-                                                    fontSize: 14,
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 3, 25, 3),
+                                                  child: Text(
+                                                    '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: const Color(
+                                                          0x98000000),
+                                                      fontSize: 14,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
-                                                  width: 170,
-                                                  height: 129,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () async {},
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    flex: 9,
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              15, 1, 15, 0),
-                                      child: Material(
-                                        color: Colors.transparent,
-                                        elevation: 10,
-                                        child: Container(
-                                          width: 100,
-                                          height: 340,
-                                          decoration: const BoxDecoration(
-                                            color: Colors.white,
-                                          ),
-                                          child: SingleChildScrollView(
-                                            child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                        25, 20, 25, 0),
-                                                child: Text(
-                                                  'Pop-bottle method',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color: Colors.black,
-                                                    fontSize: 20,
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          0, 15, 0, 0),
+                                                  child: Image.asset(
+                                                    'assets/images/pop_bottle_method.png',
+                                                    width: 170,
+                                                    height: 129,
+                                                    fit: BoxFit.cover,
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(25, 3, 25, 3),
-                                                child: Text(
-                                                  '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color:
-                                                        const Color(0x98000000),
-                                                    fontSize: 14,
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
-                                                  width: 170,
-                                                  height: 129,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -262,51 +188,134 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           ),
                                           child: SingleChildScrollView(
                                             child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                        25, 20, 25, 0),
-                                                child: Text(
-                                                  'Pop-bottle method',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color: Colors.black,
-                                                    fontSize: 20,
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 20, 25, 0),
+                                                  child: Text(
+                                                    'Pop-bottle method',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: Colors.black,
+                                                      fontSize: 20,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(25, 3, 25, 3),
-                                                child: Text(
-                                                  '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
-                                                  textAlign: TextAlign.justify,
-                                                  style: GoogleFonts
-                                                      .signikaNegative(
-                                                    color:
-                                                        const Color(0x98000000),
-                                                    fontSize: 14,
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 3, 25, 3),
+                                                  child: Text(
+                                                    '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: const Color(
+                                                          0x98000000),
+                                                      fontSize: 14,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(0, 15, 0, 0),
-                                                child: Image.network(
-                                                  'https://picsum.photos/seed/178/600',
-                                                  width: 170,
-                                                  height: 129,
-                                                  fit: BoxFit.cover,
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          0, 15, 0, 0),
+                                                  child: Image.asset(
+                                                    'assets/images/pop_bottle_method.png',
+                                                    width: 170,
+                                                    height: 129,
+                                                    fit: BoxFit.cover,
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () async {},
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    flex: 9,
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              15, 1, 15, 0),
+                                      child: Material(
+                                        color: Colors.transparent,
+                                        elevation: 10,
+                                        child: Container(
+                                          width: 100,
+                                          height: 340,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                          ),
+                                          child: SingleChildScrollView(
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 20, 25, 0),
+                                                  child: Text(
+                                                    'Pop-bottle method',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: Colors.black,
+                                                      fontSize: 20,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          25, 3, 25, 3),
+                                                  child: Text(
+                                                    '1. Fill a plastic water or soda bottle with  water.\n2. Put the pill on your tongue and close your lips tightly around the bottle opening.\n3. Take a drink, keeping contact between the bottle and your lips and using a sucking motion to swallow the water and pill. Don’t let air get into the bottle.',
+                                                    textAlign:
+                                                        TextAlign.justify,
+                                                    style: GoogleFonts
+                                                        .signikaNegative(
+                                                      color: const Color(
+                                                          0x98000000),
+                                                      fontSize: 14,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                          0, 15, 0, 0),
+                                                  child: Image.asset(
+                                                    'assets/images/pop_bottle_method.png',
+                                                    width: 170,
+                                                    height: 129,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -394,8 +403,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -527,8 +536,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [
@@ -660,8 +669,8 @@ class _HowToSwallowWidgetState extends State<HowToSwallowWidget> {
                                           color: Colors.white,
                                           image: DecorationImage(
                                             fit: BoxFit.fill,
-                                            image: Image.network(
-                                              'https://picsum.photos/seed/178/600',
+                                            image: Image.asset(
+                                              'assets/images/medication.png',
                                             ).image,
                                           ),
                                           boxShadow: const [

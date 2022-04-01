@@ -90,20 +90,21 @@ class _MedicationSearchResultWidgetState
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                          child: Image.network(
-                            'https://picsum.photos/seed/970/600',
+                              const EdgeInsetsDirectional.fromSTEB(0, 0, 30, 0),
+                          child: Image.asset(
+                            'assets/images/rosuvastatin_calcium1.png',
                             width: 169,
                             height: 134,
                             fit: BoxFit.cover,
                           ),
                         ),
-                        Image.network(
-                          'https://picsum.photos/seed/538/600',
+                        Image.asset(
+                          'assets/images/rosuvastatin_calcium2.png',
+                         width: 150,
                           height: 134,
                           fit: BoxFit.cover,
                         ),

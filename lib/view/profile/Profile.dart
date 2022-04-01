@@ -48,6 +48,7 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin{
                   _tab[_tabController.index].item1,
                   style: GoogleFonts.fredokaOne(fontSize: 28,fontWeight: FontWeight.bold,color: Colors.black)
                 ),
+                automaticallyImplyLeading: false,
                 actions: [
                   ValueListenableBuilder(
                   valueListenable: isEditable,
