@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password.dart';
 import '../signup/signup.dart';
 import '../signup/profile_setup/profile_setup_1.dart';
+import '../../nav.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({Key? key}) : super(key: key);
@@ -200,8 +201,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      Column() // TODO: Replace with HomeWidget(),
+                                  builder: (context) => const Nav(),
                                   ),
                             );
                           },
