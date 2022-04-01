@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../nav.dart';
 
 class WelcomeWidget extends StatefulWidget {
   const WelcomeWidget({Key? key}) : super(key: key);
@@ -55,7 +56,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                     child: Text(
-                      'Are you currently\ntaking any medication?',
+                      'Welcome to MediMate!',
                       style: GoogleFonts.signikaNegative(
                         color: Colors.black,
                         fontSize: 30,
@@ -70,8 +71,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  Column() // TODO: Replace with AddMedicineWidget(),
+                              builder: (context) => const Nav(),
                               ),
                         );
                       },
@@ -85,32 +85,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                 borderRadius: BorderRadius.circular(26))),
                       ),
                       child: Text(
-                        'Add Your Med',
+                        'Begin',
                         style: GoogleFonts.signikaNegative(
                           color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.w600,
                         ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Column(), //TODO: Replace with HomeWidget
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'I would like to skip for now.',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.signikaNegative(
-                        color: const Color(0xFF1A73E8),
-                        fontSize: 23,
-                        fontWeight: FontWeight.w500,
-                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
