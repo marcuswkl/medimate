@@ -96,12 +96,24 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0, 0),
                   child: Container(
+                    width: MediaQuery.of(context).size.width * 1,
                     height: MediaQuery.of(context).size.height * 1,
-                    decoration: const BoxDecoration(),
-                    child: Text(
-                      'Google Maps Work-In-Progress',
-                      style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.normal,fontStyle: FontStyle.italic,),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFEEEEEE),
+                    ),
+                    child: Image.asset(
+                      ("assets/images/MapSnippet.png"),
+                      width: MediaQuery.of(context).size.width * 1,
+                      height: MediaQuery.of(context).size.height * 1,
+                      fit: BoxFit.cover,
                     )
+
+                    // height: MediaQuery.of(context).size.height * 1,
+                    // decoration: const BoxDecoration(),
+                    // child: Text(
+                    //   'Google Maps Work-In-Progress',
+                    //   style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.normal,fontStyle: FontStyle.italic,),
+                    // )
                     
                     // GoogleMap(
                     //   controller: googleMapsController,
