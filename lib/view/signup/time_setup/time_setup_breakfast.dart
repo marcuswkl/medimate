@@ -8,16 +8,13 @@ class TimeSetupBreakfastWidget extends StatefulWidget {
   const TimeSetupBreakfastWidget({Key? key}) : super(key: key);
 
   @override
-  _TimeSetupBreakfastWidgetState createState() => _TimeSetupBreakfastWidgetState();
+  _TimeSetupBreakfastWidgetState createState() =>
+      _TimeSetupBreakfastWidgetState();
 }
 
 class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   DateTime? savedTime;
-  
-  _timeConverter (DateTime value) {
-    return DateFormat('hh:mm a').format(value);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +22,9 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
       key: scaffoldKey,
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: SingleChildScrollView(
+          child: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -35,7 +32,8 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
                     child: Container(
                       decoration: const BoxDecoration(
                         color: Color(0xFF809BCE),
@@ -64,7 +62,8 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
                         child: Image.asset(
                           'assets/images/time_setup.png',
                           width: 169,
@@ -85,20 +84,22 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0, 0, 0, 20),
                                 child: Container(
                                   width: 281,
                                   height: 58,
                                   decoration: const BoxDecoration(),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 2),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 2),
                                     child: Text(
                                       'Please enter the time that you usually have your:',
                                       style: GoogleFonts.signikaNegative(
@@ -117,40 +118,40 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
                                 child: Text(
                                   'Breakfast',
                                   style: GoogleFonts.signikaNegative(
-                                        color: Colors.black,
-                                        fontSize: 21,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                    color: Colors.black,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
-                              
-                              
-                              Expanded(child: CupertinoDatePicker(
-                                    mode: CupertinoDatePickerMode.time,
-                                    minuteInterval: 1,
-                                    use24hFormat: false,
-                                    initialDateTime: savedTime ?? DateTime.now(),
-                                    onDateTimeChanged: (DateTime changedtimer) {
-                                      setState(() {
-                                        savedTime = _timeConverter(changedtimer);
-                                      });
-                                    },
-                                  ),
+                              Expanded(
+                                child: CupertinoDatePicker(
+                                  mode: CupertinoDatePickerMode.time,
+                                  minuteInterval: 1,
+                                  use24hFormat: false,
+                                  initialDateTime: savedTime ?? DateTime.now(),
+                                  onDateTimeChanged: (DateTime changedtimer) {
+                                    setState(() {
+                                      savedTime = changedtimer;
+                                    });
+                                  },
+                                ),
                               ),
-                              
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 50, 50),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 50, 50),
                                     child: ElevatedButton(
                                       onPressed: () async {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => const TimeSetupLunchWidget(),
+                                            builder: (context) =>
+                                                const TimeSetupLunchWidget(),
                                           ),
                                         );
                                       },

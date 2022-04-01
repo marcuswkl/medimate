@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../welcome.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 class TimeSetupSleepWidget extends StatefulWidget {
   const TimeSetupSleepWidget({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class TimeSetupSleepWidget extends StatefulWidget {
 
 class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime? savedTime;
 
   @override
   Widget build(BuildContext context) {
@@ -106,9 +109,32 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                                   ),
                                 ),
                               ),
+                              Expanded(
+                                child: CupertinoTheme(
+                                  data: const CupertinoThemeData(
+                                    textTheme: CupertinoTextThemeData(
+                                      dateTimePickerTextStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  child: CupertinoDatePicker(
+                                    mode: CupertinoDatePickerMode.time,
+                                    minuteInterval: 1,
+                                    use24hFormat: false,
+                                    initialDateTime:
+                                        savedTime ?? DateTime.now(),
+                                    onDateTimeChanged: (DateTime changedtimer) {
+                                      setState(() {
+                                        savedTime = changedtimer;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0, 0, 0, 20),
+                                    0, 15, 0, 20),
                                 child: Container(
                                   width: 287,
                                   height: 105,
@@ -136,14 +162,16 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 50, 50),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 50, 50),
                                     child: ElevatedButton(
                                       onPressed: () async {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => WelcomeWidget(),
+                                            builder: (context) =>
+                                                WelcomeWidget(),
                                           ),
                                         );
                                       },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'time_setup_dinner.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 class TimeSetupLunchWidget extends StatefulWidget {
   const TimeSetupLunchWidget({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class TimeSetupLunchWidget extends StatefulWidget {
 
 class _TimeSetupLunchWidgetState extends State<TimeSetupLunchWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime? savedTime;
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +116,19 @@ class _TimeSetupLunchWidgetState extends State<TimeSetupLunchWidget> {
                                         fontSize: 21,
                                         fontWeight: FontWeight.bold,
                                       ),
+                                ),
+                              ),
+                              Expanded(
+                                child: CupertinoDatePicker(
+                                  mode: CupertinoDatePickerMode.time,
+                                  minuteInterval: 1,
+                                  use24hFormat: false,
+                                  initialDateTime: savedTime ?? DateTime.now(),
+                                  onDateTimeChanged: (DateTime changedtimer) {
+                                    setState(() {
+                                      savedTime = changedtimer;
+                                    });
+                                  },
                                 ),
                               ),
                               Row(

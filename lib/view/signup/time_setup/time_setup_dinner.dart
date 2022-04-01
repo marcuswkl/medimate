@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'time_setup_sleep.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 class TimeSetupDinnerWidget extends StatefulWidget {
   const TimeSetupDinnerWidget({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class TimeSetupDinnerWidget extends StatefulWidget {
 
 class _TimeSetupDinnerWidgetState extends State<TimeSetupDinnerWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime? savedTime;
 
   @override
   Widget build(BuildContext context) {
@@ -113,6 +116,28 @@ class _TimeSetupDinnerWidgetState extends State<TimeSetupDinnerWidget> {
                                         fontSize: 21,
                                         fontWeight: FontWeight.bold,
                                       ),
+                                ),
+                              ),
+                              Expanded(
+                                child: CupertinoTheme(
+                                  data: const CupertinoThemeData(
+                                    textTheme: CupertinoTextThemeData(
+                                      dateTimePickerTextStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  child: CupertinoDatePicker(
+                                    mode: CupertinoDatePickerMode.time,
+                                    minuteInterval: 1,
+                                    use24hFormat: false,
+                                    initialDateTime: savedTime ?? DateTime.now(),
+                                    onDateTimeChanged: (DateTime changedtimer) {
+                                      setState(() {
+                                        savedTime = changedtimer;
+                                      });
+                                    },
+                                  ),
                                 ),
                               ),
                               Row(
