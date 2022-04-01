@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'time_setup_sleep.dart';
 
 class TimeSetupDinnerWidget extends StatefulWidget {
   const TimeSetupDinnerWidget({Key? key}) : super(key: key);
@@ -126,8 +127,7 @@ class _TimeSetupDinnerWidgetState extends State<TimeSetupDinnerWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column(), //TODO: Replace with TimeSetupLunchWidget(),
+                                            builder: (context) => TimeSetupSleepWidget(),
                                           ),
                                         );
                                       },
