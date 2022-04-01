@@ -58,7 +58,7 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                         child: Image.asset(
                           'assets/images/time_setup.png',
                           width: 169,
@@ -68,7 +68,7 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.6,
+                        height: MediaQuery.of(context).size.height * 0.565,
                         decoration: const BoxDecoration(
                           color: Color(0xFF023E8A),
                           borderRadius: BorderRadius.only(
@@ -111,7 +111,7 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                                     0, 0, 0, 20),
                                 child: Container(
                                   width: 287,
-                                  height: 139,
+                                  height: 105,
                                   decoration: BoxDecoration(
                                     color: const Color(0xFFF3E7BF),
                                     borderRadius: BorderRadius.circular(22),
@@ -124,8 +124,9 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                                       'Advice: Take your medicine on time to make sure your body has an effective amount of the drug at all times!',
                                       style: GoogleFonts.signikaNegative(
                                         color: Colors.black,
-                                        fontSize: 21,
+                                        fontSize: 17,
                                       ),
+                                      textAlign: TextAlign.justify,
                                     ),
                                   ),
                                 ),
