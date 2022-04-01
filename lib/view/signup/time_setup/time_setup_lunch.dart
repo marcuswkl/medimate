@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'time_setup_dinner.dart';
 
 class TimeSetupLunchWidget extends StatefulWidget {
   const TimeSetupLunchWidget({Key? key}) : super(key: key);
@@ -104,9 +105,7 @@ class _TimeSetupLunchWidgetState extends State<TimeSetupLunchWidget> {
                               Container(
                                 width: 282,
                                 height: 32,
-                                decoration: BoxDecoration(
-                                  // color: const Color(0xFFEEEEEE),
-                                ),
+                                decoration: const BoxDecoration(),
                                 child: Text(
                                   'Lunch',
                                   style: GoogleFonts.signikaNegative(
@@ -128,8 +127,7 @@ class _TimeSetupLunchWidgetState extends State<TimeSetupLunchWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column(), //TODO: Replace with TimeSetupLunchWidget(),
+                                            builder: (context) => const TimeSetupDinnerWidget(),
                                           ),
                                         );
                                       },
