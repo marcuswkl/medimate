@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import '../time_setup1/time_setup1_widget.dart';
+import '../time_setup/time_setup_breakfast.dart';
 
 class ProfileSetup2Widget extends StatefulWidget {
   const ProfileSetup2Widget({Key? key}) : super(key: key);
@@ -167,8 +167,7 @@ class _ProfileSetup2WidgetState extends State<ProfileSetup2Widget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column(), //TODO: Replace with TimeSetupBreakfastWidget(),
+                                            builder: (context) => const TimeSetupBreakfastWidget(),
                                           ),
                                         );
                                       },
