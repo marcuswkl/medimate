@@ -1,12 +1,8 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TimeSetup1Widget extends StatefulWidget {
-  const TimeSetup1Widget({Key key}) : super(key: key);
+  const TimeSetup1Widget({Key? key}) : super(key: key);
 
   @override
   _TimeSetup1WidgetState createState() => _TimeSetup1WidgetState();
@@ -19,7 +15,7 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -30,21 +26,22 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
-                    child: FlutterFlowIconButton(
-                      borderColor: FlutterFlowTheme.of(context).primaryColor,
-                      borderRadius: 20,
-                      borderWidth: 1,
-                      buttonSize: 50,
-                      fillColor: FlutterFlowTheme.of(context).primaryColor,
-                      icon: Icon(
-                        Icons.chevron_left,
-                        color: Colors.white,
-                        size: 30,
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF809BCE),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
                       ),
-                      onPressed: () async {
-                        Navigator.pop(context);
-                      },
+                      child: IconButton(
+                        iconSize: 30,
+                        onPressed: () async {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.chevron_left,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -58,7 +55,7 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+                        padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
                         child: Image.asset(
                           'assets/images/time_setup.png',
                           width: 169,
@@ -69,8 +66,8 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height * 0.6,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFFFCB77),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0),
                             bottomRight: Radius.circular(0),
@@ -79,29 +76,27 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
                                 padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                                    const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                                 child: Container(
                                   width: 281,
                                   height: 58,
                                   decoration: BoxDecoration(),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 0, 2),
                                     child: Text(
                                       'Please enter the time that you usually have your:',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                      style: GoogleFonts.signikaNegative(
+                                        color: Colors.black,
+                                        fontSize: 21,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -110,15 +105,13 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                                 width: 282,
                                 height: 32,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFEEEEEE),
+                                  // color: const Color(0xFFEEEEEE),
                                 ),
                                 child: Text(
                                   'Breakfast',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 18,
+                                  style: GoogleFonts.signikaNegative(
+                                        color: Colors.black,
+                                        fontSize: 21,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
@@ -128,29 +121,37 @@ class _TimeSetup1WidgetState extends State<TimeSetup1Widget> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 0, 50, 50),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
+                                    child: ElevatedButton(
+                                      onPressed: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                Column(), //TODO: Replace with TimeSetupLunchWidget(),
+                                          ),
+                                        );
                                       },
-                                      text: 'Next',
-                                      options: FFButtonOptions(
-                                        width: 103,
-                                        height: 35,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all<Color>(
+                                                const Color(0xFFFFFEFE)),
+                                        minimumSize:
+                                            MaterialStateProperty.all<Size>(
+                                                const Size(103, 35)),
+                                        shape: MaterialStateProperty.all<
+                                                OutlinedBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20))),
+                                      ),
+                                      child: Text(
+                                        'Next',
+                                        style: GoogleFonts.signikaNegative(
+                                          color: Colors.black,
+                                          fontSize: 18,
                                         ),
-                                        borderRadius: 12,
                                       ),
                                     ),
                                   ),
