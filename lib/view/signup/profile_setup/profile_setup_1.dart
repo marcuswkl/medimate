@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'profile_setup_2.dart';
+import 'package:intl/intl.dart';
 
 class ProfileSetup1Widget extends StatefulWidget {
   const ProfileSetup1Widget({Key? key}) : super(key: key);
@@ -213,7 +214,21 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                         ),
                                       ),
                                       style: GoogleFonts.signikaNegative(),
-                                      keyboardType: TextInputType.datetime,
+                                      // keyboardType: TextInputType.datetime,
+                                      onTap: () async {
+                                        FocusScope.of(context)
+                                            .requestFocus(FocusNode());
+                                        var date = await showDatePicker(
+                                            context: context,
+                                            initialDate: DateTime.now(),
+                                            firstDate: DateTime(1900),
+                                            lastDate: DateTime.now());
+                                        if (date != null) {
+                                          textController2.text =
+                                              DateFormat("dd/MM/yyyy")
+                                                  .format(date);
+                                        }
+                                      },
                                     ),
                                   ),
                                 ),
@@ -234,7 +249,8 @@ class _ProfileSetup1WidgetState extends State<ProfileSetup1Widget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => ProfileSetup2Widget(),
+                                            builder: (context) =>
+                                                ProfileSetup2Widget(),
                                           ),
                                         );
                                       },
