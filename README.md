@@ -1,16 +1,18 @@
-# medimate
+# MediMate
 
-A Flutter project for the 2022 Solution Challenge.
+MediMate is a **medication management and reminder application** to assist people in taking their medications consistently and successfully. The app aims to tackle **SDG 3: Good Health And Well-Being** by encouraging proper medication administration among patients.
 
-## Getting Started
+This project is a submission for the 2022 Solution Challenge organised by Google Developers Student Clubs under Google Developers. Our team consists of 4 undergraduate students from the GDSC Sunway University chapter in Malaysia as follows:
 
-This project is a starting point for a Flutter application.
+1. Tan Yong Jern
+2. Marcus Wong Ke Lun
+3. Ko Jia Xin
+4. Daniel Wong Yu Heng
 
-A few resources to get you started if this is your first Flutter project:
+## How To Run The App
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Please ensure that you have installed [Flutter.](https://docs.flutter.dev/get-started/install)
+2. Clone the repository using your preferred Git client or download the ZIP file of the repository.
+3. Run `flutter pub get` in the terminal to fetch dependencies.
+4. Run `flutter run` in the terminal to run the application using your emulator **(Pixel 4 API 30 is preferred)** or personal device.
+6. You can also use Android Studio or Visual Studio Code to run the application.
