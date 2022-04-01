@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import '../welcome/welcome_widget.dart';
+import '../welcome.dart';
 
 class TimeSetupSleepWidget extends StatefulWidget {
   const TimeSetupSleepWidget({Key? key}) : super(key: key);
@@ -143,8 +143,7 @@ class _TimeSetupSleepWidgetState extends State<TimeSetupSleepWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                Column(), //TODO: Replace with WelcomeWidget(),
+                                            builder: (context) => WelcomeWidget(),
                                           ),
                                         );
                                       },
