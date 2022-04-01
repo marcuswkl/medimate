@@ -93,7 +93,7 @@ class _TimeSetupDinnerWidgetState extends State<TimeSetupDinnerWidget> {
                                     child: Text(
                                       'Please enter the time that you usually have your:',
                                       style: GoogleFonts.signikaNegative(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 21,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -104,13 +104,11 @@ class _TimeSetupDinnerWidgetState extends State<TimeSetupDinnerWidget> {
                               Container(
                                 width: 282,
                                 height: 32,
-                                decoration: BoxDecoration(
-                                  // color: const Color(0xFFEEEEEE),
-                                ),
+                                decoration: const BoxDecoration(),
                                 child: Text(
                                   'Dinner',
                                   style: GoogleFonts.signikaNegative(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 21,
                                         fontWeight: FontWeight.bold,
                                       ),
