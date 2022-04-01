@@ -1,6 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:async';
 
 class SideEffectsSurveyWidget extends StatefulWidget {
   const SideEffectsSurveyWidget({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                       ),
                       child: Padding(
                         padding:
-                        const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                            const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
                         child: IconButton(
                           iconSize: 60,
                           color: const Color(0x00FCFCFC),
@@ -77,7 +78,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                             size: 20,
                           ),
                           onPressed: () {
-                            Navigator.pop(context);},
+                            Navigator.pop(context);
+                          },
                         ),
                       ),
                     ),
@@ -87,7 +89,7 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                     child: Text(
                       'Medical Journal',
                       style: GoogleFonts.fredokaOne(
-                      color: Colors.black,
+                        color: Colors.black,
                         fontSize: 30,
                       ),
                     ),
@@ -130,8 +132,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                         ),
                         filled: true,
                         fillColor: const Color(0xFF809BCE),
-                        contentPadding:
-                        const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                            20, 20, 20, 20),
                         prefixIcon: const Icon(
                           Icons.search_sharp,
                           color: Colors.white,
@@ -169,7 +171,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 2, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                8, 0, 2, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -196,7 +199,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                           child: Container(
                             width: 120,
                             height: 32,
@@ -218,15 +222,16 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding:
-                              const EdgeInsetsDirectional.fromSTEB(8, 0, 2, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  8, 0, 2, 0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 3, 0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 3, 0),
                                     child: Text(
                                       'Sore Throat',
                                       style: GoogleFonts.signikaNegative(
@@ -247,7 +252,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
                           child: Container(
                             width: 60,
                             height: 32,
@@ -269,15 +275,16 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding:
-                              const EdgeInsetsDirectional.fromSTEB(8, 0, 2, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  8, 0, 2, 0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 3, 0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 3, 0),
                                     child: Text(
                                       'Flu',
                                       style: GoogleFonts.signikaNegative(
@@ -323,7 +330,7 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             hintText:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie eros lectus, in convallis velit rutrum a.',
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie eros lectus, in convallis velit rutrum a.',
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
@@ -339,7 +346,8 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                               borderRadius: BorderRadius.circular(1),
                             ),
                             contentPadding:
-                            const EdgeInsetsDirectional.fromSTEB(10, 30, 10, 0),
+                                const EdgeInsetsDirectional.fromSTEB(
+                                    10, 30, 10, 0),
                           ),
                           style: GoogleFonts.getFont(
                             'Signika Negative',
@@ -360,9 +368,7 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                             color: Colors.black,
                             size: 30,
                           ),
-                          onPressed: () {
-                            print('IconButton pressed ...');
-                          },
+                          onPressed: () {},
                         ),
                       ],
                     ),
@@ -376,15 +382,13 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               primary: const Color(0xFF8090BE),
-                              minimumSize: const Size(130,40),
+                              minimumSize: const Size(130, 40),
                               elevation: 3,
                               shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(30)),
-                              )
-                          ),
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30)),
+                              )),
+                          onPressed: () {},
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -392,16 +396,17 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
                                 Icons.save,
                                 size: 20,
                               ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                            child: Text(
-                            'Save',
-                            style: GoogleFonts.signikaNegative(
-                              color: Colors.white,
-                              fontSize: 16,
-                            ),
-                          ),
-                          ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    15, 0, 0, 0),
+                                child: Text(
+                                  'Save',
+                                  style: GoogleFonts.signikaNegative(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -417,4 +422,3 @@ class _SideEffectsSurveyWidgetState extends State<SideEffectsSurveyWidget> {
     );
   }
 }
-

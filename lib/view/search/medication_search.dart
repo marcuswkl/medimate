@@ -507,7 +507,7 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                               0),
                                                                           child:
                                                                               Text(
-                                                                            'Statins Atorvastatin',
+                                                                            'Rosuvastatin Calcium',
                                                                             style:
                                                                                 GoogleFonts.signikaNegative(
                                                                               color: Colors.white,
@@ -539,7 +539,8 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
+                                                                                  Navigator.push(context,
+                                                                                      MaterialPageRoute(builder: (context) => const MedicationSearchResultWidget()));
                                                                             },
                                                                           ),
                                                                         ),
@@ -646,7 +647,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),
@@ -752,7 +752,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),
@@ -885,7 +884,6 @@ class _MedicationResultWidgetState extends State<MedicationResultWidget> {
                                                                             ),
                                                                             onPressed:
                                                                                 () {
-                                                                              print('IconButton pressed ...');
                                                                             },
                                                                           ),
                                                                         ),
