@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'medication_list.dart';
 
 class NearbyPharmacyWidget extends StatefulWidget {
@@ -12,8 +12,8 @@ class NearbyPharmacyWidget extends StatefulWidget {
 }
 
 class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
-  late LatLng googleMapsCenter;
-  late Completer<GoogleMapController> googleMapsController;
+  // late LatLng googleMapsCenter;
+  // late Completer<GoogleMapController> googleMapsController;
   late TextEditingController textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -98,9 +98,12 @@ class _NearbyPharmacyWidgetState extends State<NearbyPharmacyWidget> {
                   child: Container(
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: const BoxDecoration(),
-                    //child: 
+                    child: Text(
+                      'Medication List',
+                      style: GoogleFonts.signikaNegative(color: Colors.black,fontSize: 20,fontWeight: FontWeight.normal,fontStyle: FontStyle.italic,),
+                    )
                     
-                    // FlutterFlowGoogleMap(
+                    // GoogleMap(
                     //   controller: googleMapsController,
                     //   onCameraIdle: (latLng) =>
                     //       setState(() => googleMapsCenter = latLng),
