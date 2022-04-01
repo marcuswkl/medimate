@@ -93,14 +93,24 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                     ),
                   ),
-                  Text(
-                    'I would like to skip for now.',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.signikaNegative(
-                      color: const Color(0xFF1A73E8),
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
-                      decoration: TextDecoration.underline,
+                  InkWell(
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Column(), //TODO: Replace with HomeWidget
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'I would like to skip for now.',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.signikaNegative(
+                        color: const Color(0xFF1A73E8),
+                        fontSize: 23,
+                        fontWeight: FontWeight.w500,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   ),
                 ],
