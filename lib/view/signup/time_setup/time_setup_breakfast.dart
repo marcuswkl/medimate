@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'time_setup_lunch.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 class TimeSetupBreakfastWidget extends StatefulWidget {
   const TimeSetupBreakfastWidget({Key? key}) : super(key: key);
@@ -11,6 +13,11 @@ class TimeSetupBreakfastWidget extends StatefulWidget {
 
 class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  DateTime? savedTime;
+  
+  _timeConverter (DateTime value) {
+    return DateFormat('hh:mm a').format(value);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +27,7 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
+          child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -115,6 +123,21 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
                                       ),
                                 ),
                               ),
+                              
+                              
+                              Expanded(child: CupertinoDatePicker(
+                                    mode: CupertinoDatePickerMode.time,
+                                    minuteInterval: 1,
+                                    use24hFormat: false,
+                                    initialDateTime: savedTime ?? DateTime.now(),
+                                    onDateTimeChanged: (DateTime changedtimer) {
+                                      setState(() {
+                                        savedTime = _timeConverter(changedtimer);
+                                      });
+                                    },
+                                  ),
+                              ),
+                              
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -166,7 +189,7 @@ class _TimeSetupBreakfastWidgetState extends State<TimeSetupBreakfastWidget> {
             ],
           ),
         ),
-      ),
+      )),
     );
   }
 }
