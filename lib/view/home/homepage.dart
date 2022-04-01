@@ -45,7 +45,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       children: [
                         Padding(
                           padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -68,7 +68,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0, 5, 0, 0),
                               child: Container(
-                                width: MediaQuery.of(context).size.width * 0.85,
+                                width: MediaQuery
+                                    .of(context)
+                                    .size
+                                    .width * 0.85,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   boxShadow: const [
@@ -88,14 +91,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   children: [
                                     Padding(
                                       padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              16, 10, 16, 0),
+                                      const EdgeInsetsDirectional.fromSTEB(
+                                          16, 10, 16, 0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.end,
+                                        CrossAxisAlignment.end,
                                         children: [
                                           Text(
                                             'Coughing Medicine',
@@ -108,24 +111,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           ElevatedButton(
                                             style: ElevatedButton.styleFrom(
                                                 tapTargetSize:
-                                                    MaterialTapTargetSize
-                                                        .shrinkWrap,
+                                                MaterialTapTargetSize
+                                                    .shrinkWrap,
                                                 primary:
-                                                    const Color(0xFF95B8D1),
+                                                const Color(0xFF95B8D1),
                                                 minimumSize: const Size(90, 23),
                                                 elevation: 3,
                                                 shape:
-                                                    const RoundedRectangleBorder(
+                                                const RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(15)),
+                                                  BorderRadius.all(
+                                                      Radius.circular(15)),
                                                 )),
-                                            onPressed: () {
-                                               },
+                                            onPressed: () {},
                                             child: Text(
                                               '2.00 PM',
                                               style:
-                                                  GoogleFonts.signikaNegative(
+                                              GoogleFonts.signikaNegative(
                                                 color: Colors.white,
                                                 fontSize: 14,
                                               ),
@@ -136,14 +138,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Padding(
                                       padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              16, 0, 16, 10),
+                                      const EdgeInsetsDirectional.fromSTEB(
+                                          16, 0, 16, 10),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsetsDirectional
@@ -151,7 +153,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             child: Text(
                                               'Benzonatate',
                                               style:
-                                                  GoogleFonts.signikaNegative(
+                                              GoogleFonts.signikaNegative(
                                                 color: Colors.black,
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.normal,
@@ -164,26 +166,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             child: ElevatedButton(
                                               style: ElevatedButton.styleFrom(
                                                   tapTargetSize:
-                                                      MaterialTapTargetSize
-                                                          .shrinkWrap,
+                                                  MaterialTapTargetSize
+                                                      .shrinkWrap,
                                                   primary:
-                                                      const Color(0xFF95B8D1),
+                                                  const Color(0xFF95B8D1),
                                                   minimumSize:
-                                                      const Size(100, 23),
+                                                  const Size(100, 23),
                                                   elevation: 3,
                                                   shape:
-                                                      const RoundedRectangleBorder(
+                                                  const RoundedRectangleBorder(
                                                     borderRadius:
-                                                        BorderRadius.all(
-                                                            Radius.circular(
-                                                                15)),
+                                                    BorderRadius.all(
+                                                        Radius.circular(
+                                                            15)),
                                                   )),
-                                              onPressed: () {
-                                                },
+                                              onPressed: () {},
                                               child: Text(
                                                 'After Lunch',
                                                 style:
-                                                    GoogleFonts.signikaNegative(
+                                                GoogleFonts.signikaNegative(
                                                   color: Colors.white,
                                                   fontSize: 14,
                                                 ),
@@ -207,7 +208,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0, 10, 0, 0),
                               child: Container(
-                                width: MediaQuery.of(context).size.width * 0.85,
+                                width: MediaQuery
+                                    .of(context)
+                                    .size
+                                    .width * 0.85,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   boxShadow: const [
@@ -228,14 +232,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Please fill in your \ndaily medical journal.',
@@ -250,28 +254,29 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.end,
+                                        CrossAxisAlignment.end,
                                         children: [
                                           ElevatedButton(
                                             style: ElevatedButton.styleFrom(
                                                 primary:
-                                                    const Color(0xFF95B8D1),
+                                                const Color(0xFF95B8D1),
                                                 minimumSize: const Size(90, 30),
                                                 elevation: 3,
                                                 shape:
-                                                    const RoundedRectangleBorder(
+                                                const RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(15)),
+                                                  BorderRadius.all(
+                                                      Radius.circular(15)),
                                                 )),
                                             onPressed: () {
                                               Navigator.push(context,
-                                                  MaterialPageRoute(builder: (context) => const SideEffectsSurveyWidget()));
+                                                  MaterialPageRoute(builder: (
+                                                      context) => const SideEffectsSurveyWidget()));
                                             },
                                             child: Text(
                                               'Journal',
                                               style:
-                                                  GoogleFonts.signikaNegative(
+                                              GoogleFonts.signikaNegative(
                                                 color: Colors.white,
                                                 fontSize: 14,
                                               ),
@@ -290,7 +295,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -311,7 +316,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Expanded(
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                        const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                         child: DefaultTabController(
                           length: 2,
                           initialIndex: 0,
@@ -347,17 +352,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              MainAxisAlignment.start,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                               children: [
                                                 Material(
                                                   color: Colors.transparent,
                                                   elevation: 3,
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:
-                                                        BorderRadius.circular(
-                                                            8),
+                                                    BorderRadius.circular(
+                                                        8),
                                                   ),
                                                   child: Container(
                                                     width: double.infinity,
@@ -368,13 +373,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         BoxShadow(
                                                           blurRadius: 3,
                                                           color:
-                                                              Color(0x32000000),
+                                                          Color(0x32000000),
                                                           offset: Offset(0, 1),
                                                         )
                                                       ],
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
+                                                      BorderRadius.circular(
+                                                          8),
                                                       border: Border.all(
                                                         color: const Color(
                                                             0x2C000000),
@@ -382,85 +387,92 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                              0, 1, 0, 0),
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(
+                                                          0, 1, 0, 0),
                                                       child: Row(
                                                         mainAxisSize:
-                                                            MainAxisSize.max,
+                                                        MainAxisSize.max,
                                                         children: [
                                                           Expanded(
                                                             flex: 7,
                                                             child: Column(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
+                                                              MainAxisAlignment
+                                                                  .center,
                                                               crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
+                                                              CrossAxisAlignment
+                                                                  .start,
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                      const EdgeInsetsDirectional
-                                                                              .fromSTEB(
-                                                                          15,
-                                                                          10,
-                                                                          0,
-                                                                          10),
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                      15,
+                                                                      10,
+                                                                      0,
+                                                                      10),
                                                                   child: Column(
                                                                     mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
+                                                                    MainAxisSize
+                                                                        .max,
                                                                     crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
+                                                                    CrossAxisAlignment
+                                                                        .start,
                                                                     children: [
                                                                       Text(
                                                                         'SINGAPORE',
                                                                         style: GoogleFonts
                                                                             .signikaNegative(
                                                                           color:
-                                                                              Colors.black,
+                                                                          Colors
+                                                                              .black,
                                                                           fontSize:
-                                                                              16,
+                                                                          16,
                                                                           fontWeight:
-                                                                              FontWeight.w500,
+                                                                          FontWeight
+                                                                              .w500,
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional
+                                                                            .fromSTEB(
                                                                             0,
                                                                             5,
                                                                             0,
                                                                             0),
                                                                         child:
-                                                                            Text(
+                                                                        Text(
                                                                           'When you are fully \nvaccinated, but still \nhospitalised for COVID-19',
                                                                           style:
-                                                                              GoogleFonts.signikaNegative(
+                                                                          GoogleFonts
+                                                                              .signikaNegative(
                                                                             color:
-                                                                                const Color(0xFF64696B),
+                                                                            const Color(
+                                                                                0xFF64696B),
                                                                             fontSize:
-                                                                                14,
+                                                                            14,
                                                                           ),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional
+                                                                            .fromSTEB(
                                                                             0,
                                                                             5,
                                                                             0,
                                                                             0),
                                                                         child:
-                                                                            Text(
+                                                                        Text(
                                                                           '1 Mar 2022 10:00 AM',
                                                                           style:
-                                                                              GoogleFonts.signikaNegative(
+                                                                          GoogleFonts
+                                                                              .signikaNegative(
                                                                             fontSize:
-                                                                                8,
+                                                                            8,
                                                                           ),
                                                                         ),
                                                                       ),
@@ -475,36 +487,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 ),
                                                                 Padding(
                                                                   padding:
-                                                                      const EdgeInsetsDirectional
-                                                                              .fromSTEB(
-                                                                          0,
-                                                                          5,
-                                                                          15,
-                                                                          5),
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                      0,
+                                                                      5,
+                                                                      15,
+                                                                      5),
                                                                   child: Row(
                                                                     mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
+                                                                    MainAxisSize
+                                                                        .max,
                                                                     mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .spaceEvenly,
+                                                                    MainAxisAlignment
+                                                                        .spaceEvenly,
                                                                     children: [
                                                                       Row(
                                                                         mainAxisSize:
-                                                                            MainAxisSize.max,
+                                                                        MainAxisSize
+                                                                            .max,
                                                                         children: [
                                                                           const Icon(
-                                                                            Icons.bookmark_rounded,
+                                                                            Icons
+                                                                                .bookmark_rounded,
                                                                             color:
-                                                                                Color(0xFF809BCE),
+                                                                            Color(
+                                                                                0xFF809BCE),
                                                                             size:
-                                                                                18,
+                                                                            18,
                                                                           ),
                                                                           Text(
                                                                             'Bookmark',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
-                                                                              color: const Color(0x99000000),
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
+                                                                              color: const Color(
+                                                                                  0x99000000),
                                                                               fontSize: 8,
                                                                             ),
                                                                           ),
@@ -512,20 +529,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       ),
                                                                       Row(
                                                                         mainAxisSize:
-                                                                            MainAxisSize.max,
+                                                                        MainAxisSize
+                                                                            .max,
                                                                         children: [
                                                                           const Icon(
-                                                                            Icons.share_rounded,
+                                                                            Icons
+                                                                                .share_rounded,
                                                                             color:
-                                                                                Color(0xFF809BCE),
+                                                                            Color(
+                                                                                0xFF809BCE),
                                                                             size:
-                                                                                18,
+                                                                            18,
                                                                           ),
                                                                           Text(
                                                                             'Share',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
-                                                                              color: const Color(0x9A000000),
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
+                                                                              color: const Color(
+                                                                                  0x9A000000),
                                                                               fontSize: 8,
                                                                             ),
                                                                           ),
@@ -541,12 +563,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             flex: 3,
                                                             child: Column(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               children: [
                                                                 Expanded(
                                                                   child:
-                                                                      InkWell(
+                                                                  InkWell(
                                                                     onTap:
                                                                         () async {
                                                                       await Navigator
@@ -554,44 +576,67 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         context,
                                                                         PageTransition(
                                                                           type:
-                                                                              PageTransitionType.fade,
+                                                                          PageTransitionType
+                                                                              .fade,
                                                                           child:
-                                                                              Image.asset(
+                                                                          Image
+                                                                              .asset(
                                                                             'assets/images/news1.png',
                                                                             width:
-                                                                                100,
+                                                                            100,
                                                                             height:
-                                                                                MediaQuery.of(context).size.height * 0.17,
+                                                                            MediaQuery
+                                                                                .of(
+                                                                                context)
+                                                                                .size
+                                                                                .height *
+                                                                                0.17,
                                                                             fit:
-                                                                                BoxFit.fill,
+                                                                            BoxFit
+                                                                                .fill,
                                                                           ),
                                                                         ),
                                                                       );
                                                                     },
                                                                     child: Hero(
                                                                       tag:
-                                                                          'imageTag1',
+                                                                      'imageTag1',
                                                                       transitionOnUserGestures:
-                                                                          true,
+                                                                      true,
                                                                       child:
-                                                                          ClipRRect(
+                                                                      ClipRRect(
                                                                         borderRadius:
-                                                                            const BorderRadius.only(
+                                                                        const BorderRadius
+                                                                            .only(
                                                                           bottomLeft:
-                                                                              Radius.circular(0),
+                                                                          Radius
+                                                                              .circular(
+                                                                              0),
                                                                           bottomRight:
-                                                                              Radius.circular(8),
+                                                                          Radius
+                                                                              .circular(
+                                                                              8),
                                                                           topLeft:
-                                                                              Radius.circular(0),
+                                                                          Radius
+                                                                              .circular(
+                                                                              0),
                                                                           topRight:
-                                                                              Radius.circular(8),
+                                                                          Radius
+                                                                              .circular(
+                                                                              8),
                                                                         ),
-                                                                        child: Image.asset(
+                                                                        child: Image
+                                                                            .asset(
                                                                           'assets/images/news2.png',
                                                                           width:
-                                                                              100,
+                                                                          100,
                                                                           height:
-                                                                              MediaQuery.of(context).size.height * 0.17,
+                                                                          MediaQuery
+                                                                              .of(
+                                                                              context)
+                                                                              .size
+                                                                              .height *
+                                                                              0.17,
                                                                           fit: BoxFit
                                                                               .fill,
                                                                         ),
@@ -616,17 +661,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.start,
+                                              MainAxisAlignment.start,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                               children: [
                                                 Material(
                                                   color: Colors.transparent,
                                                   elevation: 3,
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:
-                                                        BorderRadius.circular(
-                                                            8),
+                                                    BorderRadius.circular(
+                                                        8),
                                                   ),
                                                   child: Container(
                                                     width: double.infinity,
@@ -637,13 +682,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         BoxShadow(
                                                           blurRadius: 3,
                                                           color:
-                                                              Color(0x32000000),
+                                                          Color(0x32000000),
                                                           offset: Offset(0, 1),
                                                         )
                                                       ],
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
+                                                      BorderRadius.circular(
+                                                          8),
                                                       border: Border.all(
                                                         color: const Color(
                                                             0x2C000000),
@@ -651,85 +696,92 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                              0, 1, 0, 0),
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(
+                                                          0, 1, 0, 0),
                                                       child: Row(
                                                         mainAxisSize:
-                                                            MainAxisSize.max,
+                                                        MainAxisSize.max,
                                                         children: [
                                                           Expanded(
                                                             flex: 7,
                                                             child: Column(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
+                                                              MainAxisAlignment
+                                                                  .center,
                                                               crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
+                                                              CrossAxisAlignment
+                                                                  .start,
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                      const EdgeInsetsDirectional
-                                                                              .fromSTEB(
-                                                                          15,
-                                                                          10,
-                                                                          0,
-                                                                          10),
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                      15,
+                                                                      10,
+                                                                      0,
+                                                                      10),
                                                                   child: Column(
                                                                     mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
+                                                                    MainAxisSize
+                                                                        .max,
                                                                     crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
+                                                                    CrossAxisAlignment
+                                                                        .start,
                                                                     children: [
                                                                       Text(
                                                                         'MALAYSIA',
                                                                         style: GoogleFonts
                                                                             .signikaNegative(
                                                                           color:
-                                                                              Colors.black,
+                                                                          Colors
+                                                                              .black,
                                                                           fontSize:
-                                                                              16,
+                                                                          16,
                                                                           fontWeight:
-                                                                              FontWeight.w500,
+                                                                          FontWeight
+                                                                              .w500,
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional
+                                                                            .fromSTEB(
                                                                             0,
                                                                             5,
                                                                             0,
                                                                             0),
                                                                         child:
-                                                                            Text(
+                                                                        Text(
                                                                           'Racial Disparities in Pediatric Postoperative Mortality Rates',
                                                                           style:
-                                                                              GoogleFonts.signikaNegative(
+                                                                          GoogleFonts
+                                                                              .signikaNegative(
                                                                             color:
-                                                                                const Color(0xFF64696B),
+                                                                            const Color(
+                                                                                0xFF64696B),
                                                                             fontSize:
-                                                                                14,
+                                                                            14,
                                                                           ),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional
+                                                                            .fromSTEB(
                                                                             0,
                                                                             5,
                                                                             0,
                                                                             0),
                                                                         child:
-                                                                            Text(
+                                                                        Text(
                                                                           '2 Mar 2022 8:00 AM',
                                                                           style:
-                                                                              GoogleFonts.signikaNegative(
+                                                                          GoogleFonts
+                                                                              .signikaNegative(
                                                                             fontSize:
-                                                                                8,
+                                                                            8,
                                                                           ),
                                                                         ),
                                                                       ),
@@ -744,36 +796,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 ),
                                                                 Padding(
                                                                   padding:
-                                                                      const EdgeInsetsDirectional
-                                                                              .fromSTEB(
-                                                                          0,
-                                                                          5,
-                                                                          15,
-                                                                          5),
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                      0,
+                                                                      5,
+                                                                      15,
+                                                                      5),
                                                                   child: Row(
                                                                     mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
+                                                                    MainAxisSize
+                                                                        .max,
                                                                     mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .spaceEvenly,
+                                                                    MainAxisAlignment
+                                                                        .spaceEvenly,
                                                                     children: [
                                                                       Row(
                                                                         mainAxisSize:
-                                                                            MainAxisSize.max,
+                                                                        MainAxisSize
+                                                                            .max,
                                                                         children: [
                                                                           const Icon(
-                                                                            Icons.bookmark_rounded,
+                                                                            Icons
+                                                                                .bookmark_rounded,
                                                                             color:
-                                                                                Color(0xFF809BCE),
+                                                                            Color(
+                                                                                0xFF809BCE),
                                                                             size:
-                                                                                18,
+                                                                            18,
                                                                           ),
                                                                           Text(
                                                                             'Bookmark',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
-                                                                              color: const Color(0x99000000),
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
+                                                                              color: const Color(
+                                                                                  0x99000000),
                                                                               fontSize: 8,
                                                                             ),
                                                                           ),
@@ -781,20 +838,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                       ),
                                                                       Row(
                                                                         mainAxisSize:
-                                                                            MainAxisSize.max,
+                                                                        MainAxisSize
+                                                                            .max,
                                                                         children: [
                                                                           const Icon(
-                                                                            Icons.share_rounded,
+                                                                            Icons
+                                                                                .share_rounded,
                                                                             color:
-                                                                                Color(0xFF809BCE),
+                                                                            Color(
+                                                                                0xFF809BCE),
                                                                             size:
-                                                                                18,
+                                                                            18,
                                                                           ),
                                                                           Text(
                                                                             'Share',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
-                                                                              color: const Color(0x9A000000),
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
+                                                                              color: const Color(
+                                                                                  0x9A000000),
                                                                               fontSize: 8,
                                                                             ),
                                                                           ),
@@ -810,12 +872,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             flex: 3,
                                                             child: Column(
                                                               mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                              MainAxisSize
+                                                                  .max,
                                                               children: [
                                                                 Expanded(
                                                                   child:
-                                                                      InkWell(
+                                                                  InkWell(
                                                                     onTap:
                                                                         () async {
                                                                       await Navigator
@@ -823,44 +885,67 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         context,
                                                                         PageTransition(
                                                                           type:
-                                                                              PageTransitionType.fade,
+                                                                          PageTransitionType
+                                                                              .fade,
                                                                           child:
-                                                                          Image.asset(
+                                                                          Image
+                                                                              .asset(
                                                                             'assets/images/news2.png',
                                                                             width:
-                                                                                100,
+                                                                            100,
                                                                             height:
-                                                                                MediaQuery.of(context).size.height * 0.17,
+                                                                            MediaQuery
+                                                                                .of(
+                                                                                context)
+                                                                                .size
+                                                                                .height *
+                                                                                0.17,
                                                                             fit:
-                                                                                BoxFit.fill,
+                                                                            BoxFit
+                                                                                .fill,
                                                                           ),
                                                                         ),
                                                                       );
                                                                     },
                                                                     child: Hero(
                                                                       tag:
-                                                                          'imageTag2',
+                                                                      'imageTag2',
                                                                       transitionOnUserGestures:
-                                                                          true,
+                                                                      true,
                                                                       child:
-                                                                          ClipRRect(
+                                                                      ClipRRect(
                                                                         borderRadius:
-                                                                            const BorderRadius.only(
+                                                                        const BorderRadius
+                                                                            .only(
                                                                           bottomLeft:
-                                                                              Radius.circular(0),
+                                                                          Radius
+                                                                              .circular(
+                                                                              0),
                                                                           bottomRight:
-                                                                              Radius.circular(8),
+                                                                          Radius
+                                                                              .circular(
+                                                                              8),
                                                                           topLeft:
-                                                                              Radius.circular(0),
+                                                                          Radius
+                                                                              .circular(
+                                                                              0),
                                                                           topRight:
-                                                                              Radius.circular(8),
+                                                                          Radius
+                                                                              .circular(
+                                                                              8),
                                                                         ),
-                                                                        child: Image.asset(
+                                                                        child: Image
+                                                                            .asset(
                                                                           'assets/images/news1.png',
                                                                           width:
-                                                                              100,
+                                                                          100,
                                                                           height:
-                                                                              MediaQuery.of(context).size.height * 0.17,
+                                                                          MediaQuery
+                                                                              .of(
+                                                                              context)
+                                                                              .size
+                                                                              .height *
+                                                                              0.17,
                                                                           fit: BoxFit
                                                                               .fill,
                                                                         ),
@@ -884,31 +969,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Padding(
                                       padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              10, 0, 10, 0),
+                                      const EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 10, 0),
                                       child: SingleChildScrollView(
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
                                               padding:
-                                                  const EdgeInsetsDirectional
-                                                      .fromSTEB(0, 20, 0, 0),
+                                              const EdgeInsetsDirectional
+                                                  .fromSTEB(0, 20, 0, 0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.start,
+                                                MainAxisAlignment.start,
                                                 crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                                 children: [
                                                   Material(
                                                     color: Colors.transparent,
                                                     elevation: 3,
                                                     shape:
-                                                        RoundedRectangleBorder(
+                                                    RoundedRectangleBorder(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              8),
+                                                      BorderRadius.circular(
+                                                          8),
                                                     ),
                                                     child: Container(
                                                       width: double.infinity,
@@ -921,12 +1006,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             color: Color(
                                                                 0x32000000),
                                                             offset:
-                                                                Offset(0, 1),
+                                                            Offset(0, 1),
                                                           )
                                                         ],
                                                         borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
+                                                        BorderRadius
+                                                            .circular(8),
                                                         border: Border.all(
                                                           color: const Color(
                                                               0x2C000000),
@@ -934,81 +1019,90 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                0, 1, 0, 0),
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                            0, 1, 0, 0),
                                                         child: Row(
                                                           mainAxisSize:
-                                                              MainAxisSize.max,
+                                                          MainAxisSize.max,
                                                           children: [
                                                             Expanded(
                                                               flex: 7,
                                                               child: Column(
                                                                 mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
+                                                                MainAxisSize
+                                                                    .max,
                                                                 mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .center,
+                                                                MainAxisAlignment
+                                                                    .center,
                                                                 crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
+                                                                CrossAxisAlignment
+                                                                    .start,
                                                                 children: [
                                                                   Padding(
                                                                     padding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
-                                                                            15,
-                                                                            10,
-                                                                            0,
-                                                                            10),
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                        15,
+                                                                        10,
+                                                                        0,
+                                                                        10),
                                                                     child:
-                                                                        Column(
+                                                                    Column(
                                                                       mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
+                                                                      MainAxisSize
+                                                                          .max,
                                                                       crossAxisAlignment:
-                                                                          CrossAxisAlignment
-                                                                              .start,
+                                                                      CrossAxisAlignment
+                                                                          .start,
                                                                       children: [
                                                                         Text(
                                                                           'MALAYSIA',
                                                                           style:
-                                                                              GoogleFonts.signikaNegative(
+                                                                          GoogleFonts
+                                                                              .signikaNegative(
                                                                             color:
-                                                                                Colors.black,
+                                                                            Colors
+                                                                                .black,
                                                                             fontSize:
-                                                                                16,
+                                                                            16,
                                                                             fontWeight:
-                                                                                FontWeight.w500,
+                                                                            FontWeight
+                                                                                .w500,
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional
+                                                                              .fromSTEB(
                                                                               0,
                                                                               5,
                                                                               0,
                                                                               0),
                                                                           child:
-                                                                              Text(
+                                                                          Text(
                                                                             'Lack of Awareness and the Normalization of Dysmenorrhea',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
-                                                                              color: const Color(0xFF64696B),
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
+                                                                              color: const Color(
+                                                                                  0xFF64696B),
                                                                               fontSize: 14,
                                                                             ),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional
+                                                                              .fromSTEB(
                                                                               0,
                                                                               5,
                                                                               0,
                                                                               0),
                                                                           child:
-                                                                              Text(
+                                                                          Text(
                                                                             '14 Jan 2022 1:00 PM',
                                                                             style:
-                                                                                GoogleFonts.signikaNegative(
+                                                                            GoogleFonts
+                                                                                .signikaNegative(
                                                                               fontSize: 8,
                                                                             ),
                                                                           ),
@@ -1019,38 +1113,44 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   const Divider(
                                                                     height: 1,
                                                                     thickness:
-                                                                        1,
+                                                                    1,
                                                                     color: Color(
                                                                         0x91000000),
                                                                   ),
                                                                   Padding(
                                                                     padding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
-                                                                            0,
-                                                                            5,
-                                                                            15,
-                                                                            5),
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                        0,
+                                                                        5,
+                                                                        15,
+                                                                        5),
                                                                     child: Row(
                                                                       mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
+                                                                      MainAxisSize
+                                                                          .max,
                                                                       mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .spaceEvenly,
+                                                                      MainAxisAlignment
+                                                                          .spaceEvenly,
                                                                       children: [
                                                                         Row(
                                                                           mainAxisSize:
-                                                                              MainAxisSize.max,
+                                                                          MainAxisSize
+                                                                              .max,
                                                                           children: [
                                                                             const Icon(
-                                                                              Icons.bookmark_rounded,
-                                                                              color: Color(0xFF809BCE),
+                                                                              Icons
+                                                                                  .bookmark_rounded,
+                                                                              color: Color(
+                                                                                  0xFF809BCE),
                                                                               size: 18,
                                                                             ),
                                                                             Text(
                                                                               'Bookmark',
-                                                                              style: GoogleFonts.signikaNegative(
-                                                                                color: const Color(0x99000000),
+                                                                              style: GoogleFonts
+                                                                                  .signikaNegative(
+                                                                                color: const Color(
+                                                                                    0x99000000),
                                                                                 fontSize: 8,
                                                                               ),
                                                                             ),
@@ -1058,17 +1158,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
-                                                                              MainAxisSize.max,
+                                                                          MainAxisSize
+                                                                              .max,
                                                                           children: [
                                                                             const Icon(
-                                                                              Icons.share_rounded,
-                                                                              color: Color(0xFF809BCE),
+                                                                              Icons
+                                                                                  .share_rounded,
+                                                                              color: Color(
+                                                                                  0xFF809BCE),
                                                                               size: 18,
                                                                             ),
                                                                             Text(
                                                                               'Share',
-                                                                              style: GoogleFonts.signikaNegative(
-                                                                                color: const Color(0x9A000000),
+                                                                              style: GoogleFonts
+                                                                                  .signikaNegative(
+                                                                                color: const Color(
+                                                                                    0x9A000000),
                                                                                 fontSize: 8,
                                                                               ),
                                                                             ),
@@ -1084,12 +1189,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               flex: 3,
                                                               child: Column(
                                                                 mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
+                                                                MainAxisSize
+                                                                    .max,
                                                                 children: [
                                                                   Expanded(
                                                                     child:
-                                                                        InkWell(
+                                                                    InkWell(
                                                                       onTap:
                                                                           () async {
                                                                         await Navigator
@@ -1097,45 +1202,69 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                           context,
                                                                           PageTransition(
                                                                             type:
-                                                                                PageTransitionType.fade,
+                                                                            PageTransitionType
+                                                                                .fade,
                                                                             child:
-                                                                            Image.asset(
+                                                                            Image
+                                                                                .asset(
                                                                               'assets/images/news1.png',
                                                                               width: 100,
-                                                                              height: MediaQuery.of(context).size.height * 0.17,
-                                                                              fit: BoxFit.fill,
+                                                                              height: MediaQuery
+                                                                                  .of(
+                                                                                  context)
+                                                                                  .size
+                                                                                  .height *
+                                                                                  0.17,
+                                                                              fit: BoxFit
+                                                                                  .fill,
                                                                             ),
                                                                           ),
                                                                         );
                                                                       },
                                                                       child:
-                                                                          Hero(
+                                                                      Hero(
                                                                         tag:
-                                                                            'imageTag3',
+                                                                        'imageTag3',
                                                                         transitionOnUserGestures:
-                                                                            true,
+                                                                        true,
                                                                         child:
-                                                                            ClipRRect(
+                                                                        ClipRRect(
                                                                           borderRadius:
-                                                                              const BorderRadius.only(
+                                                                          const BorderRadius
+                                                                              .only(
                                                                             bottomLeft:
-                                                                                Radius.circular(0),
+                                                                            Radius
+                                                                                .circular(
+                                                                                0),
                                                                             bottomRight:
-                                                                                Radius.circular(8),
+                                                                            Radius
+                                                                                .circular(
+                                                                                8),
                                                                             topLeft:
-                                                                                Radius.circular(0),
+                                                                            Radius
+                                                                                .circular(
+                                                                                0),
                                                                             topRight:
-                                                                                Radius.circular(8),
+                                                                            Radius
+                                                                                .circular(
+                                                                                8),
                                                                           ),
                                                                           child:
-                                                                          Image.asset(
+                                                                          Image
+                                                                              .asset(
                                                                             'assets/images/news1.png',
                                                                             width:
-                                                                                100,
+                                                                            100,
                                                                             height:
-                                                                                MediaQuery.of(context).size.height * 0.17,
+                                                                            MediaQuery
+                                                                                .of(
+                                                                                context)
+                                                                                .size
+                                                                                .height *
+                                                                                0.17,
                                                                             fit:
-                                                                                BoxFit.fill,
+                                                                            BoxFit
+                                                                                .fill,
                                                                           ),
                                                                         ),
                                                                       ),

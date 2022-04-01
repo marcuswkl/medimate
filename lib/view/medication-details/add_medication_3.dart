@@ -721,8 +721,10 @@ class _AddMedication3State extends State<AddMedication3> with InputValidationMix
                                               if (formKey.currentState!.validate()) {
                                                 formKey.currentState?.save();
                                               }
-                                              Navigator.push(context,
-                                                  MaterialPageRoute(builder: (context) => const Nav()));
+                                              var count = 0;
+                                              Navigator.popUntil(context, (route) {
+                                                return count++ == 3;
+                                              });
                                             },
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
