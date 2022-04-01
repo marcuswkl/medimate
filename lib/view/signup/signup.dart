@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'forgot_password.dart';
-import '../signup/signup.dart';
+import '../login/login.dart';
 import '../signup/profile_setup/profile_setup_1.dart';
-import '../../nav.dart';
 
-class LoginWidget extends StatefulWidget {
-  const LoginWidget({Key? key}) : super(key: key);
+class SignUpWidget extends StatefulWidget {
+  const SignUpWidget({Key? key}) : super(key: key);
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  _SignUpWidgetState createState() => _SignUpWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class _SignUpWidgetState extends State<SignUpWidget> {
   late TextEditingController textController1;
   late TextEditingController textController2;
+  late TextEditingController textController3;
   late bool passwordVisibility;
+  late TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -23,7 +23,9 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    textController3 = TextEditingController();
     passwordVisibility = false;
+    textController4 = TextEditingController();
   }
 
   @override
@@ -41,7 +43,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: Container(
                       decoration: const BoxDecoration(
                         color: Color(0xFF809BCE),
@@ -71,12 +74,96 @@ class _LoginWidgetState extends State<LoginWidget> {
                     children: [
                       Padding(
                         padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 50, 20, 0),
+                              child: Text(
+                                'Get Started',
+                                style: GoogleFonts.fredokaOne(
+                                  color: Colors.black,
+                                  fontSize: 42,
+                                ),
+                              ),
+                            ),
+                            Image.asset(
+                              'assets/images/logo.png',
+                              width: 43,
+                              height: 104,
+                              fit: BoxFit.cover,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding:
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: Image.asset(
-                          'assets/images/logo.png',
-                          width: 72,
-                          height: 174,
-                          fit: BoxFit.cover,
+                        child: Container(
+                          width: 297,
+                          child: Text(
+                            'Create an account for your MediMate.',
+                            style: GoogleFonts.signikaNegative(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 278,
+                        height: 26,
+                        decoration: const BoxDecoration(),
+                        child: Text(
+                          'Full Name',
+                          style: GoogleFonts.signikaNegative(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                        child: Container(
+                          width: 278,
+                          height: 55,
+                          decoration: const BoxDecoration(),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 2),
+                            child: TextFormField(
+                              controller: textController1,
+                              obscureText: false,
+                              decoration: const InputDecoration(
+                                hintText: 'Eg: John Doe',
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.black45,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.black,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
+                                  ),
+                                ),
+                              ),
+                              style: GoogleFonts.signikaNegative(),
+                              keyboardType: TextInputType.name,
+                            ),
+                          ),
                         ),
                       ),
                       Container(
@@ -103,7 +190,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0, 0, 0, 2),
                             child: TextFormField(
-                              controller: textController1,
+                              controller: textController2,
                               obscureText: false,
                               decoration: const InputDecoration(
                                 hintText: 'Eg: example@gmail.com',
@@ -147,18 +234,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                         child: Container(
                           width: 278,
                           height: 55,
                           decoration: const BoxDecoration(),
                           child: TextFormField(
-                            controller: textController2,
+                            controller: textController3,
                             obscureText: !passwordVisibility,
                             decoration: InputDecoration(
                               hintText: 'Enter your password',
                               enabledBorder: const OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.black45,
                                   width: 1,
                                 ),
@@ -193,6 +280,59 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                       ),
+                      Container(
+                        width: 278,
+                        height: 26,
+                        decoration: const BoxDecoration(),
+                        child: Text(
+                          'IC Number',
+                          style: GoogleFonts.signikaNegative(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                        child: Container(
+                          width: 278,
+                          height: 55,
+                          decoration: const BoxDecoration(),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 2),
+                            child: TextFormField(
+                              controller: textController4,
+                              obscureText: false,
+                              decoration: const InputDecoration(
+                                hintText: 'XXXXXX-XX-XXXX',
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.black45,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.black,
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4.0),
+                                  ),
+                                ),
+                              ),
+                              style: GoogleFonts.signikaNegative(),
+                              keyboardType: TextInputType.number,
+                            ),
+                          ),
+                        ),
+                      ),
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
@@ -201,7 +341,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Nav(),
+                                builder: (context) => ProfileSetup1Widget(),
                                   ),
                             );
                           },
@@ -209,117 +349,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 const Color(0xFF809BCE)),
                             minimumSize: MaterialStateProperty.all<Size>(
-                                const Size(277, 48)),
+                                const Size(286, 45)),
                             shape: MaterialStateProperty.all<OutlinedBorder>(
                                 RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(5))),
+                                    borderRadius: BorderRadius.circular(12))),
                           ),
                           child: Text(
-                            'Login',
+                            'Sign Up',
                             style: GoogleFonts.signikaNegative(
                               color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ForgotPasswordWidget(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'Forgot Password?',
-                            style: GoogleFonts.signikaNegative(
-                              color: const Color(0xFF809BCE),
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                        child: Text(
-                          'or',
-                          style: GoogleFonts.signikaNegative(),
-                        ),
-                      ),
-                      Align(
-                        alignment: const AlignmentDirectional(0, 0),
-                        child: Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
-                          child: Container(
-                            width: 230,
-                            height: 44,
-                            child: Stack(
-                              children: [
-                                Align(
-                                  alignment: const AlignmentDirectional(0, 0),
-                                  child: ElevatedButton(
-                                    onPressed: () async {
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => ProfileSetup1Widget(),
-                                            ),
-                                      );
-                                    },
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.white),
-                                      minimumSize:
-                                          MaterialStateProperty.all<Size>(
-                                              const Size(304, 48)),
-                                      shape: MaterialStateProperty.all<
-                                          OutlinedBorder>(
-                                        RoundedRectangleBorder(
-                                          side: BorderSide(
-                                            color: Color(0xFF393939),
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                        ),
-                                      ),
-                                    ),
-                                    child: Text(
-                                      'Sign in with Google',
-                                      style: GoogleFonts.signikaNegative(
-                                        color: const Color(0xFF6C757D),
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                /* Align(
-                                  alignment:
-                                      const AlignmentDirectional(-0.83, 0),
-                                  child: Container(
-                                    width: 22,
-                                    height: 22,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      'https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?w=1000&ssl=1',
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                ), */
-                              ],
                             ),
                           ),
                         ),
@@ -331,7 +371,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0, 0, 5, 0),
                             child: Text(
-                              'Don\'t have an account?',
+                              'Already have an account?',
                               style: GoogleFonts.signikaNegative(
                                 color: const Color(0xFF809BCE),
                                 fontSize: 14,
@@ -343,12 +383,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                               await Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SignUpWidget(),
+                                  builder: (context) => const LoginWidget(),
                                 ),
                               );
                             },
                             child: Text(
-                              'Sign Up',
+                              'Login',
                               style: GoogleFonts.signikaNegative(
                                   color: const Color(0xFF102D51),
                                   fontSize: 14,
