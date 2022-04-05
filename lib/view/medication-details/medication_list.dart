@@ -1,9 +1,12 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'medication_list_ListView.dart';
 import 'journal_history.dart';
+import 'MedicationData.dart';
+
 
 class MedicationList extends StatefulWidget {
   const MedicationList({Key? key}) : super(key: key);
@@ -12,11 +15,25 @@ class MedicationList extends StatefulWidget {
   _MedicationListState createState() => _MedicationListState();
 }
 
-class _MedicationListState extends State<MedicationList> {
+class _MedicationListState extends State<MedicationList> with WidgetsBindingObserver {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  bool? toDelete;
+
+  @override
+  void initState() {
+    super.initState();
+    toDelete = false;
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    toDelete;
+  }
 
   @override
   Widget build(BuildContext context) {
+    // toDelete = !toDelete;
     return Scaffold(
       // key: scaffoldKey,
       // backgroundColor: Colors.white,
@@ -44,135 +61,141 @@ class _MedicationListState extends State<MedicationList> {
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Expanded(
-                        flex: 7,
-                        child: Text(
-                          'Active Meds',
-                          style: GoogleFonts.signikaNegative(color: Colors.black,fontWeight: FontWeight.w300,),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
-                            child: IconButton(
-                              iconSize: 50,
-                              color: Colors.black,
-                              icon: const Icon(
-                                Icons.delete,
-                                color: Colors.black,
-                                size: 30,
-                              ),
-                              onPressed: () {
-                                //Delete Records
-                              },
+                  child: ValueListenableBuilder(
+                    valueListenable: viewVisible,
+                    builder: (context, value, widget) {
+                      return Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Expanded(
+                            flex: 7,
+                            child: Text(
+                              'Active Meds',
+                              style: GoogleFonts.signikaNegative(color: Colors.black,fontWeight: FontWeight.w300,),
                             ),
                           ),
-                        ),
-                      ),
-                    ],
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                                child: IconButton(
+                                  iconSize: 50,
+                                  color: Colors.black,
+                                  icon:
+                                    viewVisible.value == true
+                                    ? const Icon(Icons.delete, 
+                                            color: Colors.black,
+                                            size: 30,
+                                      )
+                                    : const Icon(null),
+                                  onPressed: () {
+                                    if(toRemove.value.contains(true)){
+                                      showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) => AlertDialog(
+                                          title: const Text('Delete Record'),
+                                          content: const Text('Are you sure you want to delete the record selected?'),
+                                          actions: <Widget>[
+                                            TextButton(
+                                              onPressed: (){
+                                                Navigator.pop(context);
+                                                setState(() {
+                                                  toDelete = true;
+                                                  viewVisible.value = false;
+                                                });
+                                              },
+                                              child: const Text('YES'),
+                                            ),
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                                setState(() {
+                                                  toDelete = false;
+                                                  viewVisible.value = false;
+                                                  toRemove.value.clear();
+                                                });
+                                              },
+                                              child: const Text('NO'),
+                                            ),
+                                          ],
+                                      ));
+                                    }
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    }
                   ),
-                ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      //Medication Details
-                      const MedicationListView(),
+                ),                
 
-                      //Button Pannel
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            
-                            //History Button
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 130, 0),
-                              child: (
-                                Row(
-                                  children: [
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary: const Color(0xFF809BCE),
-                                        minimumSize: const Size(125,40),
-                                        elevation: 3,
-                                        shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                MedicationListView(toDelete: toDelete!),
+                                  
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    //Medication Details
+                    
+                    //Button Pannel
+                    Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          
+                          //History Button
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 130, 0),
+                            child: (
+                              Row(
+                                children: [
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      primary: const Color(0xFF809BCE),
+                                      minimumSize: const Size(125,40),
+                                      elevation: 3,
+                                      shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                                      )
+                                    ),
+                                  onPressed: (){
+                                    Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => const JournalHistoryWidget()));
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(
+                                        Icons.history,
+                                        size: 18,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                        child: Text(
+                                          'HISTORY',
+                                          style: GoogleFonts.signikaNegative(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w500,),
                                         )
                                       ),
-                                    onPressed: (){
-                                      Navigator.push(context,
-                                      MaterialPageRoute(builder: (context) => const JournalHistoryWidget()));
-                                    },
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        const Icon(
-                                          Icons.history,
-                                          size: 18,
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                          child: Text(
-                                            'HISTORY',
-                                            style: GoogleFonts.signikaNegative(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w500,),
-                                          )
-                                        ),
-                                      ],
-                                    )),
-                                  ],
-                                )
-                              ),
+                                    ],
+                                  )),
+                                ],
+                              )
                             ),
+                          ),
 
-                            //Edit Button
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                              child: Material(
-                                color: Colors.transparent,
-                                elevation: 3,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF809BCE),
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
-                                    child: IconButton(
-                                      iconSize: 40,
-                                      color: const Color(0x00FCFCFC),
-                                      icon: const Icon(
-                                        Icons.edit_outlined,
-                                        color: Colors.white,
-                                        size: 20,
-                                      ),
-                                      onPressed: () {
-                                        //Edit Records
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-
-                            //Add Button
-                            Material(
+                          //Edit Button
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                            child: Material(
                               color: Colors.transparent,
                               elevation: 3,
                               shape: RoundedRectangleBorder(
@@ -191,25 +214,57 @@ class _MedicationListState extends State<MedicationList> {
                                     iconSize: 40,
                                     color: const Color(0x00FCFCFC),
                                     icon: const Icon(
-                                      Icons.add,
+                                      Icons.edit_outlined,
                                       color: Colors.white,
                                       size: 20,
                                     ),
                                     onPressed: () {
-                                      //Add Records
+                                      //Edit Records
                                     },
                                   ),
                                 ),
                               ),
                             ),
+                          ),
+
+                          //Add Button
+                          Material(
+                            color: Colors.transparent,
+                            elevation: 3,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF809BCE),
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(1, 0, 0, 0),
+                                child: IconButton(
+                                  iconSize: 40,
+                                  color: const Color(0x00FCFCFC),
+                                  icon: const Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
+                                  onPressed: () {
+                                    //Add Records
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
 
 
-                          ],
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                // ),
+                    ),
+                  ],
+                ),
               ]
             ),
           ),
